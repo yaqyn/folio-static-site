@@ -1,46 +1,29 @@
-# Tolkien Fan Club
+---
+layout: home
+description: Abdulrahman M. Yaqyn — software, systems, and learning by building. Explore yaqyn's projects and development notes.
+---
+# yaqyn.
 
-![JRR Tolkien sitting](/images/tolkien.png)
+I'm **Abdulrahman M. Yaqyn**. I build software, explore systems, and learn by taking things apart and putting them back together.
 
-Here's the deal, **I like Tolkien**.
+[Explore my work](/projects/) [A little about me](/about/)
 
-> "I am in fact a Hobbit in all but size."
->
-> -- J.R.R. Tolkien
+![A cobalt Y-shaped junction, drawn as an architectural study of connected systems](/images/yaqyn-cover.png)
 
-## Blog posts
+## Selected work
 
-- [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
-- [Why Tom Bombadil Was a Mistake](/blog/tom)
-- [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
+- [qvOS](https://github.com/yaqyn/qvOS) A Linux operating-system project, built around the way I use my machine.
+- [AI Agent](https://github.com/yaqyn/AI_Agent) A coding agent that can inspect a workspace, edit files, and run Python.
+- [Web Crawler](https://github.com/yaqyn/web_crawler) An asynchronous crawler that turns linked pages into structured reports.
+- [Asteroids](https://github.com/yaqyn/Asteroids) A keyboard-first arcade game with lives, scoring, and a wireframe ship.
 
-## Reasons I like Tolkien
+## From the workbench
 
-- You can spend years studying the legendarium and still not understand its depths
-- It can be enjoyed by children and adults alike
-- Disney _didn't ruin it_ (okay, but Amazon might have)
-- It created an entirely new genre of fantasy
+- [Building a site from first principles](/notes/static-sites/) Markdown, small Python objects, and the path from a text file to this page.
+- [What a coding agent needs beyond a model](/notes/agents/) Tool boundaries, clear errors, and verification that means something.
 
-## My favorite characters (in order)
+## How I approach the work
 
-1. Gandalf
-2. Bilbo
-3. Sam
-4. Glorfindel
-5. Galadriel
-6. Elrond
-7. Thorin
-8. Sauron
-9. Aragorn
+> Build something small enough to understand, then improve it until it is useful.
 
-Here's what `elflang` looks like (the perfect coding language):
-
-```
-func main(){
-    fmt.Println("Aiya, Ambar!")
-}
-```
-
-Want to get in touch? [Contact me here](/contact).
-
-This site was generated with a custom-built [static site generator](https://www.boot.dev/courses/build-static-site-generator-python) from the course on [Boot.dev](https://www.boot.dev).
+This site follows that approach. The pages start as Markdown, the generator is Python, and the source is open on [GitHub](https://github.com/yaqyn/my-site).

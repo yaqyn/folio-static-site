@@ -1,3 +1,4 @@
 #!/bin/sh
-
-python3 src/main.py "/my-site/"
+set -eu
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec python3 "$project_dir/src/main.py" "${1:-/my-site/}"

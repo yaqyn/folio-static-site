@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+if [[ "${1:-}" == "--help" ]]; then
+    printf '%s\n' 'Usage: ./launch [PORT] (default: 8888)' 'Builds the local site, then serves it at http://127.0.0.1:PORT'
+    exit 0
+fi
+port="${1:-8888}"
+if (( $# > 1 )) || [[ ! "$port" =~ ^[0-9]{1,5}$ ]] || (( 10#$port < 1 || 10#$port > 65535 )); then
+    printf '%s\n' 'Error: provide one port between 1 and 65535.' >&2
+    exit 2
+fi
+python3 "$project_dir/src/main.py" /
+printf 'Open http://127.0.0.1:%s\n' "$port"
+exec python3 -m http.server "$port" --bind 127.0.0.1 --directory "$project_dir/docs"

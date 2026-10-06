@@ -64,7 +64,7 @@ the **same** even with inline stuff
         self.assertEqual(
             markdown_to_html_node(markdown).to_html(),
             '<div><p>A <a href="https://example.com">link</a> and '
-            '<img src="image.png" alt="image"></img></p></div>',
+            '<img src="image.png" alt="image"></p></div>',
         )
 
 

@@ -1,3 +1,5 @@
+from urllib.parse import urlsplit
+
 from enum import Enum
 
 from leafnode import LeafNode
@@ -40,6 +42,12 @@ def text_node_to_html_node(text_node: TextNode) -> LeafNode:
         return LeafNode("i", text_node.text)
     if text_node.text_type == TextType.CODE:
         return LeafNode("code", text_node.text)
+    if text_node.text_type in {TextType.LINK, TextType.IMAGE}:
+        allowed = {"", "http", "https"}
+        if text_node.text_type == TextType.LINK:
+            allowed.add("mailto")
+        if urlsplit(text_node.url or "").scheme.lower() not in allowed:
+            raise ValueError("Unsupported link or image URL scheme")
     if text_node.text_type == TextType.LINK:
         return LeafNode("a", text_node.text, {"href": text_node.url})
     if text_node.text_type == TextType.IMAGE:

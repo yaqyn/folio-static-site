@@ -1,61 +1,75 @@
-![Static Site Generator — animated project cover](readme-assets/cover.gif)
+![yaqyn — a cobalt architectural Y junction](static/images/yaqyn-cover.png)
 
-# Static Site Generator
+# yaqyn — a personal site, built from first principles
 
-**A Python static site generator that turns Markdown into a linked website.**
+**Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-Write content in Markdown, add static assets, and build HTML pages through a shared template. The included Tolkien-themed site demonstrates nested blog routes, images, inline formatting, and navigation.
+A cobalt workshop theme, a custom Y illustration, and content about the actual work: qvOS, AI Agent, Web Crawler, Asteroids, BookBot, and retrieval/search. The site includes projects, about, contact, notes, and a custom 404 page.
 
-## <img src="readme-assets/run.svg" width="24" height="24" alt=""> Build and preview locally
+[Visit the published site](https://yaqyn.github.io/my-site/) · [Design context](DESIGN.md)
 
-Requires **Python 3**. No third-party dependencies.
+## One-line launch
+
+Requires **Python 3.10+**. No third-party runtime dependencies.
 
 ```bash
-sh main.sh
+./launch
 ```
 
-Open **http://localhost:8888**. This regenerates `docs/` and starts Python’s HTTP server. Stop the server with **Ctrl+C**.
+Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
 
-![Bundled Rivendell artwork used by the example website](static/images/rivendell.png)
+![Actual desktop render of the yaqyn homepage](readme-assets/site-preview.png)
 
-<sub>Artwork from the bundled example site. See [the source homepage](content/index.md) for the content it accompanies.</sub>
-
-## <img src="readme-assets/design.svg" width="24" height="24" alt=""> Markdown becomes a page tree
-
-![Generator workflow: Markdown, text nodes, HTML tree, static pages](readme-assets/workflow.svg)
-
-Inline parsing handles text, links, images, code, bold, and italics. Block parsing produces headings, paragraphs, quotes, lists, and code blocks. Recursive generation preserves the content directory’s route structure.
+## Write and build
 
 | Location | Purpose |
 | --- | --- |
-| `content/` | Markdown pages and nested blog posts |
-| `static/` | Stylesheet and images |
-| `template.html` | Shared page shell |
-| `src/` | Parsers, HTML nodes, generation, and tests |
-| `docs/` | Generated site output |
+| `content/` | Markdown pages and development notes |
+| `static/` | Shared styles, favicon, and custom artwork |
+| `template.html` | Navigation, landmarks, metadata, and footer |
+| `src/` | Parser, HTML tree, staged build, and tests |
+| `docs/` | Generated output used by GitHub Pages |
 
-## <img src="readme-assets/code.svg" width="24" height="24" alt=""> Publish with the correct base path
+Markdown supports headings, paragraphs, quotes, lists, links, images, bold, italics, inline code, and fenced code with optional language labels. Blank lines inside code fences are preserved. Raw HTML is escaped rather than executed.
+
+Pages may start with a small frontmatter block:
+
+```markdown
+---
+description: A useful one-sentence page description.
+layout: page
+---
+# Page title
+```
+
+Supported keys are `description` and `layout`; layouts are `page` and `home`. This is a deliberately small key-value format, not a full YAML parser. The homepage's first three paragraphs are its introduction, actions, and image. Keep that order when editing its content.
+
+Build for the existing GitHub Pages project path:
 
 ```bash
 sh build.sh
 ```
 
-The build script uses `/my-site/` as its base path for project-site hosting. For another deployment path, pass it directly:
+Or choose another base path, output, and canonical public URL:
 
 ```bash
-python3 src/main.py "/your-project/"
+python3 src/main.py /portfolio/ --output /tmp/portfolio --site-url https://example.com/portfolio
 ```
 
-Generation replaces `docs/`, copies `static/`, and renders the Markdown pages. Edit the source content and assets rather than generated HTML.
+Builds stage assets and pages in a temporary directory before replacing generated output. A broken Markdown page leaves the previous build intact. Existing custom output directories need a `.nojekyll` marker; the generator protects the project, source, and Git directories. Edit sources rather than generated HTML. Regenerate `docs/` with `sh build.sh` before committing for publication.
 
-## <img src="readme-assets/learn.svg" width="24" height="24" alt=""> Check the parser and generator
+Local links receive the selected base path; external and protocol-relative links retain their destinations. Text and attributes are HTML-escaped, and unsupported link/image schemes are rejected. Every page has a description, canonical URL, social metadata, and selected navigation.
+
+## Verify
 
 ```bash
 sh test.sh
 ```
 
-The unittest suite covers inline and block parsing, HTML nodes, and page generation. This project develops recursion, composition, and the boundary between source content and generated output.
+The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
+
+The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
 
 ---
 
-Built by **[Abdulrahman M. Yaqyn](https://yaqyn.dev)** through the [Boot.dev](https://www.boot.dev) curriculum.
+Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)** through the [Boot.dev](https://www.boot.dev) curriculum.

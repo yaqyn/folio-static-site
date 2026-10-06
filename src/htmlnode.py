@@ -1,3 +1,6 @@
+from html import escape
+
+
 class HTMLNode:
     def __init__(self, tag=None, value=None, children=None, props=None):
         self.tag = tag
@@ -11,7 +14,10 @@ class HTMLNode:
     def props_to_html(self):
         if not self.props:
             return ""
-        return "".join(f' {key}="{value}"' for key, value in self.props.items())
+        return "".join(
+            f' {key}="{escape(str(value), quote=True)}"'
+            for key, value in self.props.items()
+        )
 
     def __repr__(self):
         return (

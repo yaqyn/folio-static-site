@@ -39,8 +39,11 @@ def _quote_to_html(block: str) -> ParentNode:
 
 
 def _code_to_html(block: str) -> ParentNode:
-    code_text = block[4:-3]
-    code_node = LeafNode("code", code_text)
+    opening, code_text = block.split("\n", 1)
+    code_text = code_text[:-3]
+    language = opening[3:]
+    props = {"class": "language-" + language} if language else None
+    code_node = LeafNode("code", code_text, props)
     return ParentNode("pre", [code_node])
 
 
@@ -74,22 +77,96 @@ def extract_title(markdown: str) -> str:
     raise ValueError("Markdown document has no h1 heading")
 
 
-def generate_page(from_path: str, template_path: str, dest_path: str, basepath="/"):
-    print(
-        f"Generating page from {from_path} to {dest_path} "
-        f"using {template_path}"
-    )
-    with open(from_path) as markdown_file:
-        markdown = markdown_file.read()
-    with open(template_path) as template_file:
-        template = template_file.read()
+def parse_frontmatter(markdown):
+    if not markdown.startswith("---\n"):
+        return {}, markdown
+    metadata, separator, content = markdown[4:].partition("\n---\n")
+    if not separator:
+        raise ValueError("Frontmatter must end with ---")
+    values = {}
+    for line in metadata.splitlines():
+        if not line.strip():
+            continue
+        key, separator, value = line.partition(":")
+        if not separator or key.strip() not in {"description", "layout"}:
+            raise ValueError(f"Unsupported frontmatter: {line}")
+        values[key.strip()] = value.strip()
+    if values.get("layout", "page") not in {"home", "page"}:
+        raise ValueError("Layout must be home or page")
+    return values, content
 
+
+def normalize_basepath(basepath):
+    if not basepath.startswith("/") or any(
+        part in {".", ".."} for part in basepath.split("/")
+    ):
+        raise ValueError("Base path must be an absolute URL path without traversal")
+    if any(char in basepath for char in '"<>?#\\'):
+        raise ValueError("Base path contains unsupported characters")
+    return "/" + basepath.strip("/") + "/" if basepath.strip("/") else "/"
+
+
+def generate_page(
+    from_path,
+    template_path,
+    dest_path,
+    basepath="/",
+    *,
+    route="/",
+    site_url="https://yaqyn.github.io/my-site",
+):
+    from html import escape
+    from pathlib import Path
+    import re
+
+    basepath = normalize_basepath(basepath)
+    print(f"Generating {route}")
+    metadata, markdown = parse_frontmatter(Path(from_path).read_text(encoding="utf-8"))
+    template = Path(template_path).read_text(encoding="utf-8")
     html = markdown_to_html_node(markdown).to_html()
     title = extract_title(markdown)
-    page = template.replace("{{ Title }}", title).replace("{{ Content }}", html)
-    page = page.replace('href="/', f'href="{basepath}')
-    page = page.replace('src="/', f'src="{basepath}')
-
-    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-    with open(dest_path, "w") as output_file:
-        output_file.write(page)
+    description = metadata.get(
+        "description", f"{title} — projects and notes by Abdulrahman M. Yaqyn."
+    )
+    layout = metadata.get("layout", "page")
+    navigation = []
+    for label, target in [
+        ("Home", "/"),
+        ("Projects", "/projects/"),
+        ("Notes", "/notes/"),
+        ("About", "/about/"),
+    ]:
+        selected = route == target if target == "/" else route.startswith(target)
+        current = (
+            f' aria-current="{"page" if route == target else "location"}"'
+            if selected
+            else ""
+        )
+        navigation.append(f'<a href="{target}"{current}>{label}</a>')
+    replacements = {
+        "Title": escape(title),
+        "Content": html,
+        "Description": escape(description, quote=True),
+        "PageClass": layout,
+        "Navigation": "".join(navigation),
+        "Canonical": escape(site_url.rstrip("/") + route, quote=True),
+        "ImageURL": escape(
+            site_url.rstrip("/") + "/images/yaqyn-cover.png", quote=True
+        ),
+        "Breadcrumbs": '<a href="/">yaqyn.</a><span aria-hidden="true"> / </span>'
+        + escape(title)
+        if layout != "home"
+        else "",
+    }
+    template = re.sub(
+        r"\{\{ (\w+) \}\}",
+        lambda match: replacements.get(match.group(1), match.group(0)),
+        template,
+    )
+    # Prefix root-local href/src attributes, preserving protocol-relative URLs.
+    template = re.sub(
+        r'(href|src)="/(?!/)', lambda match: match.group(1) + '="' + basepath, template
+    )
+    destination = Path(dest_path)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(template, encoding="utf-8")

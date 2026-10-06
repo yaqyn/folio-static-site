@@ -1,4 +1,4 @@
 #!/bin/sh
-
-python3 src/main.py
-cd docs && python3 -m http.server 8888
+set -eu
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec "$project_dir/launch" "$@"

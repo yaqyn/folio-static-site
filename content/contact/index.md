@@ -1,9 +1,16 @@
-# Contact the Author
+---
+description: Find Abdulrahman M. Yaqyn on GitHub and explore the source behind his projects.
+---
+# Get in touch
 
-[< Back Home](/)
+The best place to find my work is **GitHub**. If a question or bug belongs to a project, open an issue in that repository so the context stays with the code.
 
-Give me a call anytime to chat about Tolkien!
+## Find me
 
-`555-555-5555`
+[github.com/yaqyn](https://github.com/yaqyn)
 
-**"Vaya marie."**
+## About this site
+
+The source for these pages is public. Content, styles, and the Python generator are all in the same repository.
+
+[View the site source](https://github.com/yaqyn/my-site) or [browse the projects](/projects/).
