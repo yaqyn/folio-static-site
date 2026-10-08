@@ -12,15 +12,11 @@ I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt*
 
 ## Career Projects
 
-![HyperQuote — Build the Future, Faster.](/images/hyperquote-cover.gif)
-
-- [HyperQuote — Connected Business Operations](https://github.com/yaqyn/HyperQuote) My career project: a digital ecosystem connecting customers, sales, operations, dispatch, and drivers, from a material request to delivery.
+- [HyperQuote — Connected Business Operations](https://github.com/yaqyn/HyperQuote) Connected business software for customers, sales, operations, dispatch, and drivers—from a material request to delivery.
 
 ## Personal Projects
 
-![qvOS — Personal Linux Distribution](/images/qvos-cover.gif)
-
-- [qvOS — Personal Linux Distribution](https://github.com/yaqyn/qvOS) My personal Arch Linux distribution, adapted around a keyboard-first Hyprland desktop, native tools, installation, updates, and recovery.
+- [qvOS — Personal Linux Distribution](https://github.com/yaqyn/qvOS) An Arch Linux distribution built around a keyboard-first Hyprland desktop, native tools, installation, updates, and recovery.
 
 ## Learning Journey Projects
 

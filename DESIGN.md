@@ -128,4 +128,4 @@ Personal Projects (qvOS), and Learning Journey Projects (Workbench, SiteLens,
 Orbit, TextScope, CineSearch, and Folio). The Boot.dev projects are student work.
 Keep these categories in separate sections in the portfolio and profile gallery.
 
-Career and personal sections use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. Learning Journey Projects use compact category-labelled cards.
+Career and personal sections on the projects page and in README documentation use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. The homepage uses restrained text-led project sections and the black-and-white author portrait; project covers do not appear there. Learning Journey Projects use compact category-labelled cards.
