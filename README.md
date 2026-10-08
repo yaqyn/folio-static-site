@@ -4,9 +4,22 @@
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). Featured work includes HyperQuote, qvOS, Workbench, and CineSearch. The site includes projects, about, contact, notes, and a custom 404 page.
+A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). All eight projects appear on the homepage and Projects page with their current names and repository links. The site includes projects, about, contact, notes, and a custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
+
+## Projects
+
+| Project | Purpose |
+| --- | --- |
+| [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected Business Operations |
+| [qvOS](https://github.com/yaqyn/qvOS) | Personal Linux Distribution |
+| [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |
+| [CineSearch](https://github.com/yaqyn/cinesearch-rag-engine) | Movie RAG Engine |
+| [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) | Web Crawler |
+| [Orbit](https://github.com/yaqyn/orbit-asteroids-game) | Asteroids Game |
+| [TextScope](https://github.com/yaqyn/textscope-text-analyzer) | Text Analyzer |
+| [Folio](https://github.com/yaqyn/folio-static-site) | Personal Site & Generator |
 
 ## One-line launch
 
