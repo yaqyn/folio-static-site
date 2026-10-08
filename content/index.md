@@ -13,9 +13,9 @@ I'm **Abdulrahman M. Yaqyn**. I build software, explore systems, and learn by ta
 ## Selected work
 
 - [qvOS](https://github.com/yaqyn/qvOS) A Linux operating-system project, built around the way I use my machine.
-- [Workbench](https://github.com/yaqyn/workbench-ai-agent) A coding agent that can inspect a workspace, edit files, and run Python.
-- [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) An asynchronous crawler that turns linked pages into structured reports.
-- [Orbit](https://github.com/yaqyn/orbit-asteroids-game) A keyboard-first arcade game with lives, scoring, and a wireframe ship.
+- [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) A coding agent that can inspect a workspace, edit files, and run Python.
+- [SiteLens — Web Crawler](https://github.com/yaqyn/sitelens-web-crawler) An asynchronous crawler that turns linked pages into structured reports.
+- [Orbit — Asteroids Game](https://github.com/yaqyn/orbit-asteroids-game) A keyboard-first arcade game with lives, scoring, and a wireframe ship.
 
 ## From the workbench
 
