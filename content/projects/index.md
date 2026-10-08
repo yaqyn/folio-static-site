@@ -51,7 +51,7 @@ A dependency-free text-analysis tool that counts words and letters, ranks vocabu
 
 ## CineSearch — Movie RAG Engine
 
-A movie search project exploring keyword search, semantic embeddings, hybrid ranking, and reranking. Built while working through the Boot.dev retrieval course.
+A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset. Built while working through the Boot.dev retrieval course.
 
 [Explore CineSearch on GitHub](https://github.com/yaqyn/cinesearch-rag-engine)
 

@@ -10,12 +10,17 @@ I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt*
 
 ![Black and white portrait of Abdulrahman M. Yaqyn](/images/yaqyn-portrait.png)
 
-## Selected work
+## Projects
 
 - [HyperQuote — Connected Business Operations](https://github.com/yaqyn/HyperQuote) A digital ecosystem connecting customers, sales, operations, dispatch, and drivers, from a material request to delivery.
 - [qvOS — Personal Linux Distribution](https://github.com/yaqyn/qvOS) A standalone Arch Linux distribution with a keyboard-first Hyprland desktop, native tools, installation, updates, and recovery.
 - [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) A focused Python project exploring workspace-scoped coding agents.
 - [CineSearch — Movie RAG Engine](https://github.com/yaqyn/cinesearch-rag-engine) Movie retrieval combining keyword search, semantic embeddings, hybrid ranking, and grounded generation.
+
+- [SiteLens — Web Crawler](https://github.com/yaqyn/sitelens-web-crawler) Asynchronous website crawling with robots.txt checks, request limits, and structured reports.
+- [Orbit — Asteroids Game](https://github.com/yaqyn/orbit-asteroids-game) A keyboard-first arcade game with lives, scoring, and a wireframe ship.
+- [TextScope — Text Analyzer](https://github.com/yaqyn/textscope-text-analyzer) Word and letter counts, vocabulary rankings, book comparisons, and report exports.
+- [Folio — Personal Site & Generator](https://github.com/yaqyn/folio-static-site) This portrait-led portfolio, built with a Python Markdown-to-HTML generator.
 
 ## From the workbench
 
