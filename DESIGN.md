@@ -122,3 +122,10 @@ keyboard-visible navigation; test those contracts whenever the template changes.
 
 The biography, skills, credentials, contact details, and major-project descriptions
 come from the user-maintained [GitHub profile README](https://github.com/yaqyn/yaqyn/blob/main/README.md), reviewed for this redesign. Do not invent additional personal claims.
+
+Project branding uses three explicit categories: Career Projects (HyperQuote),
+Personal Projects (qvOS), and Learning Journey Projects (Workbench, SiteLens,
+Orbit, TextScope, CineSearch, and Folio). The Boot.dev projects are student work.
+Keep these categories in separate sections in the portfolio and profile gallery.
+
+Career and personal sections use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. Learning Journey Projects use compact category-labelled cards.

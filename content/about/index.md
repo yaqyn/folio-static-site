@@ -3,21 +3,27 @@ description: Abdulrahman M. Yaqyn — backend developer in 6th of October City, 
 ---
 # About
 
-I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. I work on backend systems, practical AI applications, and automation, with hands-on experience building connected business software and my own Arch Linux distribution.
+I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. My career project is HyperQuote, my personal Linux project is qvOS, and my Boot.dev student projects form a separate learning journey.
 
 ## A business background, a systems approach
 
 My accounting background shapes how I approach development: understand the operation, follow the data, and build tools that make the work easier. I enjoy turning complex processes into clear interfaces and connected systems.
 
-## Building connected business software
+## Career Projects — HyperQuote
 
 **HyperQuote** represents six months of continuous AI-assisted full-stack development. It connects customers, sales, internal operations, management, dispatch, and drivers, from a material request to its delivery.
 
 The work includes orders, inventory, suppliers, warehousing, fleet, finance, and customer-service workflows; natural-language ordering and a RAG-based company-information assistant; and customer, operations, and driver experiences around shared data.
 
-## A personal Linux distribution
+## Personal Projects — qvOS
 
 **qvOS** is my ongoing Arch Linux distribution project. Starting as a fork of DHH's Omacom, I build and adapt it around development, productivity, automation, and AI agent workflows. It brings together a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
+
+## Learning Journey Projects — Boot.dev
+
+Workbench, SiteLens, Orbit, TextScope, CineSearch, and Folio are student projects developed through the Boot.dev curriculum. They document my practice in Python, backend fundamentals, retrieval, and software design, including extensions made as I learn.
+
+[Explore the learning journey projects](/projects/).
 
 ## Skills and tools
 
