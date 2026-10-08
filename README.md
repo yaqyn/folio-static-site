@@ -1,12 +1,12 @@
 ![yaqyn — a cobalt architectural Y junction](static/images/yaqyn-cover.png)
 
-# yaqyn — a personal site, built from first principles
+# Folio — yaqyn’s personal site
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-A cobalt workshop theme, a custom Y illustration, and content about the actual work: qvOS, AI Agent, Web Crawler, Asteroids, BookBot, and retrieval/search. The site includes projects, about, contact, notes, and a custom 404 page.
+A cobalt workshop theme, a custom Y illustration, and content about the actual work: qvOS, Workbench, SiteLens, Orbit, TextScope, and CineSearch. The site includes projects, about, contact, notes, and a custom 404 page.
 
-[Visit the published site](https://yaqyn.github.io/my-site/) · [Design context](DESIGN.md)
+[Visit the published site](https://yaqyn.github.io/folio/) · [Design context](DESIGN.md)
 
 ## One-line launch
 
