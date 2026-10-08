@@ -2,18 +2,39 @@
 
 # Folio — Personal Site & Generator
 
+> **Learning Journey Projects · Boot.dev**
+> A student project developed through the Boot.dev curriculum and extended through hands-on practice.
+
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). All eight projects appear on the homepage and Projects page with their current names and repository links. The site includes projects, about, contact, notes, and a custom 404 page.
+A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). Career Projects (HyperQuote), Personal Projects (qvOS), and Learning Journey Projects (the six Boot.dev student projects) have separate sections on the homepage and Projects page. The site includes projects, about, contact, notes, and a custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
 ## <img src="readme-assets/project.svg" width="24" height="24" alt=""> Projects
 
+### Career Projects
+
+![HyperQuote — Build the Future, Faster.](static/images/hyperquote-cover.gif)
+
 | Project | Purpose |
 | --- | --- |
 | [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected Business Operations |
+
+### Personal Projects
+
+![qvOS — Personal Linux Distribution](static/images/qvos-cover.gif)
+
+| Project | Purpose |
+| --- | --- |
 | [qvOS](https://github.com/yaqyn/qvOS) | Personal Linux Distribution |
+
+### Learning Journey Projects
+
+Student projects developed through the Boot.dev curriculum.
+
+| Project | Purpose |
+| --- | --- |
 | [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |
 | [CineSearch](https://github.com/yaqyn/cinesearch-rag-engine) | Movie RAG Engine |
 | [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) | Web Crawler |
