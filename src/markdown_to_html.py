@@ -151,7 +151,7 @@ def generate_page(
         "Navigation": "".join(navigation),
         "Canonical": escape(site_url.rstrip("/") + route, quote=True),
         "ImageURL": escape(
-            site_url.rstrip("/") + "/images/yaqyn-cover.png", quote=True
+            site_url.rstrip("/") + "/images/yaqyn-portrait.png", quote=True
         ),
         "Breadcrumbs": '<a href="/">yaqyn.</a><span aria-hidden="true"> / </span>'
         + escape(title)

@@ -8,7 +8,7 @@ I'm **Abdulrahman M. Yaqyn**. I build software, explore systems, and learn by ta
 
 [Explore my work](/projects/) [A little about me](/about/)
 
-![A cobalt Y-shaped junction, drawn as an architectural study of connected systems](/images/yaqyn-cover.png)
+![Black and white portrait of Abdulrahman M. Yaqyn](/images/yaqyn-portrait.png)
 
 ## Selected work
 
