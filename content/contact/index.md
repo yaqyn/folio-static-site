@@ -13,4 +13,4 @@ The best place to find my work is **GitHub**. If a question or bug belongs to a 
 
 The source for these pages is public. Content, styles, and the Python generator are all in the same repository.
 
-[View the site source](https://github.com/yaqyn/my-site) or [browse the projects](/projects/).
+[View the site source](https://github.com/yaqyn/folio) or [browse the projects](/projects/).

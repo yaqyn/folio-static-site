@@ -8,32 +8,32 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="What a coding agent needs beyond a model | yaqyn">
     <meta property="og:description" content="A closer look at coding-agent tools, workspace boundaries, useful errors, and verification.">
-    <meta property="og:url" content="https://yaqyn.github.io/my-site/notes/agents/">
+    <meta property="og:url" content="https://yaqyn.github.io/folio/notes/agents/">
     <meta property="og:site_name" content="yaqyn">
-    <meta property="og:image" content="https://yaqyn.github.io/my-site/images/yaqyn-cover.png">
+    <meta property="og:image" content="https://yaqyn.github.io/folio/images/yaqyn-cover.png">
     <meta property="og:image:alt" content="A cobalt Y-shaped architectural junction">
     <meta name="twitter:card" content="summary_large_image">
     <title>What a coding agent needs beyond a model | yaqyn</title>
-    <link rel="canonical" href="https://yaqyn.github.io/my-site/notes/agents/">
-    <link rel="icon" href="/my-site/favicon.svg" type="image/svg+xml">
-    <link href="/my-site/index.css" rel="stylesheet">
+    <link rel="canonical" href="https://yaqyn.github.io/folio/notes/agents/">
+    <link rel="icon" href="/folio/favicon.svg" type="image/svg+xml">
+    <link href="/folio/index.css" rel="stylesheet">
   </head>
   <body class="page">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-shell">
       <header class="site-header">
-        <a class="wordmark" href="/my-site/" aria-label="yaqyn home">yaqyn<span>.</span></a>
-        <nav aria-label="Main navigation"><a href="/my-site/">Home</a><a href="/my-site/projects/">Projects</a><a href="/my-site/notes/" aria-current="location">Notes</a><a href="/my-site/about/">About</a></nav>
+        <a class="wordmark" href="/folio/" aria-label="yaqyn home">yaqyn<span>.</span></a>
+        <nav aria-label="Main navigation"><a href="/folio/">Home</a><a href="/folio/projects/">Projects</a><a href="/folio/notes/" aria-current="location">Notes</a><a href="/folio/about/">About</a></nav>
         <a class="header-link" href="https://github.com/yaqyn">GitHub <span aria-hidden="true">↗</span></a>
       </header>
       <main id="main" tabindex="-1">
-        <div class="breadcrumbs"><a href="/my-site/">yaqyn.</a><span aria-hidden="true"> / </span>What a coding agent needs beyond a model</div>
-        <article class="page-content"><div><h1>What a coding agent needs beyond a model</h1><p>A coding agent connects a conversation to actions. The model can ask to read a file, change some code, or execute a program. The application has to decide how each request is handled.</p><h2>Tools need a clear boundary</h2><p>In the AI Agent project, every file-tool path is resolved against the selected workspace. Resolving symlinks matters: a path that appears to be inside the project can point somewhere else.</p><p>That protects the file-tool boundary. It does not turn a Python subprocess into an operating-system sandbox, so execution still requires care about the workspace and code involved.</p><h2>Errors belong in the conversation</h2><p>A malformed tool argument should become an understandable tool result. Crashing the program loses the conversation and gives the model no chance to adjust.</p><p>The agent loop also has a step limit, request timeouts, and an explicit read-only mode. These are small controls that make a run easier to inspect.</p><h2>Verification closes the loop</h2><p>An edit is a proposal until it has been checked. The final response should distinguish between files changed, tests actually run, and anything left uncertain.</p><p>The project tests the conversation loop with simulated provider responses. That verifies the local behavior without assuming an external provider is available.</p><p><a href="https://github.com/yaqyn/AI_Agent">Explore AI Agent</a> or <a href="/my-site/notes/">return to the notes</a>.</p></div></article>
+        <div class="breadcrumbs"><a href="/folio/">yaqyn.</a><span aria-hidden="true"> / </span>What a coding agent needs beyond a model</div>
+        <article class="page-content"><div><h1>What a coding agent needs beyond a model</h1><p>A coding agent connects a conversation to actions. The model can ask to read a file, change some code, or execute a program. The application has to decide how each request is handled.</p><h2>Tools need a clear boundary</h2><p>In the Workbench project, every file-tool path is resolved against the selected workspace. Resolving symlinks matters: a path that appears to be inside the project can point somewhere else.</p><p>That protects the file-tool boundary. It does not turn a Python subprocess into an operating-system sandbox, so execution still requires care about the workspace and code involved.</p><h2>Errors belong in the conversation</h2><p>A malformed tool argument should become an understandable tool result. Crashing the program loses the conversation and gives the model no chance to adjust.</p><p>The agent loop also has a step limit, request timeouts, and an explicit read-only mode. These are small controls that make a run easier to inspect.</p><h2>Verification closes the loop</h2><p>An edit is a proposal until it has been checked. The final response should distinguish between files changed, tests actually run, and anything left uncertain.</p><p>The project tests the conversation loop with simulated provider responses. That verifies the local behavior without assuming an external provider is available.</p><p><a href="https://github.com/yaqyn/workbench">Explore Workbench</a> or <a href="/folio/notes/">return to the notes</a>.</p></div></article>
       </main>
       <footer class="site-footer">
-        <a class="wordmark" href="/my-site/">yaqyn<span>.</span></a>
+        <a class="wordmark" href="/folio/">yaqyn<span>.</span></a>
         <p>Abdulrahman M. Yaqyn<br><span>Software. Systems. Learning by building.</span></p>
-        <div><a href="/my-site/contact/">Get in touch</a><a href="https://github.com/yaqyn/my-site">View source <span aria-hidden="true">↗</span></a></div>
+        <div><a href="/folio/contact/">Get in touch</a><a href="https://github.com/yaqyn/folio">View source <span aria-hidden="true">↗</span></a></div>
       </footer>
     </div>
   </body>

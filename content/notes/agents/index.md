@@ -7,7 +7,7 @@ A coding agent connects a conversation to actions. The model can ask to read a f
 
 ## Tools need a clear boundary
 
-In the AI Agent project, every file-tool path is resolved against the selected workspace. Resolving symlinks matters: a path that appears to be inside the project can point somewhere else.
+In the Workbench project, every file-tool path is resolved against the selected workspace. Resolving symlinks matters: a path that appears to be inside the project can point somewhere else.
 
 That protects the file-tool boundary. It does not turn a Python subprocess into an operating-system sandbox, so execution still requires care about the workspace and code involved.
 
@@ -23,4 +23,4 @@ An edit is a proposal until it has been checked. The final response should disti
 
 The project tests the conversation loop with simulated provider responses. That verifies the local behavior without assuming an external provider is available.
 
-[Explore AI Agent](https://github.com/yaqyn/AI_Agent) or [return to the notes](/notes/).
+[Explore Workbench](https://github.com/yaqyn/workbench) or [return to the notes](/notes/).

@@ -40,9 +40,9 @@ class TestPageGeneration(unittest.TestCase):
             source.write_text("# Test page\n\n[Home](/)")
             template.write_text("{{ Title }}{{ Content }}")
 
-            generate_page(str(source), str(template), str(destination), "/my-site/")
+            generate_page(str(source), str(template), str(destination), "/folio/")
 
-            self.assertIn('href="/my-site/"', destination.read_text())
+            self.assertIn('href="/folio/"', destination.read_text())
 
 
 if __name__ == "__main__":

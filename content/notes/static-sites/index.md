@@ -17,7 +17,7 @@ Markdown → text nodes → HTML nodes → template → static page
 
 ## The small boundaries matter
 
-Text and attributes need HTML escaping. Links need a supported scheme. A project hosted below a path such as `/my-site/` needs that prefix applied to local routes without changing external links.
+Text and attributes need HTML escaping. Links need a supported scheme. A project hosted below a path such as `/folio/` needs that prefix applied to local routes without changing external links.
 
 The generator also builds in a temporary directory. A malformed page should fail the build while leaving the last generated site intact.
 
@@ -38,4 +38,4 @@ The launcher builds a local version and serves it on the loopback interface:
 ./launch
 ```
 
-[View the source](https://github.com/yaqyn/my-site) or [return to the notes](/notes/).
+[View the source](https://github.com/yaqyn/folio) or [return to the notes](/notes/).

@@ -78,7 +78,7 @@ class TestSiteReliability(unittest.TestCase):
                 parse_frontmatter(markdown)
 
     def test_basepath_normalization(self):
-        self.assertEqual(normalize_basepath("/my-site"), "/my-site/")
+        self.assertEqual(normalize_basepath("/folio"), "/folio/")
         self.assertEqual(normalize_basepath("/"), "/")
         for path in ["relative", "/../", "/a/../b", '/bad"', "/bad?query"]:
             with self.subTest(path=path), self.assertRaises(ValueError):
@@ -102,7 +102,7 @@ class TestSiteReliability(unittest.TestCase):
 
     def test_all_local_routes_and_assets_exist(self):
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()):
-            output = build_site("/my-site", Path(directory) / "site")
+            output = build_site("/folio", Path(directory) / "site")
             pages = list(output.rglob("*.html"))
             self.assertEqual(len(pages), 8)
             for page in pages:
@@ -112,9 +112,9 @@ class TestSiteReliability(unittest.TestCase):
                 links = Links()
                 links.feed(markup)
                 for url in links.urls:
-                    if url.startswith("/my-site/"):
+                    if url.startswith("/folio/"):
                         local = output / unquote(
-                            urlsplit(url).path.removeprefix("/my-site/")
+                            urlsplit(url).path.removeprefix("/folio/")
                         )
                         if local.is_dir():
                             local /= "index.html"
