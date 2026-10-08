@@ -39,7 +39,7 @@ A dependency-free text-analysis tool that counts words and letters, ranks vocabu
 
 A movie search project exploring keyword search, semantic embeddings, hybrid ranking, and reranking. Built while working through the Boot.dev retrieval course.
 
-[Visit my repositories](https://github.com/yaqyn)
+[Explore CineSearch on GitHub](https://github.com/yaqyn/cinesearch-rag-engine)
 
 ## Folio — Personal Site & Generator
 
