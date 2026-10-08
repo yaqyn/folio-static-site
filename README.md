@@ -8,7 +8,7 @@ A graphite and charcoal theme, the author’s original black-and-white portrait,
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
-## Projects
+## <img src="readme-assets/project.svg" width="24" height="24" alt=""> Projects
 
 | Project | Purpose |
 | --- | --- |
@@ -21,7 +21,7 @@ A graphite and charcoal theme, the author’s original black-and-white portrait,
 | [TextScope](https://github.com/yaqyn/textscope-text-analyzer) | Text Analyzer |
 | [Folio](https://github.com/yaqyn/folio-static-site) | Personal Site & Generator |
 
-## One-line launch
+## <img src="readme-assets/run.svg" width="24" height="24" alt=""> One-line launch
 
 Requires **Python 3.10+**. No third-party runtime dependencies.
 
@@ -31,7 +31,7 @@ Requires **Python 3.10+**. No third-party runtime dependencies.
 
 Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
 
-## Write and build
+## <img src="readme-assets/build.svg" width="24" height="24" alt=""> Write and build
 
 | Location | Purpose |
 | --- | --- |
@@ -50,7 +50,7 @@ Pages may start with a small frontmatter block:
 description: A useful one-sentence page description.
 layout: page
 ---
-# Folio — Personal Site & Generator
+# Page title
 ```
 
 Supported keys are `description` and `layout`; layouts are `page` and `home`. This is a deliberately small key-value format, not a full YAML parser. The homepage's first three paragraphs are its introduction, actions, and image. Keep that order when editing its content.
@@ -71,7 +71,7 @@ Builds stage assets and pages in a temporary directory before replacing generate
 
 Local links receive the selected base path; external and protocol-relative links retain their destinations. Text and attributes are HTML-escaped, and unsupported link/image schemes are rejected. Every page has a description, canonical URL, social metadata, and selected navigation.
 
-## Verify
+## <img src="readme-assets/verify.svg" width="24" height="24" alt=""> Verify
 
 ```bash
 sh test.sh
