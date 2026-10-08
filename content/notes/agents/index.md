@@ -23,4 +23,4 @@ An edit is a proposal until it has been checked. The final response should disti
 
 The project tests the conversation loop with simulated provider responses. That verifies the local behavior without assuming an external provider is available.
 
-[Explore Workbench](https://github.com/yaqyn/workbench) or [return to the notes](/notes/).
+[Explore Workbench](https://github.com/yaqyn/workbench-ai-agent) or [return to the notes](/notes/).

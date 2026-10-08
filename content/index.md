@@ -13,9 +13,9 @@ I'm **Abdulrahman M. Yaqyn**. I build software, explore systems, and learn by ta
 ## Selected work
 
 - [qvOS](https://github.com/yaqyn/qvOS) A Linux operating-system project, built around the way I use my machine.
-- [Workbench](https://github.com/yaqyn/workbench) A coding agent that can inspect a workspace, edit files, and run Python.
-- [SiteLens](https://github.com/yaqyn/sitelens) An asynchronous crawler that turns linked pages into structured reports.
-- [Orbit](https://github.com/yaqyn/orbit) A keyboard-first arcade game with lives, scoring, and a wireframe ship.
+- [Workbench](https://github.com/yaqyn/workbench-ai-agent) A coding agent that can inspect a workspace, edit files, and run Python.
+- [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) An asynchronous crawler that turns linked pages into structured reports.
+- [Orbit](https://github.com/yaqyn/orbit-asteroids-game) A keyboard-first arcade game with lives, scoring, and a wireframe ship.
 
 ## From the workbench
 
@@ -26,4 +26,4 @@ I'm **Abdulrahman M. Yaqyn**. I build software, explore systems, and learn by ta
 
 > Build something small enough to understand, then improve it until it is useful.
 
-This site follows that approach. The pages start as Markdown, the generator is Python, and the source is open on [GitHub](https://github.com/yaqyn/folio).
+This site follows that approach. The pages start as Markdown, the generator is Python, and the source is open on [GitHub](https://github.com/yaqyn/folio-static-site).

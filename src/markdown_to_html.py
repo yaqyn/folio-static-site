@@ -113,7 +113,7 @@ def generate_page(
     basepath="/",
     *,
     route="/",
-    site_url="https://yaqyn.github.io/folio",
+    site_url="https://yaqyn.github.io/folio-static-site",
 ):
     from html import escape
     from pathlib import Path

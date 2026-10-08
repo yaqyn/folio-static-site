@@ -1,12 +1,12 @@
 ![yaqyn — a cobalt architectural Y junction](static/images/yaqyn-cover.png)
 
-# Folio — yaqyn’s personal site
+# Folio — Personal Site & Generator
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
 A cobalt workshop theme, a custom Y illustration, and content about the actual work: qvOS, Workbench, SiteLens, Orbit, TextScope, and CineSearch. The site includes projects, about, contact, notes, and a custom 404 page.
 
-[Visit the published site](https://yaqyn.github.io/folio/) · [Design context](DESIGN.md)
+[Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
 ## One-line launch
 
@@ -39,7 +39,7 @@ Pages may start with a small frontmatter block:
 description: A useful one-sentence page description.
 layout: page
 ---
-# Page title
+# Folio — Personal Site & Generator
 ```
 
 Supported keys are `description` and `layout`; layouts are `page` and `home`. This is a deliberately small key-value format, not a full YAML parser. The homepage's first three paragraphs are its introduction, actions, and image. Keep that order when editing its content.

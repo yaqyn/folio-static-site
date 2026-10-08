@@ -8,36 +8,36 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Building a site from first principles | yaqyn">
     <meta property="og:description" content="How yaqyn&#x27;s Python static site generator turns Markdown into pages, with a shared template and verified builds.">
-    <meta property="og:url" content="https://yaqyn.github.io/folio/notes/static-sites/">
+    <meta property="og:url" content="https://yaqyn.github.io/folio-static-site/notes/static-sites/">
     <meta property="og:site_name" content="yaqyn">
-    <meta property="og:image" content="https://yaqyn.github.io/folio/images/yaqyn-cover.png">
+    <meta property="og:image" content="https://yaqyn.github.io/folio-static-site/images/yaqyn-cover.png">
     <meta property="og:image:alt" content="A cobalt Y-shaped architectural junction">
     <meta name="twitter:card" content="summary_large_image">
     <title>Building a site from first principles | yaqyn</title>
-    <link rel="canonical" href="https://yaqyn.github.io/folio/notes/static-sites/">
-    <link rel="icon" href="/folio/favicon.svg" type="image/svg+xml">
-    <link href="/folio/index.css" rel="stylesheet">
+    <link rel="canonical" href="https://yaqyn.github.io/folio-static-site/notes/static-sites/">
+    <link rel="icon" href="/folio-static-site/favicon.svg" type="image/svg+xml">
+    <link href="/folio-static-site/index.css" rel="stylesheet">
   </head>
   <body class="page">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-shell">
       <header class="site-header">
-        <a class="wordmark" href="/folio/" aria-label="yaqyn home">yaqyn<span>.</span></a>
-        <nav aria-label="Main navigation"><a href="/folio/">Home</a><a href="/folio/projects/">Projects</a><a href="/folio/notes/" aria-current="location">Notes</a><a href="/folio/about/">About</a></nav>
+        <a class="wordmark" href="/folio-static-site/" aria-label="yaqyn home">yaqyn<span>.</span></a>
+        <nav aria-label="Main navigation"><a href="/folio-static-site/">Home</a><a href="/folio-static-site/projects/">Projects</a><a href="/folio-static-site/notes/" aria-current="location">Notes</a><a href="/folio-static-site/about/">About</a></nav>
         <a class="header-link" href="https://github.com/yaqyn">GitHub <span aria-hidden="true">↗</span></a>
       </header>
       <main id="main" tabindex="-1">
-        <div class="breadcrumbs"><a href="/folio/">yaqyn.</a><span aria-hidden="true"> / </span>Building a site from first principles</div>
+        <div class="breadcrumbs"><a href="/folio-static-site/">yaqyn.</a><span aria-hidden="true"> / </span>Building a site from first principles</div>
         <article class="page-content"><div><h1>Building a site from first principles</h1><p>This site is a small Python program before it is a website. The content lives in Markdown files, and the generator turns those files into ordinary HTML.</p><h2>A page is a tree</h2><p>Inline text becomes a set of typed nodes: text, bold, italics, links, images, and code. Blocks provide the structure around them: paragraphs, headings, lists, quotes, and fenced code.</p><p>Those pieces form a tree of parent and leaf nodes. Rendering the tree produces HTML without a framework or a browser running on the server.</p><pre><code>Markdown → text nodes → HTML nodes → template → static page
-</code></pre><h2>The small boundaries matter</h2><p>Text and attributes need HTML escaping. Links need a supported scheme. A project hosted below a path such as <code>/folio/</code> needs that prefix applied to local routes without changing external links.</p><p>The generator also builds in a temporary directory. A malformed page should fail the build while leaving the last generated site intact.</p><h2>Content stays separate</h2><p>The shared template owns the navigation, metadata, and footer. Markdown owns the page. A small frontmatter block supplies a description and, for the homepage, its layout.</p><pre><code>description: A short description of the page.
+</code></pre><h2>The small boundaries matter</h2><p>Text and attributes need HTML escaping. Links need a supported scheme. A project hosted below a path such as <code>/folio-static-site/</code> needs that prefix applied to local routes without changing external links.</p><p>The generator also builds in a temporary directory. A malformed page should fail the build while leaving the last generated site intact.</p><h2>Content stays separate</h2><p>The shared template owns the navigation, metadata, and footer. Markdown owns the page. A small frontmatter block supplies a description and, for the homepage, its layout.</p><pre><code>description: A short description of the page.
 layout: home
 </code></pre><h2>Try it</h2><p>The launcher builds a local version and serves it on the loopback interface:</p><pre><code>./launch
-</code></pre><p><a href="https://github.com/yaqyn/folio">View the source</a> or <a href="/folio/notes/">return to the notes</a>.</p></div></article>
+</code></pre><p><a href="https://github.com/yaqyn/folio-static-site">View the source</a> or <a href="/folio-static-site/notes/">return to the notes</a>.</p></div></article>
       </main>
       <footer class="site-footer">
-        <a class="wordmark" href="/folio/">yaqyn<span>.</span></a>
+        <a class="wordmark" href="/folio-static-site/">yaqyn<span>.</span></a>
         <p>Abdulrahman M. Yaqyn<br><span>Software. Systems. Learning by building.</span></p>
-        <div><a href="/folio/contact/">Get in touch</a><a href="https://github.com/yaqyn/folio">View source <span aria-hidden="true">↗</span></a></div>
+        <div><a href="/folio-static-site/contact/">Get in touch</a><a href="https://github.com/yaqyn/folio-static-site">View source <span aria-hidden="true">↗</span></a></div>
       </footer>
     </div>
   </body>

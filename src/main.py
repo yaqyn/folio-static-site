@@ -22,7 +22,7 @@ def generate_pages_recursive(
     dest_dir_path,
     basepath="/",
     *,
-    site_url="https://yaqyn.github.io/folio",
+    site_url="https://yaqyn.github.io/folio-static-site",
     _root=None,
 ):
     source_root = Path(_root or dir_path)
@@ -52,7 +52,7 @@ def generate_pages_recursive(
             )
 
 
-def build_site(basepath="/", output=None, site_url="https://yaqyn.github.io/folio"):
+def build_site(basepath="/", output=None, site_url="https://yaqyn.github.io/folio-static-site"):
     basepath = normalize_basepath(basepath)
     output = Path(output or ROOT / "docs").resolve()
     for protected in [
@@ -108,7 +108,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Build yaqyn's Markdown site")
     parser.add_argument("basepath", nargs="?", default="/")
     parser.add_argument("--output", type=Path)
-    parser.add_argument("--site-url", default="https://yaqyn.github.io/folio")
+    parser.add_argument("--site-url", default="https://yaqyn.github.io/folio-static-site")
     args = parser.parse_args(argv)
     if (
         urlsplit(args.site_url).scheme not in {"https", "http"}
