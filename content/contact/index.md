@@ -1,16 +1,19 @@
 ---
-description: Find Abdulrahman M. Yaqyn on GitHub and explore the source behind his projects.
+description: Contact Abdulrahman M. Yaqyn about backend development, AI applications, and business workflow automation.
 ---
 # Get in touch
 
-The best place to find my work is **GitHub**. If a question or bug belongs to a project, open an issue in that repository so the context stays with the code.
+Have a role or project in mind? I'm interested in **backend development, AI applications, and business workflow automation**.
 
-## Find me
+## Email
 
-[github.com/yaqyn](https://github.com/yaqyn)
+[contact@yaqyn.dev](mailto:contact@yaqyn.dev)
 
-## About this site
+## Elsewhere
 
-The source for these pages is public. Content, styles, and the Python generator are all in the same repository.
+- [GitHub — yaqyn](https://github.com/yaqyn).
+- [Boot.dev — learning progress](https://www.boot.dev/u/yaqyn).
 
-[View the site source](https://github.com/yaqyn/folio-static-site) or [browse the projects](/projects/).
+If a question or bug belongs to a project, open an issue in its repository so the context stays with the code.
+
+[Explore the projects](/projects/) or [view the source for this site](https://github.com/yaqyn/folio-static-site).

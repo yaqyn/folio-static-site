@@ -5,11 +5,25 @@ description: Software and systems projects by Abdulrahman M. Yaqyn, from qvOS to
 
 A collection of things I build to learn, solve a problem, or make a tool my own. The source is the best place to see how each one works.
 
-## qvOS
+## HyperQuote — Connected Business Operations
 
-A Linux operating-system project and an ongoing exploration of a personal computing environment.
+Six months of continuous AI-assisted full-stack development: a digital ecosystem connecting customers, sales, internal operations, management, dispatch, and drivers, from a material request to delivery.
 
-[Explore qvOS on GitHub](https://github.com/yaqyn/qvOS)
+- Connected orders, inventory, suppliers, warehousing, fleet, finance, and customer-service workflows.
+- Natural-language ordering and a RAG-based assistant for accessing company information.
+- Customer, operations, and driver experiences around shared data and coordinated handoffs.
+
+**Stack:** Supabase, PostgreSQL, Cloudflare Workers, TypeScript (AI-assisted), Motion, Adobe Aria, and Infisical.
+
+[Explore HyperQuote](https://github.com/yaqyn/HyperQuote), [visit the website](https://www.hyperquote.net), or [open the customer portal](https://portal.hyperquote.net).
+
+## qvOS — Personal Linux Distribution
+
+An ongoing standalone Arch Linux distribution project, starting as a fork of DHH's Omacom. A keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery, adapted around my development, productivity, automation, and AI agent workflows.
+
+**Focus:** Arch Linux, Hyprland, command-line tools, desktop integration, and automation.
+
+[Explore qvOS](https://github.com/yaqyn/qvOS) or [read about its architecture](https://github.com/yaqyn/qvOS/blob/OS/qvcore/README.md)
 
 ## Workbench — AI Coding Agent
 
