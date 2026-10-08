@@ -1,10 +1,10 @@
-![yaqyn — a cobalt architectural Y junction](static/images/yaqyn-cover.png)
+![Folio — yaqyn’s portrait-led charcoal portfolio](readme-assets/site-preview.png)
 
 # Folio — Personal Site & Generator
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-A cobalt workshop theme, a custom Y illustration, and content about the actual work: qvOS, Workbench, SiteLens, Orbit, TextScope, and CineSearch. The site includes projects, about, contact, notes, and a custom 404 page.
+A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). Featured work includes HyperQuote, qvOS, Workbench, and CineSearch. The site includes projects, about, contact, notes, and a custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
@@ -18,14 +18,12 @@ Requires **Python 3.10+**. No third-party runtime dependencies.
 
 Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
 
-![Actual desktop render of the yaqyn homepage](readme-assets/site-preview.png)
-
 ## Write and build
 
 | Location | Purpose |
 | --- | --- |
 | `content/` | Markdown pages and development notes |
-| `static/` | Shared styles, favicon, and custom artwork |
+| `static/` | Shared styles, favicon, and the original author portrait |
 | `template.html` | Navigation, landmarks, metadata, and footer |
 | `src/` | Parser, HTML tree, staged build, and tests |
 | `docs/` | Generated output used by GitHub Pages |

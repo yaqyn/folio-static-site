@@ -1,5 +1,5 @@
 Cover and README visual palette
-Accent: #9cb5ff
-Background: #151b2d
-Surface: #202942
-Text: #eff1f9
+Accent: #deddd9
+Background: #1c1d20
+Surface: #27292c
+Text: #f2f1ed

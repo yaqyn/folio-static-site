@@ -1,10 +1,10 @@
 :root {
-  --background: #151b2d;
-  --surface: #202942;
-  --foreground: #eff1f9;
-  --muted: #a9b3cc;
-  --accent: #9cb5ff;
-  --border: #394662;
+  --background: #1c1d20;
+  --surface: #27292c;
+  --foreground: #f2f1ed;
+  --muted: #b0b2b6;
+  --accent: #deddd9;
+  --border: #45474b;
   --font-display: "Trebuchet MS", Arial, sans-serif;
   --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "DejaVu Sans Mono", monospace;
@@ -12,7 +12,7 @@
   --section-gap: 5rem;
   --radius: 8px;
   color-scheme: dark;
-  scrollbar-color: var(--border) var(--background);
+  scrollbar-color: var(--muted) var(--background);
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
@@ -77,15 +77,16 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); display: bloc
 .site-footer > div { display: flex; gap: 28px; margin-left: auto; font-size: 13px; padding-top: 8px; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--background); }
-::-webkit-scrollbar-thumb { background: var(--border); border: 2px solid var(--background); border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+::-webkit-scrollbar-thumb { background: var(--muted); border: 2px solid var(--background); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--foreground); }
+::-webkit-scrollbar-thumb:active { background: var(--accent); }
 @media (max-width: 800px) {
   .site-shell { padding: 0 24px; }
   .site-header { min-height: 96px; gap: 24px; flex-wrap: wrap; padding: 22px 0; }
   nav { gap: 20px; }
   .header-link { display: none; }
   .home .page-content > div { column-gap: 30px; }
-  .home h1 { font-size: 100px; letter-spacing: -6px; }
+  .home h1 { font-size: clamp(72px, 13vw, 100px); letter-spacing: -.065em; white-space: nowrap; }
   .home .page-content > div > p:first-of-type { font-size: 19px; }
   .home .page-content > div > p:nth-of-type(2) { gap: 16px; flex-wrap: wrap; }
   .site-footer { gap: 24px; flex-wrap: wrap; }
@@ -99,7 +100,7 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); display: bloc
   nav a { font-size: 13px; }
   .home .page-content { margin-top: 50px; }
   .home .page-content > div { display: block; }
-  .home h1 { font-size: 112px; letter-spacing: -7px; }
+  .home h1 { font-size: clamp(72px, 20vw, 112px); letter-spacing: -.065em; }
   .home .page-content > div > p:first-of-type { font-size: 21px; }
   .home .page-content > div > p:nth-of-type(3) { margin-top: 36px; }
   .home .page-content > div > p:nth-of-type(3) img { aspect-ratio: 4 / 5; }

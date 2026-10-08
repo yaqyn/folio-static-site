@@ -3,12 +3,12 @@ version: alpha
 name: yaqyn
 description: A personal workshop for Abdulrahman M. Yaqyn's software, systems, and development notes.
 colors:
-  background: "#151b2d"
-  surface: "#202942"
-  foreground: "#eff1f9"
-  muted: "#a9b3cc"
-  primary: "#9cb5ff"
-  border: "#394662"
+  background: "#1c1d20"
+  surface: "#27292c"
+  foreground: "#f2f1ed"
+  muted: "#b0b2b6"
+  primary: "#deddd9"
+  border: "#45474b"
 typography:
   display:
     fontFamily: "Trebuchet MS, Arial, sans-serif"
@@ -47,9 +47,11 @@ The site's job is to introduce yaqyn and let visitors explore the work and sourc
 English is the current content language; no market-specific claims are made.
 The register is a personal brand/content site, not a dashboard or application.
 
-The creative reference is a quiet cobalt engineering workshop. The lowercase
-wordmark and a sculptural Y junction are the signature. Keep the rest of the site
-calm, readable, and direct. Project descriptions explain actual behavior rather
+The creative reference is a graphite studio built around the user’s black and
+white author portrait. The lowercase wordmark and unchanged portrait are the
+signature. Charcoal backgrounds are deliberately lighter than pure black; layered
+gray surfaces and off-white typography keep the photo’s contrast readable. Keep
+the rest of the site calm, readable, and direct. Project descriptions explain actual behavior rather
 than inventing clients, awards, career history, or availability.
 
 Runtime CSS in `static/index.css` is canonical (mapping model B). This document
@@ -81,12 +83,13 @@ not elevated cards. Article text stays within 760px.
 The header and footer are shared in `template.html`. Navigation wraps naturally,
 without a JavaScript menu. The first keyboard target is Skip to content. Article
 breadcrumbs and selected navigation retain orientation. Hero image aspect ratio
-reserves space before loading. No forms, async controls, or loading states exist.
+reserves space before loading at a 4:5 ratio on desktop and mobile. The
+portrait file is copied unchanged from the user’s supplied author photograph. No forms, async controls, or loading states exist.
 
 ## Elevation & Depth
 
 No shadows, gradients, glass panels, or animated backgrounds. Depth belongs to
-the architectural artwork. UI hierarchy uses type, spacing, and borders.
+the photographic lighting in the portrait. UI hierarchy uses type, spacing, and borders.
 
 ## Shapes
 
@@ -98,7 +101,7 @@ dividers, and open project rows retain simple geometry. Focus is always visible.
 `template.html` owns the header, navigation, skip link, metadata, main landmark,
 and footer. `generate_page` owns active navigation and route metadata. The home
 layout uses the first three Markdown paragraphs for introduction, actions, and
-artwork; maintain that order. All other pages use the shared article layout.
+portrait; maintain that order. All other pages use the shared article layout.
 
 Links have underline/hover feedback and a 3px focus outline. The homepage primary
 link uses accent fill with dark text. No control is represented by an empty hash
@@ -116,3 +119,6 @@ keyboard-visible navigation; test those contracts whenever the template changes.
 - Keep links useful, focus visible, and narrow layouts free of horizontal overflow.
 - Do not restore fantasy artwork or generic placeholder phone numbers.
 - Do not add external fonts, trackers, or unnecessary JavaScript to this site.
+
+The biography, skills, credentials, contact details, and major-project descriptions
+come from the user-maintained [GitHub profile README](https://github.com/yaqyn/yaqyn/blob/main/README.md), reviewed for this redesign. Do not invent additional personal claims.
