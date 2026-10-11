@@ -61,6 +61,14 @@ A command-line coding agent using OpenRouter. It can inspect a project, edit fil
 
 [Explore Workbench on GitHub](https://github.com/yaqyn/workbench-ai-agent)
 
+### CineSearch — Movie RAG Engine
+
+![CineSearch — Movie RAG Engine](/images/projects/cinesearch-cover.png)
+
+A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset. Built while working through the Boot.dev retrieval course.
+
+[Explore CineSearch on GitHub](https://github.com/yaqyn/cinesearch-rag-engine)
+
 ### SiteLens — Web Crawler
 
 ![SiteLens — Web Crawler](/images/projects/sitelens-cover.png)
@@ -84,14 +92,6 @@ A Pygame arcade game. Pilot a wireframe ship, split incoming rocks, and survive 
 A dependency-free text-analysis tool that counts words and letters, ranks vocabulary, compares books, and exports JSON or CSV reports.
 
 [Explore TextScope on GitHub](https://github.com/yaqyn/textscope-text-analyzer)
-
-### CineSearch — Movie RAG Engine
-
-![CineSearch — Movie RAG Engine](/images/projects/cinesearch-cover.png)
-
-A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset. Built while working through the Boot.dev retrieval course.
-
-[Explore CineSearch on GitHub](https://github.com/yaqyn/cinesearch-rag-engine)
 
 ### Folio — Personal Site & Generator
 
