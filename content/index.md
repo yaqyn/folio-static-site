@@ -4,7 +4,7 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 ---
 # yaqyn.
 
-I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**, focused on backend systems, AI applications, and Linux tools. The work here spans HyperQuote’s business software, qvOS, and Go and Python projects developed through Boot.dev.
+**Backend systems, AI applications, and Linux tools—with attention to the workflows behind them.** Based in **6th of October City, Egypt**, my work spans HyperQuote’s business software, qvOS, and Go and Python projects developed through Boot.dev.
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
