@@ -3,11 +3,11 @@ description: Abdulrahman M. Yaqyn — backend developer in 6th of October City, 
 ---
 # About
 
-I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. My career project is HyperQuote, my personal Linux project is qvOS, and my Boot.dev student projects form a separate learning journey.
+I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. I build backend systems, AI applications, and Linux tools. My work includes HyperQuote’s business software, my personal Linux distribution qvOS, and Go and Python projects developed through Boot.dev.
 
 ## A business background, a systems approach
 
-My accounting background shapes how I approach development: understand the operation, follow the data, and build tools that make the work easier. I enjoy turning complex processes into clear interfaces and connected systems.
+My accounting background makes me attentive to how records, responsibilities, and handoffs fit together. I approach software by understanding the work first, then shaping the data and interfaces around it.
 
 ## Career Projects — HyperQuote
 
@@ -17,11 +17,11 @@ The work includes orders, inventory, suppliers, warehousing, fleet, finance, and
 
 ## Personal Projects — qvOS
 
-**qvOS** is my ongoing Arch Linux distribution project. Originally built on Omarchy, I build and adapt it around development, productivity, automation, and AI agent workflows. It brings together a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
+**qvOS** is my ongoing Arch Linux distribution project. It began with Omarchy, and I adapt and extend it for my own development, productivity, automation, and AI agent workflows. The work spans a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
 
 ## Learning Journey Projects — Boot.dev
 
-Threadline, Portlight, Workbench, SiteLens, Orbit, TextScope, CineSearch, and Folio are student projects developed through the Boot.dev curriculum. They document my practice in Go, Python, backend fundamentals, containerization, retrieval, and software design, including extensions made as I learn.
+My Go and Python projects began in the Boot.dev curriculum and grew through independent extensions. They cover APIs, containerized services, retrieval, asynchronous crawling, and developer tools. I document the behavior and limitations alongside the code.
 
 [Explore the learning journey projects](/projects/).
 
@@ -35,11 +35,11 @@ Threadline, Portlight, Workbench, SiteLens, Orbit, TextScope, CineSearch, and Fo
 
 ## How I work with AI
 
-I use **Claude Code and Codex** throughout development for implementation, debugging, and code review. My workflow combines detailed prompts, iterative review, and human decision-making. I focus on understanding the requirements, evaluating the generated work, and checking how the pieces behave together.
+I use **Claude Code and Codex** for implementation, debugging, and code review. I define the requirements, review changes, and check behavior through tests and direct use. The tools help me explore and build; the decisions and responsibility for the work remain mine.
 
 ## Learning
 
-I'm strengthening my backend foundations through **Boot.dev and IBM**, studying **Go, JavaScript, and TypeScript**, and expanding into **AWS and cloud engineering**. My current learning includes frontend development with **Scrimba**, full-stack development with **Meta and Scrimba**, and AI engineering with **IBM and Scrimba**.
+My current study covers backend development through **Boot.dev and IBM**, **Go, JavaScript, and TypeScript**, and **AWS and cloud engineering**. I also study frontend development with **Scrimba**, full-stack development with **Meta and Scrimba**, and AI engineering with **IBM and Scrimba**.
 
 [View my Boot.dev learning progress](https://www.boot.dev/u/yaqyn).
 

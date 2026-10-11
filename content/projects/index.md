@@ -3,7 +3,7 @@ description: Software and systems projects by Abdulrahman M. Yaqyn, from qvOS to
 ---
 # Projects
 
-My work has three distinct parts: career projects, personal projects, and student projects documenting my learning journey. Each project links to its source.
+Business software, a personal Linux distribution, and Go and Python projects. Each entry describes what the system does and links to the source, where you can examine the implementation and run it yourself.
 
 ## Career Projects
 
@@ -27,7 +27,7 @@ A building-materials procurement platform connecting customers, sales, internal 
 
 ### qvOS — Personal Linux Distribution
 
-An ongoing standalone Arch Linux distribution project, originally built on Omarchy. A keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery, adapted around my development, productivity, automation, and AI agent workflows.
+My ongoing Arch Linux distribution project, originally built on Omarchy. I adapt its keyboard-first Hyprland desktop, native tools, installation, updates, and recovery around the development workflows I use every day.
 
 **Focus:** Arch Linux, Hyprland, command-line tools, desktop integration, and automation.
 
@@ -35,7 +35,7 @@ An ongoing standalone Arch Linux distribution project, originally built on Omarc
 
 ## Learning Journey Projects
 
-**Student projects developed through the Boot.dev curriculum and extended through hands-on practice.**
+**Projects developed through the Boot.dev curriculum and extended through independent work.**
 
 ### Threadline — Social Publishing API
 
@@ -65,7 +65,7 @@ A command-line coding agent using OpenRouter. It can inspect a project, edit fil
 
 ![CineSearch — Movie RAG Engine](/images/projects/cinesearch-cover.png)
 
-A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset. Built while working through the Boot.dev retrieval course.
+A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset.
 
 [Explore CineSearch on GitHub](https://github.com/yaqyn/cinesearch-rag-engine)
 
@@ -73,7 +73,7 @@ A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk re
 
 ![SiteLens — Web Crawler](/images/projects/sitelens-cover.png)
 
-An asynchronous website crawler with a fixed worker pool, robots.txt checks, request limits, and structured JSON reports. A practical exercise in concurrency and handling failures without losing the whole run.
+An asynchronous website crawler with a fixed worker pool, robots.txt checks, request limits, and structured JSON reports. It handles crawl failures without losing the whole run.
 
 [Explore SiteLens on GitHub](https://github.com/yaqyn/sitelens-web-crawler)
 

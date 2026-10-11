@@ -3,7 +3,7 @@ description: Contact Abdulrahman M. Yaqyn about backend development, AI applicat
 ---
 # Get in touch
 
-Have a role or project in mind? I'm interested in **backend development, AI applications, and business workflow automation**.
+For a role or project involving **backend development, AI applications, or business workflow automation**, email me with a little context about the work and what you need.
 
 ## Email
 

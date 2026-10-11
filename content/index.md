@@ -4,7 +4,7 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 ---
 # yaqyn.
 
-I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. My work spans HyperQuote’s business software, qvOS as a personal Linux project, and a learning journey through Go, Python, and backend development.
+I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. I build backend systems, AI applications, and Linux tools. My work includes HyperQuote’s business software, my personal Linux distribution qvOS, and Go and Python projects developed through Boot.dev.
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
@@ -20,7 +20,7 @@ I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt*
 
 ## Learning Journey Projects
 
-Student projects built through Boot.dev, with further hands-on practice and extensions.
+Projects developed through Boot.dev and extended through independent work. The focus is on how each system behaves, from authentication and shutdown to retrieval and tool boundaries.
 
 - [Threadline — Social Publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
 - [Portlight — HTTP Server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
@@ -38,6 +38,6 @@ Student projects built through Boot.dev, with further hands-on practice and exte
 
 ## From the workflow to the system
 
-My accounting background shapes how I approach development: understand the operation, follow the data, and build tools that make the work easier. I enjoy turning complex processes into clear interfaces and connected systems.
+My accounting background makes me attentive to how records, responsibilities, and handoffs fit together. I approach software by understanding the work first, then shaping the data and interfaces around it.
 
-[More about my background, skills, and learning](/about/) or [browse all projects](/projects/).
+[More about my background and approach](/about/) or [browse all projects](/projects/).

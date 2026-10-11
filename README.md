@@ -3,11 +3,11 @@
 # Folio — Personal Site & Generator
 
 > **Learning Journey Project · Boot.dev**
-> A student project developed through the Boot.dev curriculum and extended through hands-on practice.
+> Built through the Boot.dev curriculum and extended into my personal portfolio.
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). Career Projects (HyperQuote), Personal Projects (qvOS), and Learning Journey Projects (the eight Boot.dev student projects) have separate sections on the homepage and Projects page. The site includes projects, about, contact, notes, and a custom 404 page.
+My portfolio brings together HyperQuote, qvOS, eight Boot.dev projects, and notes on how I build. The site uses a charcoal palette and my original black-and-white portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
@@ -31,7 +31,7 @@ A graphite and charcoal theme, the author’s original black-and-white portrait,
 
 ### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Learning Journey Projects
 
-Student projects developed through the Boot.dev curriculum.
+Projects developed through the Boot.dev curriculum and extended through independent work.
 
 | Project | Purpose |
 | --- | --- |

@@ -131,3 +131,7 @@ Keep these categories in separate sections in the portfolio and profile gallery.
 Career and personal sections on the projects page and in README documentation use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. The homepage uses restrained text-led project sections and the black-and-white author portrait; project covers do not appear there. Learning Journey Projects use their canonical README covers on the projects page. The homepage retains text-led rows; all eight projects appear in both views.
 
 Project-cover images reserve their intrinsic PNG dimensions and load lazily. The homepage portrait keeps eager loading. Reuse the repository artwork without changing its palette or cropping.
+
+## Voice
+
+Write in the first person with clear ownership and specific project behavior. Explain the purpose before the implementation. Keep paragraphs focused and headings descriptive. State course origins once where relevant, and distinguish ongoing study from completed work. Confidence comes from evidence and a point of view; humility comes from honest scope and limitations. Avoid inflated expertise, repeated beginner labels, generic enthusiasm, and claims about adoption or results without evidence.
