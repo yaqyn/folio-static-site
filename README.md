@@ -2,9 +2,6 @@
 
 # Folio — Personal Site & Generator
 
-> **Learning Journey Project · Boot.dev**
-> Built through the Boot.dev curriculum and extended into my personal portfolio.
-
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
 Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
@@ -127,3 +124,6 @@ sh test.sh
 The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
 
 The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
+
+> **Learning Journey Project · Boot.dev**
+> Built through the Boot.dev curriculum and extended into my personal portfolio.
