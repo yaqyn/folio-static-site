@@ -6,6 +6,7 @@ from leafnode import LeafNode
 from parentnode import ParentNode
 from textnode import text_node_to_html_node
 import os
+import struct
 
 
 def _text_to_children(text: str) -> list[HTMLNode]:
@@ -123,7 +124,24 @@ def generate_page(
     print(f"Generating {route}")
     metadata, markdown = parse_frontmatter(Path(from_path).read_text(encoding="utf-8"))
     template = Path(template_path).read_text(encoding="utf-8")
-    html = markdown_to_html_node(markdown).to_html()
+    content_node = markdown_to_html_node(markdown)
+    # Reserve cover geometry and defer artwork below the fold; the hero stays eager.
+    for block in content_node.children:
+        for node in block.children or []:
+            if node.tag == "img" and node.props["src"].startswith("/images/projects/"):
+                static = Path(__file__).resolve().parent.parent / "static"
+                image = (static / node.props["src"].lstrip("/")).resolve()
+                if not image.is_relative_to(static / "images" / "projects"):
+                    raise ValueError("Project cover path must stay inside its asset directory")
+                with image.open("rb") as cover:
+                    header = cover.read(24)
+                if header[:8] != b"\x89PNG\r\n\x1a\n":
+                    raise ValueError("Project covers must be PNG images")
+                width, height = struct.unpack(">II", header[16:24])
+                node.props.update(
+                    width=str(width), height=str(height), loading="lazy", decoding="async"
+                )
+    html = content_node.to_html()
     title = extract_title(markdown)
     description = metadata.get(
         "description", f"{title} — projects and notes by Abdulrahman M. Yaqyn."

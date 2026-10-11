@@ -117,4 +117,4 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); display: bloc
 }
 
 /* Project covers retain their own branding within the charcoal portfolio. */
-.page-content img[src*="-cover.gif"] { width: 100%; max-width: 760px; margin-inline: auto; border: 1px solid var(--border); }
+.page-content img[src*="-cover."] { width: 100%; max-width: 760px; margin-inline: auto; border: 1px solid var(--border); }

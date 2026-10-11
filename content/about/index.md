@@ -11,26 +11,26 @@ My accounting background shapes how I approach development: understand the opera
 
 ## Career Projects — HyperQuote
 
-**HyperQuote** represents six months of continuous AI-assisted full-stack development. It connects customers, sales, internal operations, management, dispatch, and drivers, from a material request to its delivery.
+**HyperQuote** is a building-materials procurement platform. It connects customers, sales, internal operations, management, dispatch, and drivers, from a material request to its delivery.
 
 The work includes orders, inventory, suppliers, warehousing, fleet, finance, and customer-service workflows; natural-language ordering and a RAG-based company-information assistant; and customer, operations, and driver experiences around shared data.
 
 ## Personal Projects — qvOS
 
-**qvOS** is my ongoing Arch Linux distribution project. Starting as a fork of DHH's Omacom, I build and adapt it around development, productivity, automation, and AI agent workflows. It brings together a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
+**qvOS** is my ongoing Arch Linux distribution project. Originally built on Omarchy, I build and adapt it around development, productivity, automation, and AI agent workflows. It brings together a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
 
 ## Learning Journey Projects — Boot.dev
 
-Workbench, SiteLens, Orbit, TextScope, CineSearch, and Folio are student projects developed through the Boot.dev curriculum. They document my practice in Python, backend fundamentals, retrieval, and software design, including extensions made as I learn.
+Threadline, Portlight, Workbench, SiteLens, Orbit, TextScope, CineSearch, and Folio are student projects developed through the Boot.dev curriculum. They document my practice in Go, Python, backend fundamentals, containerization, retrieval, and software design, including extensions made as I learn.
 
 [Explore the learning journey projects](/projects/).
 
 ## Skills and tools
 
-- **Programming:** Python, SQL, object-oriented and functional programming, data structures, and algorithms.
+- **Programming:** Go, Python, SQL, object-oriented and functional programming, data structures, and algorithms.
 - **Backend and data:** APIs and HTTP, database development, PostgreSQL, Supabase, Pandas, Polars, data analysis, and visualization.
 - **AI and automation:** LLM applications, RAG, AI agents, agentic workflows, prompt engineering, web scraping, and workflow automation.
-- **Development:** Git, Linux, command-line tools, debugging, and AI-assisted software development.
+- **Development:** Git, Linux, Docker, Docker Compose, command-line tools, debugging, and AI-assisted software development.
 - **Business and design:** AI strategy and adoption, Adobe graphic design, and Google Workspace.
 
 ## How I work with AI

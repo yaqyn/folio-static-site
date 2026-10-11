@@ -4,7 +4,7 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 ---
 # yaqyn.
 
-I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. My work spans HyperQuote’s business software, qvOS as a personal Linux project, and a learning journey through Python and backend development.
+I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt**. My work spans HyperQuote’s business software, qvOS as a personal Linux project, and a learning journey through Go, Python, and backend development.
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
@@ -22,6 +22,8 @@ I'm **Abdulrahman M. Yaqyn**, a developer based in **6th of October City, Egypt*
 
 Student projects built through Boot.dev, with further hands-on practice and extensions.
 
+- [Threadline — Social Publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
+- [Portlight — HTTP Server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
 - [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) Workspace-scoped coding agents and tool boundaries.
 - [CineSearch — Movie RAG Engine](https://github.com/yaqyn/cinesearch-rag-engine) BM25, semantic retrieval, hybrid ranking, and grounded generation.
 - [SiteLens — Web Crawler](https://github.com/yaqyn/sitelens-web-crawler) HTTP, asynchronous crawling, and structured reports.

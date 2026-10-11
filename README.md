@@ -2,18 +2,18 @@
 
 # Folio — Personal Site & Generator
 
-> **Learning Journey Projects · Boot.dev**
+> **Learning Journey Project · Boot.dev**
 > A student project developed through the Boot.dev curriculum and extended through hands-on practice.
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). Career Projects (HyperQuote), Personal Projects (qvOS), and Learning Journey Projects (the six Boot.dev student projects) have separate sections on the homepage and Projects page. The site includes projects, about, contact, notes, and a custom 404 page.
+A graphite and charcoal theme, the author’s original black-and-white portrait, and personal content drawn from the [GitHub profile README](https://github.com/yaqyn/yaqyn). Career Projects (HyperQuote), Personal Projects (qvOS), and Learning Journey Projects (the eight Boot.dev student projects) have separate sections on the homepage and Projects page. The site includes projects, about, contact, notes, and a custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
 ## <img src="readme-assets/project.svg" width="24" height="24" alt=""> Projects
 
-### Career Projects
+### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Career Projects
 
 ![HyperQuote — Build the Future, Faster.](static/images/hyperquote-cover.gif)
 
@@ -21,7 +21,7 @@ A graphite and charcoal theme, the author’s original black-and-white portrait,
 | --- | --- |
 | [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected Business Operations |
 
-### Personal Projects
+### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Personal Projects
 
 ![qvOS — Personal Linux Distribution](static/images/qvos-cover.gif)
 
@@ -29,12 +29,14 @@ A graphite and charcoal theme, the author’s original black-and-white portrait,
 | --- | --- |
 | [qvOS](https://github.com/yaqyn/qvOS) | Personal Linux Distribution |
 
-### Learning Journey Projects
+### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Learning Journey Projects
 
 Student projects developed through the Boot.dev curriculum.
 
 | Project | Purpose |
 | --- | --- |
+| [Threadline](https://github.com/yaqyn/threadline-social-api) | Social Publishing API |
+| [Portlight](https://github.com/yaqyn/portlight-http-server) | Containerized HTTP Server |
 | [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |
 | [CineSearch](https://github.com/yaqyn/cinesearch-rag-engine) | Movie RAG Engine |
 | [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) | Web Crawler |
