@@ -13,22 +13,26 @@ Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development
 
 [Run the portfolio](#-quick-start)
 
-## <img src="readme-assets/icons/launch.svg" width="24" height="24" alt=""> Quick start
-
-Requires **Python 3.10+**. No third-party runtime dependencies.
-
-```bash
-./launch
-```
-
-Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
-
 ## <img src="readme-assets/icons/features.svg" width="24" height="24" alt=""> Features
 
 - Turn Markdown into linked static pages with a shared template.
 - Explore career, personal, and learning projects with source links.
 - Read development notes and navigate the site without JavaScript.
 - Build pages in a temporary stage before replacing published output.
+
+## <img src="readme-assets/icons/installation.svg" width="24" height="24" alt=""> Installation
+
+Requires **Python 3.10+**. No third-party runtime dependencies.
+
+Run the commands below from the project checkout.
+
+## <img src="readme-assets/icons/launch.svg" width="24" height="24" alt=""> Quick start
+
+```bash
+./launch
+```
+
+Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
 
 ## <img src="readme-assets/icons/usage.svg" width="24" height="24" alt=""> Usage and build
 
@@ -70,24 +74,6 @@ Builds stage assets and pages in a temporary directory before replacing generate
 
 Local links receive the selected base path; external and protocol-relative links retain their destinations. Text and attributes are HTML-escaped, and unsupported link/image schemes are rejected. Every page has a description, canonical URL, social metadata, and selected navigation.
 
-## <img src="readme-assets/icons/architecture.svg" width="24" height="24" alt=""> Architecture
-
-The parser builds text nodes, converts them into an HTML tree, and renders pages through a shared template. The build stages pages and static assets before replacing the output directory.
-
-![Markdown-to-page workflow](readme-assets/workflow.svg)
-
-[Read the implementation notes](content/notes/static-sites/index.md).
-
-## <img src="readme-assets/icons/verification.svg" width="24" height="24" alt=""> Verification
-
-```bash
-sh test.sh
-```
-
-The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
-
-The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
-
 ## <img src="readme-assets/icons/projects.svg" width="24" height="24" alt=""> Projects
 
 ### <img src="readme-assets/icons/career.svg" width="20" height="20" alt=""> Career projects
@@ -124,3 +110,20 @@ Projects developed through the Boot.dev curriculum and extended through independ
 ---
 
 Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)**.
+## <img src="readme-assets/icons/architecture.svg" width="24" height="24" alt=""> Architecture
+
+The parser builds text nodes, converts them into an HTML tree, and renders pages through a shared template. The build stages pages and static assets before replacing the output directory.
+
+![Markdown-to-page workflow](readme-assets/workflow.svg)
+
+[Read the implementation notes](content/notes/static-sites/index.md).
+
+## <img src="readme-assets/icons/verification.svg" width="24" height="24" alt=""> Verification
+
+```bash
+sh test.sh
+```
+
+The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
+
+The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
