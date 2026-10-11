@@ -3,7 +3,7 @@ description: Software and systems projects by Abdulrahman M. Yaqyn, from qvOS to
 ---
 # Projects
 
-Business software, a personal Linux distribution, and Go and Python projects. Each entry describes what the system does and links to the source, where you can examine the implementation and run it yourself.
+Business software, a personal Linux distribution, and Go and Python projects. Each entry describes what the system does and links to its source, setup instructions, and current limitations.
 
 ## Career Projects
 
@@ -19,6 +19,8 @@ A building-materials procurement platform connecting customers, sales, internal 
 
 **Stack:** TypeScript, React, TanStack Start, Supabase, PostgreSQL, Cloudflare Workers, and Infisical.
 
+The public showcase uses fictional data and shared demonstration accounts.
+
 [Explore HyperQuote](https://github.com/yaqyn/HyperQuote), [visit the website](https://www.hyperquote.net), or [open the customer portal](https://portal.hyperquote.net).
 
 ## Personal Projects
@@ -28,6 +30,8 @@ A building-materials procurement platform connecting customers, sales, internal 
 ### qvOS — Personal Linux Distribution
 
 An ongoing Arch Linux distribution project, originally built on Omarchy. Its keyboard-first Hyprland desktop, native tools, installation, updates, and recovery support my everyday development workflows.
+
+Public ISO downloads are not available yet; the repository documents source builds and release checks.
 
 **Focus:** Arch Linux, Hyprland, command-line tools, desktop integration, and automation.
 
@@ -57,7 +61,7 @@ A small Go HTTP service packaged in a minimal non-root Docker image. Validated s
 
 ![Workbench — AI Coding Agent](/images/projects/workbench-cover.png)
 
-A command-line coding agent using OpenRouter. It can inspect a project, edit files, and run Python through workspace-scoped tools. Read-only mode, bounded runs, and saved transcripts make its behavior easier to examine.
+A command-line coding agent using OpenRouter. It can inspect a project, edit files, and run Python through workspace-scoped tools. Read-only mode, bounded runs, and saved transcripts make its behavior easier to examine. Python execution runs on the host; workspace file checks are not an operating-system sandbox.
 
 [Explore Workbench on GitHub](https://github.com/yaqyn/workbench-ai-agent)
 
@@ -65,7 +69,7 @@ A command-line coding agent using OpenRouter. It can inspect a project, edit fil
 
 ![CineSearch — Movie RAG Engine](/images/projects/cinesearch-cover.png)
 
-A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset.
+A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset. Keyword and semantic search run locally; LLM-powered commands use OpenRouter and require your own API key.
 
 [Explore CineSearch on GitHub](https://github.com/yaqyn/cinesearch-rag-engine)
 

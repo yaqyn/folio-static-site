@@ -124,8 +124,8 @@ The biography, skills, credentials, contact details, and major-project descripti
 come from the user-maintained [GitHub profile README](https://github.com/yaqyn/yaqyn/blob/main/README.md), reviewed for this redesign. Do not invent additional personal claims.
 
 Project branding uses three explicit categories: Career Projects (HyperQuote),
-Personal Projects (qvOS), and Learning Journey Projects (Threadline, Portlight, Workbench, SiteLens,
-Orbit, TextScope, CineSearch, and Folio). The Boot.dev projects are student work.
+Personal Projects (qvOS), and Learning Journey Projects (Threadline, Portlight, Workbench, CineSearch,
+SiteLens, Orbit, TextScope, and Folio). The Boot.dev projects are student work.
 Keep these categories in separate sections in the portfolio and profile gallery.
 
 Career and personal sections on the projects page and in README documentation use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. The homepage uses restrained text-led project sections and the black-and-white author portrait; project covers do not appear there. Learning Journey Projects use their canonical README covers on the projects page. The homepage retains text-led rows; all eight projects appear in both views.

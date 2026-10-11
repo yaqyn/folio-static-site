@@ -3,7 +3,7 @@ description: Abdulrahman M. Yaqyn — backend developer in 6th of October City, 
 ---
 # About
 
-**Backend systems, AI applications, and Linux tools—with attention to the workflows behind them.** Based in **6th of October City, Egypt**, my work spans HyperQuote’s business software, qvOS, and Go and Python projects developed through Boot.dev.
+**Abdulrahman M. Yaqyn — software and systems.** Based in **6th of October City, Egypt**, with an accounting background and projects across business operations, AI applications, and Linux.
 
 ## A business background, a systems approach
 
@@ -17,7 +17,7 @@ The work includes orders, inventory, suppliers, warehousing, fleet, finance, and
 
 ## Personal Projects — qvOS
 
-**qvOS** is my ongoing Arch Linux distribution project. Built on Omarchy, it continues to evolve around development, productivity, automation, and AI agent workflows. The work spans a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
+**qvOS** is my ongoing Arch Linux distribution project. It began with Omarchy and continues to evolve around development, productivity, automation, and AI agent workflows. The work spans a keyboard-first Hyprland desktop, native system tools, installation, updates, and recovery.
 
 ## Learning Journey Projects — Boot.dev
 

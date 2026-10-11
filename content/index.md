@@ -4,7 +4,7 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 ---
 # yaqyn.
 
-**Backend systems, AI applications, and Linux tools—with attention to the workflows behind them.** Based in **6th of October City, Egypt**, my work spans HyperQuote’s business software, qvOS, and Go and Python projects developed through Boot.dev.
+**Backend systems, AI applications, and Linux tools built around real workflows.** Based in **6th of October City, Egypt**, the work spans HyperQuote’s business software, qvOS, and Go and Python projects developed through Boot.dev.
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
@@ -16,7 +16,7 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 
 ## Personal Projects
 
-- [qvOS — Personal Linux Distribution](https://github.com/yaqyn/qvOS) An Arch Linux distribution built around a keyboard-first Hyprland desktop, native tools, installation, updates, and recovery.
+- [qvOS — Personal Linux Distribution](https://github.com/yaqyn/qvOS) An ongoing Arch Linux distribution project built around a keyboard-first Hyprland desktop, native tools, installation, updates, and recovery.
 
 ## Learning Journey Projects
 
@@ -24,7 +24,7 @@ Projects developed through Boot.dev and extended through independent work. The f
 
 - [Threadline — Social Publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
 - [Portlight — HTTP Server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
-- [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) Workspace-scoped coding agents and tool boundaries.
+- [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) Workspace-scoped coding agent with read-only tools and explicit execution limits.
 - [CineSearch — Movie RAG Engine](https://github.com/yaqyn/cinesearch-rag-engine) BM25, semantic retrieval, hybrid ranking, and grounded generation.
 - [SiteLens — Web Crawler](https://github.com/yaqyn/sitelens-web-crawler) HTTP, asynchronous crawling, and structured reports.
 - [Orbit — Asteroids Game](https://github.com/yaqyn/orbit-asteroids-game) Game logic and object-oriented programming.

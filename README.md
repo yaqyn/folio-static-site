@@ -6,9 +6,7 @@
 
 Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
 
-[Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
-
-[Run the portfolio](#-quick-start)
+[Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Run locally](#-quick-start) · [Design context](DESIGN.md)
 
 ## <img src="readme-assets/icons/features.svg" width="24" height="24" alt=""> Features
 
@@ -21,7 +19,7 @@ Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development
 
 Requires **Python 3.10+**. No third-party runtime dependencies.
 
-Run the commands below from the project checkout.
+Clone with `git clone https://github.com/yaqyn/folio-static-site.git`, then run the commands below from `folio-static-site/`.
 
 ## <img src="readme-assets/icons/launch.svg" width="24" height="24" alt=""> Quick start
 
@@ -31,7 +29,7 @@ Run the commands below from the project checkout.
 
 Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
 
-## <img src="readme-assets/icons/usage.svg" width="24" height="24" alt=""> Usage and build
+## <img src="readme-assets/icons/usage.svg" width="24" height="24" alt=""> Usage
 
 | Location | Purpose |
 | --- | --- |
@@ -91,7 +89,7 @@ Local links receive the selected base path; external and protocol-relative links
 
 ### <img src="readme-assets/icons/learning.svg" width="20" height="20" alt=""> Learning journey projects
 
-Projects developed through the Boot.dev curriculum and extended through independent work.
+Eight Go and Python projects exploring APIs, services, retrieval, tools, games, and static publishing.
 
 | Project | Purpose |
 | --- | --- |
@@ -104,9 +102,6 @@ Projects developed through the Boot.dev curriculum and extended through independ
 | [TextScope](https://github.com/yaqyn/textscope-text-analyzer) | Text Analyzer |
 | [Folio](https://github.com/yaqyn/folio-static-site) | Personal Site & Generator |
 
----
-
-Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)**.
 ## <img src="readme-assets/icons/architecture.svg" width="24" height="24" alt=""> Architecture
 
 The parser builds text nodes, converts them into an HTML tree, and renders pages through a shared template. The build stages pages and static assets before replacing the output directory.
@@ -124,6 +119,10 @@ sh test.sh
 The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
 
 The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
+
+---
+
+Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)**.
 
 > **Learning Journey Project · Boot.dev**
 > Built through the Boot.dev curriculum and extended into my personal portfolio.

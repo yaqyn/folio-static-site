@@ -32,10 +32,12 @@ layout: home
 
 ## Try it
 
-The launcher builds a local version and serves it on the loopback interface:
+From the project checkout, with Python 3.10 or newer, the launcher builds a local version and serves it on the loopback interface:
 
 ```
 ./launch
 ```
+
+Open **http://127.0.0.1:8888** and stop the server with **Ctrl+C**.
 
 [View the source](https://github.com/yaqyn/folio-static-site) or [return to the notes](/notes/).
