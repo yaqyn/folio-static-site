@@ -11,40 +11,9 @@ Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
-## <img src="readme-assets/project.svg" width="24" height="24" alt=""> Projects
+[Run the portfolio](#quick-start)
 
-### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Career Projects
-
-![HyperQuote — Build the Future, Faster.](static/images/hyperquote-cover.gif)
-
-| Project | Purpose |
-| --- | --- |
-| [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected Business Operations |
-
-### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Personal Projects
-
-![qvOS — Personal Linux Distribution](static/images/qvos-cover.gif)
-
-| Project | Purpose |
-| --- | --- |
-| [qvOS](https://github.com/yaqyn/qvOS) | Personal Linux Distribution |
-
-### <img src="readme-assets/project.svg" width="20" height="20" alt=""> Learning Journey Projects
-
-Projects developed through the Boot.dev curriculum and extended through independent work.
-
-| Project | Purpose |
-| --- | --- |
-| [Threadline](https://github.com/yaqyn/threadline-social-api) | Social Publishing API |
-| [Portlight](https://github.com/yaqyn/portlight-http-server) | Containerized HTTP Server |
-| [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |
-| [CineSearch](https://github.com/yaqyn/cinesearch-rag-engine) | Movie RAG Engine |
-| [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) | Web Crawler |
-| [Orbit](https://github.com/yaqyn/orbit-asteroids-game) | Asteroids Game |
-| [TextScope](https://github.com/yaqyn/textscope-text-analyzer) | Text Analyzer |
-| [Folio](https://github.com/yaqyn/folio-static-site) | Personal Site & Generator |
-
-## <img src="readme-assets/run.svg" width="24" height="24" alt=""> One-line launch
+## <img src="readme-assets/icons/launch.svg" width="24" height="24" alt=""> Quick start
 
 Requires **Python 3.10+**. No third-party runtime dependencies.
 
@@ -54,7 +23,14 @@ Requires **Python 3.10+**. No third-party runtime dependencies.
 
 Open **http://127.0.0.1:8888**. The launcher builds a local version and serves it on the loopback interface. Stop with **Ctrl+C**. Use `./launch 8891` for another port. It works from any directory when invoked by absolute path; `sh main.sh` remains an alias.
 
-## <img src="readme-assets/build.svg" width="24" height="24" alt=""> Write and build
+## <img src="readme-assets/icons/features.svg" width="24" height="24" alt=""> Features
+
+- Turn Markdown into linked static pages with a shared template.
+- Explore career, personal, and learning projects with source links.
+- Read development notes and navigate the site without JavaScript.
+- Build pages in a temporary stage before replacing published output.
+
+## <img src="readme-assets/icons/usage.svg" width="24" height="24" alt=""> Usage and build
 
 | Location | Purpose |
 | --- | --- |
@@ -94,7 +70,15 @@ Builds stage assets and pages in a temporary directory before replacing generate
 
 Local links receive the selected base path; external and protocol-relative links retain their destinations. Text and attributes are HTML-escaped, and unsupported link/image schemes are rejected. Every page has a description, canonical URL, social metadata, and selected navigation.
 
-## <img src="readme-assets/verify.svg" width="24" height="24" alt=""> Verify
+## <img src="readme-assets/icons/architecture.svg" width="24" height="24" alt=""> Architecture
+
+The parser builds text nodes, converts them into an HTML tree, and renders pages through a shared template. The build stages pages and static assets before replacing the output directory.
+
+![Markdown-to-page workflow](readme-assets/workflow.svg)
+
+[Read the implementation notes](content/notes/static-sites/index.md).
+
+## <img src="readme-assets/icons/verification.svg" width="24" height="24" alt=""> Verification
 
 ```bash
 sh test.sh
@@ -104,6 +88,39 @@ The unittest suite covers parsing, HTML nodes, page generation, frontmatter, esc
 
 The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
 
+## <img src="readme-assets/icons/projects.svg" width="24" height="24" alt=""> Projects
+
+### <img src="readme-assets/icons/career.svg" width="20" height="20" alt=""> Career projects
+
+![HyperQuote — Build the Future, Faster.](static/images/hyperquote-cover.gif)
+
+| Project | Purpose |
+| --- | --- |
+| [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected Business Operations |
+
+### <img src="readme-assets/icons/projects.svg" width="20" height="20" alt=""> Personal projects
+
+![qvOS — Personal Linux Distribution](static/images/qvos-cover.gif)
+
+| Project | Purpose |
+| --- | --- |
+| [qvOS](https://github.com/yaqyn/qvOS) | Personal Linux Distribution |
+
+### <img src="readme-assets/icons/learning.svg" width="20" height="20" alt=""> Learning journey projects
+
+Projects developed through the Boot.dev curriculum and extended through independent work.
+
+| Project | Purpose |
+| --- | --- |
+| [Threadline](https://github.com/yaqyn/threadline-social-api) | Social Publishing API |
+| [Portlight](https://github.com/yaqyn/portlight-http-server) | Containerized HTTP Server |
+| [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |
+| [CineSearch](https://github.com/yaqyn/cinesearch-rag-engine) | Movie RAG Engine |
+| [SiteLens](https://github.com/yaqyn/sitelens-web-crawler) | Web Crawler |
+| [Orbit](https://github.com/yaqyn/orbit-asteroids-game) | Asteroids Game |
+| [TextScope](https://github.com/yaqyn/textscope-text-analyzer) | Text Analyzer |
+| [Folio](https://github.com/yaqyn/folio-static-site) | Personal Site & Generator |
+
 ---
 
-Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)** through the [Boot.dev](https://www.boot.dev) curriculum.
+Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)**.
