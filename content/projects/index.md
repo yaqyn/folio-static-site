@@ -27,7 +27,7 @@ A building-materials procurement platform connecting customers, sales, internal 
 
 ### qvOS — Personal Linux Distribution
 
-My ongoing Arch Linux distribution project, originally built on Omarchy. I adapt its keyboard-first Hyprland desktop, native tools, installation, updates, and recovery around the development workflows I use every day.
+An ongoing Arch Linux distribution project, originally built on Omarchy. Its keyboard-first Hyprland desktop, native tools, installation, updates, and recovery support my everyday development workflows.
 
 **Focus:** Arch Linux, Hyprland, command-line tools, desktop integration, and automation.
 

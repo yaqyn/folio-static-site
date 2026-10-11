@@ -7,7 +7,7 @@
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-My portfolio brings together HyperQuote, qvOS, eight Boot.dev projects, and notes on how I build. The site uses a charcoal palette and my original black-and-white portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
+Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
