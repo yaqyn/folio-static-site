@@ -11,7 +11,7 @@ Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Design context](DESIGN.md)
 
-[Run the portfolio](#quick-start)
+[Run the portfolio](#-quick-start)
 
 ## <img src="readme-assets/icons/launch.svg" width="24" height="24" alt=""> Quick start
 
