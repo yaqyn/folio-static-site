@@ -8,7 +8,7 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
-![Black and white portrait of Abdulrahman M. Yaqyn](/images/yaqyn-portrait.png)
+![Black and white portrait of Abdulrahman M. Yaqyn](/images/yaqyn-portrait.webp)
 
 ## Career Projects
 

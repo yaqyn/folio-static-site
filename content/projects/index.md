@@ -43,7 +43,7 @@ Public ISO downloads are not available yet; the repository documents source buil
 
 ### Threadline — Social Publishing API
 
-![Threadline — Social Publishing API](/images/projects/threadline-cover.png)
+![Threadline — Social Publishing API](/images/projects/threadline-cover.webp)
 
 A Go and PostgreSQL backend for short-form publishing, with Argon2id password hashing, signed access tokens, revocable refresh sessions, author-owned posts, and membership webhooks. OpenAPI documentation and regression tests describe the HTTP contract.
 
@@ -51,7 +51,7 @@ A Go and PostgreSQL backend for short-form publishing, with Argon2id password ha
 
 ### Portlight — HTTP Server
 
-![Portlight — HTTP Server](/images/projects/portlight-cover.png)
+![Portlight — HTTP Server](/images/projects/portlight-cover.webp)
 
 A small Go HTTP service packaged in a minimal non-root Docker image. Validated startup configuration, health probes, JSON request logs, connection timeouts, and graceful shutdown make the operating behavior explicit.
 
@@ -59,7 +59,7 @@ A small Go HTTP service packaged in a minimal non-root Docker image. Validated s
 
 ### Workbench — AI Coding Agent
 
-![Workbench — AI Coding Agent](/images/projects/workbench-cover.png)
+![Workbench — AI Coding Agent](/images/projects/workbench-cover.webp)
 
 A command-line coding agent using OpenRouter. It can inspect a project, edit files, and run Python through workspace-scoped tools. Read-only mode, bounded runs, and saved transcripts make its behavior easier to examine. Python execution runs on the host; workspace file checks are not an operating-system sandbox.
 
@@ -67,7 +67,7 @@ A command-line coding agent using OpenRouter. It can inspect a project, edit fil
 
 ### CineSearch — Movie RAG Engine
 
-![CineSearch — Movie RAG Engine](/images/projects/cinesearch-cover.png)
+![CineSearch — Movie RAG Engine](/images/projects/cinesearch-cover.webp)
 
 A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk retrieval, hybrid ranking, reranking, and grounded generation. Evaluation tools measure retrieval quality against a golden dataset. Keyword and semantic search run locally; LLM-powered commands use OpenRouter and require your own API key.
 
@@ -75,7 +75,7 @@ A movie RAG engine combining BM25 keyword scoring, semantic embeddings, chunk re
 
 ### SiteLens — Web Crawler
 
-![SiteLens — Web Crawler](/images/projects/sitelens-cover.png)
+![SiteLens — Web Crawler](/images/projects/sitelens-cover.webp)
 
 An asynchronous website crawler with a fixed worker pool, robots.txt checks, request limits, and structured JSON reports. It handles crawl failures without losing the whole run.
 
@@ -83,7 +83,7 @@ An asynchronous website crawler with a fixed worker pool, robots.txt checks, req
 
 ### Orbit — Asteroids Game
 
-![Orbit — Asteroids Game](/images/projects/orbit-cover.png)
+![Orbit — Asteroids Game](/images/projects/orbit-cover.webp)
 
 A Pygame arcade game. Pilot a wireframe ship, split incoming rocks, and survive with three lives. It includes pause and restart flows, a saved best score, and reduced-motion options.
 
@@ -91,7 +91,7 @@ A Pygame arcade game. Pilot a wireframe ship, split incoming rocks, and survive 
 
 ### TextScope — Text Analyzer
 
-![TextScope — Text Analyzer](/images/projects/textscope-cover.png)
+![TextScope — Text Analyzer](/images/projects/textscope-cover.webp)
 
 A dependency-free text-analysis tool that counts words and letters, ranks vocabulary, compares books, and exports JSON or CSV reports.
 
@@ -99,7 +99,7 @@ A dependency-free text-analysis tool that counts words and letters, ranks vocabu
 
 ### Folio — Personal Site & Generator
 
-![Folio — Personal Site & Generator](/images/projects/folio-cover.png)
+![Folio — Personal Site & Generator](/images/projects/folio-cover.webp)
 
 A static site generator written in Python. It turns Markdown into a linked website using a shared template and a small HTML-node model.
 

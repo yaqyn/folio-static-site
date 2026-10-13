@@ -119,6 +119,13 @@ class TestSiteReliability(unittest.TestCase):
                         if local.is_dir():
                             local /= "index.html"
                         self.assertTrue(local.exists(), f"{page}: missing {url}")
+            projects = (output / "projects/index.html").read_text()
+            self.assertIn(
+                'src="/folio-static-site/images/projects/threadline-cover.webp" '
+                'alt="Threadline — Social Publishing API" width="2172" height="724" '
+                'loading="lazy" decoding="async"',
+                projects,
+            )
             self.assertTrue((output / ".nojekyll").exists())
             self.assertIn(
                 'aria-current="page">Projects',

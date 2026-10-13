@@ -1,4 +1,4 @@
-![Folio — yaqyn’s portrait-led charcoal portfolio](readme-assets/site-preview.png)
+![Folio — yaqyn’s portrait-led charcoal portfolio](readme-assets/site-preview.webp)
 
 # Folio — Personal Site & Generator
 

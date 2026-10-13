@@ -134,10 +134,21 @@ def generate_page(
                 if not image.is_relative_to(static / "images" / "projects"):
                     raise ValueError("Project cover path must stay inside its asset directory")
                 with image.open("rb") as cover:
-                    header = cover.read(24)
-                if header[:8] != b"\x89PNG\r\n\x1a\n":
-                    raise ValueError("Project covers must be PNG images")
-                width, height = struct.unpack(">II", header[16:24])
+                    header = cover.read(30)
+                if header[:8] == b"\x89PNG\r\n\x1a\n":
+                    width, height = struct.unpack(">II", header[16:24])
+                elif header[:4] == b"RIFF" and header[8:12] == b"WEBP":
+                    if header[12:16] == b"VP8X":
+                        width = 1 + int.from_bytes(header[24:27], "little")
+                        height = 1 + int.from_bytes(header[27:30], "little")
+                    elif header[12:16] == b"VP8L" and header[20] == 0x2F:
+                        dimensions = int.from_bytes(header[21:25], "little")
+                        width = 1 + (dimensions & 0x3FFF)
+                        height = 1 + ((dimensions >> 14) & 0x3FFF)
+                    else:
+                        raise ValueError("Project covers must use lossless WebP")
+                else:
+                    raise ValueError("Project covers must be PNG or lossless WebP images")
                 node.props.update(
                     width=str(width), height=str(height), loading="lazy", decoding="async"
                 )
@@ -169,7 +180,7 @@ def generate_page(
         "Navigation": "".join(navigation),
         "Canonical": escape(site_url.rstrip("/") + route, quote=True),
         "ImageURL": escape(
-            site_url.rstrip("/") + "/images/yaqyn-portrait.png", quote=True
+            site_url.rstrip("/") + "/images/yaqyn-portrait.webp", quote=True
         ),
         "Breadcrumbs": '<a href="/">yaqyn.</a><span aria-hidden="true"> / </span>'
         + escape(title)
