@@ -98,6 +98,8 @@ def parse_frontmatter(markdown):
 
 
 def normalize_basepath(basepath):
+    if any(ord(char) < 32 or ord(char) == 127 for char in basepath):
+        raise ValueError("Base path contains control characters")
     if not basepath.startswith("/") or any(
         part in {".", ".."} for part in basepath.split("/")
     ):

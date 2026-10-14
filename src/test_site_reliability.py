@@ -80,7 +80,7 @@ class TestSiteReliability(unittest.TestCase):
     def test_basepath_normalization(self):
         self.assertEqual(normalize_basepath("/folio-static-site"), "/folio-static-site/")
         self.assertEqual(normalize_basepath("/"), "/")
-        for path in ["relative", "/../", "/a/../b", '/bad"', "/bad?query"]:
+        for path in ["relative", "/../", "/a/../b", '/bad"', "/bad?query", "/bad\npath", "/bad\tpath", "/bad\x7fpath"]:
             with self.subTest(path=path), self.assertRaises(ValueError):
                 normalize_basepath(path)
 
