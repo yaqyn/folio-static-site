@@ -167,6 +167,7 @@ def generate_page(
     for label, target in [
         ("Home", "/"),
         ("Projects", "/projects/"),
+        ("Games", "/games/"),
         ("Notes", "/notes/"),
         ("About", "/about/"),
     ]:

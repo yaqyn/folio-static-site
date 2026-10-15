@@ -129,7 +129,7 @@ Personal Projects (qvOS), and Learning Journey Projects (Readlane, Clibble, Thre
 SiteLens, Orbit, TextScope, and Folio). The Boot.dev projects are student work.
 Keep these categories in separate sections in the portfolio and profile gallery.
 
-Career and personal sections on the projects page and in README documentation use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. The homepage uses restrained text-led project sections and the black-and-white author portrait; project covers do not appear there. Learning Journey Projects use their canonical README covers on the projects page. The homepage retains text-led rows; all ten projects appear in both views.
+Career and personal sections on the projects page and in README documentation use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. The homepage uses restrained text-led project sections and the black-and-white author portrait; project covers do not appear there. Learning Journey Projects use their canonical README covers on the projects page. The homepage retains text-led rows; all ten projects appear on the homepage. Orbit and Clibble have their full entries on the Games page; the Projects page links there. The shared navigation includes Games.
 
 Project-cover images reserve their intrinsic image dimensions and load lazily. The homepage portrait keeps eager loading. Reuse the repository artwork without changing its palette or cropping.
 

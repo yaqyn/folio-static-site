@@ -23,13 +23,13 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 Projects developed through Boot.dev and extended through independent work. The focus is on how each system behaves, from authentication and shutdown to retrieval and tool boundaries.
 
 - [Readlane — Feed Reader](https://github.com/yaqyn/readlane-feed-reader) RSS and Atom collection, PostgreSQL, and keyboard-driven reading.
-- [Clibble — Pokémon CLI](https://github.com/yaqyn/clibble-pokemon-cli) Terminal exploration, PokéAPI, persistent catches, and offline records.
+- [Clibble — Pokémon CLI](/games/) Terminal exploration, PokéAPI, persistent catches, and offline records.
 - [Threadline — Social Publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
 - [Portlight — HTTP Server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
 - [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) Workspace-scoped coding agent with read-only tools and explicit execution limits.
 - [CineSearch — Movie RAG Engine](https://github.com/yaqyn/cinesearch-rag-engine) BM25, semantic retrieval, hybrid ranking, and grounded generation.
 - [SiteLens — Web Crawler](https://github.com/yaqyn/sitelens-web-crawler) HTTP, asynchronous crawling, and structured reports.
-- [Orbit — Asteroids Game](https://github.com/yaqyn/orbit-asteroids-game) Game logic and object-oriented programming.
+- [Orbit — Asteroids Game](/games/) Game logic and object-oriented programming.
 - [TextScope — Text Analyzer](https://github.com/yaqyn/textscope-text-analyzer) Text processing, vocabulary analysis, and exports.
 - [Folio — Personal Site & Generator](https://github.com/yaqyn/folio-static-site) Markdown parsing, HTML generation, and static-site publishing.
 

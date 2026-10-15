@@ -104,7 +104,7 @@ class TestSiteReliability(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()):
             output = build_site("/folio-static-site", Path(directory) / "site")
             pages = list(output.rglob("*.html"))
-            self.assertEqual(len(pages), 8)
+            self.assertEqual(len(pages), 9)
             for page in pages:
                 markup = page.read_text()
                 self.assertNotIn("Tolkien", markup)
@@ -126,6 +126,10 @@ class TestSiteReliability(unittest.TestCase):
                 'loading="lazy" decoding="async"',
                 projects,
             )
+            games = (output / "games/index.html").read_text()
+            self.assertIn('aria-current="page">Games', games)
+            self.assertIn("Orbit — Asteroids Game", games)
+            self.assertIn("Clibble — Pokémon CLI", games)
             self.assertTrue((output / ".nojekyll").exists())
             self.assertIn(
                 'aria-current="page">Projects',

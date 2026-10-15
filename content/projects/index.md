@@ -41,6 +41,8 @@ Public ISO downloads are not available yet; the repository documents source buil
 
 **Projects developed through the Boot.dev curriculum and extended through independent work.**
 
+For Orbit and Clibble, visit [Games](/games/).
+
 ### Readlane — Feed Reader
 
 ![Readlane — Feed Reader](/images/projects/readlane-cover.webp)
@@ -49,13 +51,6 @@ A terminal-first RSS and Atom reader with PostgreSQL-backed collection. Follow s
 
 [Explore Readlane on GitHub](https://github.com/yaqyn/readlane-feed-reader)
 
-### Clibble — Pokémon CLI
-
-![Clibble — Pokémon CLI](/images/projects/clibble-cover.webp)
-
-An arrow-driven Pokémon adventure built in Go. Explore locations through PokéAPI, attempt catches, and save a collection locally. Saved records work offline, commands support scripts, and an optional read-only web companion lets you search catches by name or type. New exploration requires internet access.
-
-[Explore Clibble on GitHub](https://github.com/yaqyn/clibble-pokemon-cli)
 
 ### Threadline — Social Publishing API
 
@@ -97,13 +92,6 @@ An asynchronous website crawler with a fixed worker pool, robots.txt checks, req
 
 [Explore SiteLens on GitHub](https://github.com/yaqyn/sitelens-web-crawler)
 
-### Orbit — Asteroids Game
-
-![Orbit — Asteroids Game](/images/projects/orbit-cover.webp)
-
-A Pygame arcade game. Pilot a wireframe ship, split incoming rocks, and survive with three lives. It includes pause and restart flows, a saved best score, and reduced-motion options.
-
-[Explore Orbit on GitHub](https://github.com/yaqyn/orbit-asteroids-game)
 
 ### TextScope — Text Analyzer
 
