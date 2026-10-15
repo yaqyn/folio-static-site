@@ -4,7 +4,7 @@
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-Folio brings together HyperQuote, qvOS, eight Boot.dev projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
+Folio brings together HyperQuote, qvOS, ten Boot.dev projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, biography, contact page, notes, and custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Run locally](#-quick-start) · [Design context](DESIGN.md)
 
@@ -89,10 +89,12 @@ Local links receive the selected base path; external and protocol-relative links
 
 ### <img src="readme-assets/icons/learning.svg" width="20" height="20" alt=""> Learning journey projects
 
-Eight Go and Python projects exploring APIs, services, retrieval, tools, games, and static publishing.
+Ten Go and Python projects exploring APIs, services, retrieval, tools, games, and static publishing.
 
 | Project | Purpose |
 | --- | --- |
+| [Readlane](https://github.com/yaqyn/readlane-feed-reader) | Terminal-first RSS and Atom Reader |
+| [Clibble](https://github.com/yaqyn/clibble-pokemon-cli) | Terminal Pokémon Adventure |
 | [Threadline](https://github.com/yaqyn/threadline-social-api) | Social Publishing API |
 | [Portlight](https://github.com/yaqyn/portlight-http-server) | Containerized HTTP Server |
 | [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |

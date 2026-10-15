@@ -41,6 +41,22 @@ Public ISO downloads are not available yet; the repository documents source buil
 
 **Projects developed through the Boot.dev curriculum and extended through independent work.**
 
+### Readlane — Feed Reader
+
+![Readlane — Feed Reader](/images/projects/readlane-cover.webp)
+
+A terminal-first RSS and Atom reader with PostgreSQL-backed collection. Follow sources, search collected posts, and read summaries with the keyboard. A single collection worker uses cache validators and persistent retry backoff; an optional read-only web companion displays the same stories. Reader selection assumes a trusted local environment and is not authentication.
+
+[Explore Readlane on GitHub](https://github.com/yaqyn/readlane-feed-reader)
+
+### Clibble — Pokémon CLI
+
+![Clibble — Pokémon CLI](/images/projects/clibble-cover.webp)
+
+An arrow-driven Pokémon adventure built in Go. Explore locations through PokéAPI, attempt catches, and save a collection locally. Saved records work offline, commands support scripts, and an optional read-only web companion lets you search catches by name or type. New exploration requires internet access.
+
+[Explore Clibble on GitHub](https://github.com/yaqyn/clibble-pokemon-cli)
+
 ### Threadline — Social Publishing API
 
 ![Threadline — Social Publishing API](/images/projects/threadline-cover.webp)

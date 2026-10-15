@@ -22,6 +22,8 @@ description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linu
 
 Projects developed through Boot.dev and extended through independent work. The focus is on how each system behaves, from authentication and shutdown to retrieval and tool boundaries.
 
+- [Readlane — Feed Reader](https://github.com/yaqyn/readlane-feed-reader) RSS and Atom collection, PostgreSQL, and keyboard-driven reading.
+- [Clibble — Pokémon CLI](https://github.com/yaqyn/clibble-pokemon-cli) Terminal exploration, PokéAPI, persistent catches, and offline records.
 - [Threadline — Social Publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
 - [Portlight — HTTP Server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
 - [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) Workspace-scoped coding agent with read-only tools and explicit execution limits.
