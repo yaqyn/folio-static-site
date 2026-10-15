@@ -14,6 +14,11 @@ class TestPageGeneration(unittest.TestCase):
         with self.assertRaises(ValueError):
             extract_title("## Only a subheading")
 
+    def test_extract_title_ignores_code_examples(self):
+        self.assertEqual(extract_title("```markdown\n# Example\n```\n\n# Actual title"), "Actual title")
+        with self.assertRaises(ValueError):
+            extract_title("```\n# Not a heading\n```")
+
     def test_generate_page(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

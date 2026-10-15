@@ -72,9 +72,12 @@ def markdown_to_html_node(markdown: str) -> ParentNode:
 
 
 def extract_title(markdown: str) -> str:
-    for line in markdown.split("\n"):
-        if line.startswith("# "):
-            return line[2:].strip()
+    for block in markdown_to_blocks(markdown):
+        if block_to_block_type(block) == BlockType.CODE:
+            continue
+        for line in block.splitlines():
+            if line.startswith("# "):
+                return line[2:].strip()
     raise ValueError("Markdown document has no h1 heading")
 
 
