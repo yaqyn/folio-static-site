@@ -21,6 +21,6 @@ A little wilderness RPG that opens inside your terminal. Choose with arrows and 
 
 Catches and escapes consume saved supplies and tries: twelve seeds, replenishing over time, and three tries per wildling in a thirty-minute window. Restarting or changing trails keeps those limits. Motion can be switched off, and scriptable commands remain available alongside the RPG screen. An optional read-only web companion lets you search your journal by name or habitat. These are local single-player rules; the save file and device clock are trusted.
 
-[Explore Clibble on GitHub](https://github.com/yaqyn/clibble-pokemon-cli)
+[Explore Clibble on GitHub](https://github.com/yaqyn/clibble-terminal-rpg)
 
 [Explore the other projects](/projects/).
