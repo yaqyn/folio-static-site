@@ -129,7 +129,7 @@ class TestSiteReliability(unittest.TestCase):
             games = (output / "games/index.html").read_text()
             self.assertIn('aria-current="page">Games', games)
             self.assertIn("Orbit — Asteroids Game", games)
-            self.assertIn("Clibble — Pokémon CLI", games)
+            self.assertIn("Clibble — Terminal RPG", games)
             self.assertTrue((output / ".nojekyll").exists())
             self.assertIn(
                 'aria-current="page">Projects',

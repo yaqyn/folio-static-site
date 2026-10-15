@@ -94,7 +94,7 @@ Ten Go and Python projects exploring APIs, services, retrieval, tools, games, an
 | Project | Purpose |
 | --- | --- |
 | [Readlane](https://github.com/yaqyn/readlane-feed-reader) | Terminal-first RSS and Atom Reader |
-| [Clibble](https://github.com/yaqyn/clibble-pokemon-cli) | Terminal Pokémon Adventure |
+| [Clibble](https://github.com/yaqyn/clibble-pokemon-cli) | Original Offline Terminal RPG |
 | [Threadline](https://github.com/yaqyn/threadline-social-api) | Social Publishing API |
 | [Portlight](https://github.com/yaqyn/portlight-http-server) | Containerized HTTP Server |
 | [Workbench](https://github.com/yaqyn/workbench-ai-agent) | AI Coding Agent |
