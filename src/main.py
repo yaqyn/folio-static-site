@@ -40,7 +40,7 @@ def generate_pages_recursive(
         elif source.suffix == ".md":
             relative = source.relative_to(source_root).with_suffix(".html")
             route = "/" + relative.as_posix()
-            if route.endswith("index.html"):
+            if source.stem == "index":
                 route = route[: -len("index.html")]
             generate_page(
                 source,

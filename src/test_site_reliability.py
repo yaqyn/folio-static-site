@@ -15,7 +15,7 @@ from markdown_to_html import (
     normalize_basepath,
     parse_frontmatter,
 )
-from main import build_site, ROOT
+from main import build_site, generate_pages_recursive, ROOT
 
 
 class Links(HTMLParser):
@@ -30,6 +30,16 @@ class Links(HTMLParser):
 
 
 class TestSiteReliability(unittest.TestCase):
+    def test_only_exact_index_filename_becomes_directory_route(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "index.md").write_text("# Home")
+            (root / "bookindex.md").write_text("# Book index")
+            with patch("main.generate_page") as generate:
+                generate_pages_recursive(root, root / "template", root / "output")
+            routes = {call.args[0].name: call.kwargs["route"] for call in generate.call_args_list}
+            self.assertEqual(routes, {"index.md": "/", "bookindex.md": "/bookindex.html"})
+
     def test_html_text_and_attributes_are_escaped(self):
         self.assertEqual(
             LeafNode("code", "<script>&").to_html(), "<code>&lt;script&gt;&amp;</code>"
