@@ -6,6 +6,15 @@ from markdown_to_html import extract_title, generate_page
 
 
 class TestPageGeneration(unittest.TestCase):
+    def test_canonical_route_is_url_encoded_before_html_escaping(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, template, output = root / "page.md", root / "template.html", root / "page.html"
+            source.write_text("# Test")
+            template.write_text('<link rel="canonical" href="{{ Canonical }}">')
+            generate_page(source, template, output, route="/notes/café #1.html", site_url="https://example.com")
+            self.assertIn('href="https://example.com/notes/caf%C3%A9%20%231.html"', output.read_text())
+
     def test_extract_title(self):
         self.assertEqual(extract_title("# Hello"), "Hello")
         self.assertEqual(extract_title("#   Hello world  "), "Hello world")

@@ -123,6 +123,7 @@ def generate_page(
 ):
     from html import escape
     from pathlib import Path
+    from urllib.parse import quote
     import re
 
     basepath = normalize_basepath(basepath)
@@ -184,7 +185,7 @@ def generate_page(
         "Description": escape(description, quote=True),
         "PageClass": layout,
         "Navigation": "".join(navigation),
-        "Canonical": escape(site_url.rstrip("/") + route, quote=True),
+        "Canonical": escape(site_url.rstrip("/") + quote(route, safe="/"), quote=True),
         "ImageURL": escape(
             site_url.rstrip("/") + "/images/yaqyn-portrait.webp", quote=True
         ),
