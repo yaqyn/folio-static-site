@@ -124,14 +124,34 @@ keyboard-visible navigation; test those contracts whenever the template changes.
 The biography, skills, credentials, contact details, and major-project descriptions
 come from the user-maintained [GitHub profile README](https://github.com/yaqyn/yaqyn/blob/main/README.md), reviewed for this redesign. Do not invent additional personal claims.
 
-Project branding uses three explicit categories: Career Projects (HyperQuote),
-Personal Projects (qvOS), and Learning Journey Projects (Readlane, Clibble, Threadline, Portlight, Workbench, CineSearch,
-SiteLens, Orbit, TextScope, and Folio). The Boot.dev projects are student work.
-Keep these categories in separate sections in the portfolio and profile gallery.
+Project branding uses three explicit categories: Career projects (HyperQuote,
+Modern, Stockroom), Personal projects (qvOS, Counter), and Learning journey
+projects (Leafmark, Waymark, Readlane, Clibble, Threadline, Portlight, Workbench,
+CineSearch, SiteLens, Orbit, TextScope, Folio). Keep this order on the homepage
+and Projects page. The Games page follows the relative learning order, Clibble
+then Orbit. Course origins remain explicit without repeating beginner labels.
 
-Career and personal sections on the projects page and in README documentation use the original HyperQuote and qvOS animated covers, preserving their blue and red project identities. The homepage uses restrained text-led project sections and the black-and-white author portrait; project covers do not appear there. Learning Journey Projects use their canonical README covers on the projects page. The homepage retains text-led rows; all ten projects appear on the homepage. Orbit and Clibble have their full entries on the Games page; the Projects page links there. The shared navigation includes Games.
+All seventeen entries appear on the homepage and Projects page. Career source
+stays private. Link to approved HyperQuote and Modern showcases and the public
+Yaqyn Development gallery; Stockroom remains a private evaluation prototype.
+The qvOS description leads with its standalone architecture; its signed Stable
+package-provider credit belongs at the end of its detailed entry. Public ISO
+downloads are not claimed to be available.
 
-Project-cover images reserve their intrinsic image dimensions and load lazily. The homepage portrait keeps eager loading. Reuse the repository artwork without changing its palette or cropping.
+The homepage remains text-led, with its original black-and-white portrait.
+Detailed project entries reuse the original HyperQuote and qvOS animated covers
+and the other projects' canonical artwork. Modern uses its static architectural
+brand illustration. Counter and Leafmark retain their original SVG covers;
+Waymark retains its lossless WebP. No organization bumper, new fonts, JavaScript,
+or decorative effects are added to Folio. Stockroom has no public cover or
+interface capture. Games keep full entries and covers on the Games page, with
+short linked descriptions in the Projects inventory.
+
+Project-cover images reserve intrinsic dimensions and load lazily. Raster
+headers provide PNG/WebP geometry; canonical SVG files supply positive integer
+width/height attributes. The homepage portrait remains eager and unchanged.
+Asset provenance is recorded in `static/images/ASSETS.md`. Edit `content/` and
+regenerate `docs/`; never maintain a second copy of page content by hand.
 
 ## Voice
 

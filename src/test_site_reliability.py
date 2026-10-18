@@ -114,7 +114,7 @@ class TestSiteReliability(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()):
             output = build_site("/folio-static-site", Path(directory) / "site")
             pages = list(output.rglob("*.html"))
-            self.assertEqual(len(pages), 9)
+            self.assertEqual(len(pages), 10)
             for page in pages:
                 markup = page.read_text()
                 self.assertNotIn("Tolkien", markup)
@@ -130,6 +130,18 @@ class TestSiteReliability(unittest.TestCase):
                             local /= "index.html"
                         self.assertTrue(local.exists(), f"{page}: missing {url}")
             projects = (output / "projects/index.html").read_text()
+            self.assertIn(
+                'src="/folio-static-site/images/projects/leafmark-cover.svg" '
+                'alt="Leafmark — a page of your own" width="1200" height="360" '
+                'loading="lazy" decoding="async"',
+                projects,
+            )
+            self.assertIn(
+                'src="/folio-static-site/images/projects/counter-cover.svg" '
+                'alt="Counter — a tally display connected to a counting key" '
+                'width="1280" height="560" loading="lazy" decoding="async"',
+                projects,
+            )
             self.assertIn(
                 'src="/folio-static-site/images/projects/threadline-cover.webp" '
                 'alt="Threadline — Social Publishing API" width="2172" height="724" '

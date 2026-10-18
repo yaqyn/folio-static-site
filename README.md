@@ -4,7 +4,7 @@
 
 **Abdulrahman M. Yaqyn's projects and development notes, powered by a small Python static site generator.**
 
-Folio brings together HyperQuote, qvOS, ten Boot.dev projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the project gallery, games page, biography, contact page, notes, and custom 404 page.
+Folio brings together three career projects, two personal projects, twelve Boot.dev learning projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the full project inventory, games page, biography, contact page, workflow and technical notes, and custom 404 page.
 
 [Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Run locally](#-quick-start) · [Design context](DESIGN.md)
 
@@ -39,7 +39,7 @@ Open **http://127.0.0.1:8888**. The launcher builds a local version and serves i
 | `src/` | Parser, HTML tree, staged build, and tests |
 | `docs/` | Generated output used by GitHub Pages |
 
-Markdown supports headings, paragraphs, quotes, lists, links, images, bold, italics, inline code, and fenced code with optional language labels. Blank lines inside code fences are preserved. Raw HTML is escaped rather than executed.
+Markdown supports headings, paragraphs, quotes, lists, links, images, bold, italics, inline code, and fenced code with optional language labels. Blank lines inside code fences are preserved. Raw HTML is escaped rather than executed. Project-cover dimensions are read from PNG, lossless WebP, and canonical SVG files with positive integer width and height. Covers load lazily with their geometry reserved; the homepage portrait stays eager.
 
 Pages may start with a small frontmatter block:
 
@@ -77,7 +77,11 @@ Local links receive the selected base path; external and protocol-relative links
 
 | Project | Purpose |
 | --- | --- |
-| [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected Business Operations |
+| [HyperQuote](https://github.com/yaqyn/HyperQuote) | Connected procurement and delivery workflows; public showcase |
+| [Modern](https://github.com/yaqyn/Modern) | Bilingual construction-company website; public showcase |
+| Stockroom | Private warehouse evaluation prototype |
+
+Application source stays private. [Yaqyn Development](https://github.com/yaqyn-dev) introduces the career projects and development workflow.
 
 ### <img src="readme-assets/icons/projects.svg" width="20" height="20" alt=""> Personal projects
 
@@ -85,14 +89,17 @@ Local links receive the selected base path; external and protocol-relative links
 
 | Project | Purpose |
 | --- | --- |
-| [qvOS](https://github.com/yaqyn/qvOS) | Personal Linux Distribution |
+| [qvOS](https://github.com/yaqyn/qvOS) | Standalone Arch Linux distribution in active development |
+| [Counter](https://github.com/yaqyn/omarchy-counter) | Native Omarchy tally counter |
 
 ### <img src="readme-assets/icons/learning.svg" width="20" height="20" alt=""> Learning journey projects
 
-Ten Go and Python projects exploring APIs, services, retrieval, tools, games, and static publishing.
+Twelve projects exploring private notes, link workspaces, APIs, services, retrieval, terminal interfaces, games, and static publishing.
 
 | Project | Purpose |
 | --- | --- |
+| [Leafmark](https://github.com/yaqyn/leafmark-notebook) | Private plain-text notebook with exportable drafts |
+| [Waymark](https://github.com/yaqyn/waymark-link-shortener) | Editable short links and request observability |
 | [Readlane](https://github.com/yaqyn/readlane-feed-reader) | Terminal-first RSS and Atom Reader |
 | [Clibble](https://github.com/yaqyn/clibble-terminal-rpg) | Original Offline Terminal RPG |
 | [Threadline](https://github.com/yaqyn/threadline-social-api) | Social Publishing API |
@@ -118,7 +125,7 @@ The parser builds text nodes, converts them into an HTML tree, and renders pages
 sh test.sh
 ```
 
-The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
+The unittest suite covers parsing, HTML nodes, page generation, frontmatter, escaping, link schemes, code fences, all local routes and assets, and recovery from a failed build. It also checks intrinsic geometry and lazy loading for the vector and raster project covers. GitHub Actions tests Python 3.10 and 3.13 and checks that the published build is reproducible.
 
 The responsive theme has been checked in an isolated Chromium browser at desktop, 390px, and 320px widths, including keyboard skip navigation, project/note links, reduced motion, and the 404 recovery page. The site uses no JavaScript or remote fonts.
 

@@ -5,6 +5,12 @@ description: A closer look at coding-agent tools, workspace boundaries, useful e
 
 A coding agent connects a conversation to actions. The model can ask to read a file, change some code, or execute a program. The application has to decide how each request is handled.
 
+## Start with inspectable behavior
+
+Workbench now puts the conversation, settings, progress, and tool results in a full-screen terminal interface. New sessions begin in Inspect only mode. The selected project, access level, model, and transcript settings make the scope visible before a run.
+
+An offline preview can exercise the interface without credentials or provider requests. That is a useful way to inspect the interaction, but it is separate from verifying a real model-backed run.
+
 ## Tools need a clear boundary
 
 In the Workbench project, every file-tool path is resolved against the selected workspace. Resolving symlinks matters: a path that appears to be inside the project can point somewhere else.

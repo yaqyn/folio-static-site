@@ -1,40 +1,48 @@
 ---
 layout: home
-description: Abdulrahman M. Yaqyn — backend systems, AI applications, and Linux. Developer based in 6th of October City, Egypt.
+description: Abdulrahman M. Yaqyn — business software, backend systems, AI applications, and Linux. Projects, engineering decisions, and development notes.
 ---
 # yaqyn.
 
-**Backend systems, AI applications, and Linux tools built around real workflows.** Based in **6th of October City, Egypt**, the work spans HyperQuote’s business software, qvOS, and Go and Python projects developed through Boot.dev.
+**Business software, backend systems, and Linux tools built around real workflows.** Based in **6th of October City, Egypt**, I build across client applications, independent tools, and Go and Python projects developed through Boot.dev.
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
 ![Black and white portrait of Abdulrahman M. Yaqyn](/images/yaqyn-portrait.webp)
 
-## Career Projects
+## Career projects
 
-- [HyperQuote — Connected Business Operations](https://github.com/yaqyn/HyperQuote) Connected business software for customers, sales, operations, dispatch, and drivers—from a material request to delivery.
+Client applications and internal tools live in [Yaqyn Development](https://github.com/yaqyn-dev). Source stays private; the public gallery explains the work and links to approved showcases.
 
-## Personal Projects
+- [HyperQuote — Connected business operations](https://github.com/yaqyn/HyperQuote) Building-material requests, quotations, stock, and deliveries across customers, operations teams, and drivers.
+- [Modern — Construction company website](https://github.com/yaqyn/Modern) English and Arabic service discovery, project galleries, and contextual inquiries.
+- [Stockroom — Warehouse workflow prototype](https://github.com/yaqyn-dev#stockroom) A private evaluation prototype for receiving, storage suggestions, internal transfers, and movement history.
 
-- [qvOS — Personal Linux Distribution](https://github.com/yaqyn/qvOS) An ongoing Arch Linux distribution project built around a keyboard-first Hyprland desktop, native tools, installation, updates, and recovery.
+## Personal projects
 
-## Learning Journey Projects
+- [qvOS — Personal Linux distribution](https://github.com/yaqyn/qvOS) Standalone Arch Linux, with a keyboard-first Hyprland desktop and its own tools, installer, updates, and recovery lifecycle.
+- [Counter — Omarchy tally counter](https://github.com/yaqyn/omarchy-counter) Keep count without switching windows. A chosen key, a quiet bar display, and saved totals for azkar, repetitions, and everyday tallies.
 
-Projects developed through Boot.dev and extended through independent work. The focus is on how each system behaves, from authentication and shutdown to retrieval and tool boundaries.
+## Learning journey projects
 
-- [Readlane — Feed Reader](https://github.com/yaqyn/readlane-feed-reader) RSS and Atom collection, PostgreSQL, and keyboard-driven reading.
+Projects developed through Boot.dev and extended through independent work. Each repository documents its origins, run instructions, and current boundaries.
+
+- [Leafmark — Personal notebook](https://github.com/yaqyn/leafmark-notebook) Private plain-text notes, search, pinning, archives, and exportable drafts, with SQLite or optional Turso storage.
+- [Waymark — Private link workspace](https://github.com/yaqyn/waymark-link-shortener) Editable short links, persistent click totals, and request diagnosis through logs, metrics, and optional traces.
+- [Readlane — Feed reader](https://github.com/yaqyn/readlane-feed-reader) RSS and Atom collection, PostgreSQL, persistent retries, and keyboard-driven reading.
 - [Clibble — Terminal RPG](/games/) An offline forest adventure with original wildlings, catch seeds, and a saved field journal.
-- [Threadline — Social Publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
-- [Portlight — HTTP Server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
-- [Workbench — AI Coding Agent](https://github.com/yaqyn/workbench-ai-agent) Workspace-scoped coding agent with read-only tools and explicit execution limits.
-- [CineSearch — Movie RAG Engine](https://github.com/yaqyn/cinesearch-rag-engine) BM25, semantic retrieval, hybrid ranking, and grounded generation.
-- [SiteLens — Web Crawler](https://github.com/yaqyn/sitelens-web-crawler) HTTP, asynchronous crawling, and structured reports.
-- [Orbit — Asteroids Game](/games/) Game logic and object-oriented programming.
-- [TextScope — Text Analyzer](https://github.com/yaqyn/textscope-text-analyzer) Text processing, vocabulary analysis, and exports.
-- [Folio — Personal Site & Generator](https://github.com/yaqyn/folio-static-site) Markdown parsing, HTML generation, and static-site publishing.
+- [Threadline — Social publishing API](https://github.com/yaqyn/threadline-social-api) Go and PostgreSQL APIs, authentication, renewable sessions, and membership webhooks.
+- [Portlight — HTTP server](https://github.com/yaqyn/portlight-http-server) Containerized Go service with health probes, structured logs, and graceful shutdown.
+- [Workbench — AI coding agent](https://github.com/yaqyn/workbench-ai-agent) A full-screen terminal workbench for scoped inspection, edits, bounded Python execution, and reviewable transcripts.
+- [CineSearch — Movie RAG engine](https://github.com/yaqyn/cinesearch-rag-engine) Keyboard movie browsing, keyword and semantic retrieval, hybrid ranking, and grounded generation.
+- [SiteLens — Web crawler](https://github.com/yaqyn/sitelens-web-crawler) A terminal crawling workspace with live progress, bounded work, robots.txt checks, and structured JSON reports.
+- [Orbit — Asteroids game](/games/) Pilot an upgradeable starfighter, collect salvage, and survive escalating asteroid fields.
+- [TextScope — Text analyzer](https://github.com/yaqyn/textscope-text-analyzer) Explore books through a terminal dashboard, compare vocabulary, and export text, JSON, or CSV reports.
+- [Folio — Personal site and generator](https://github.com/yaqyn/folio-static-site) Markdown parsing, HTML generation, and static-site publishing, including this portfolio.
 
 ## From the workbench
 
+- [Following a request through a system](/notes/workflow/) Records, responsibilities, failure cases, and the checks that connect a user action to its result.
 - [Building a site from first principles](/notes/static-sites/) Markdown, small Python objects, and the path from a text file to this page.
 - [What a coding agent needs beyond a model](/notes/agents/) Tool boundaries, clear errors, and verification that means something.
 

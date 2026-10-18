@@ -11,7 +11,7 @@ Inline text becomes a set of typed nodes: text, bold, italics, links, images, an
 
 Those pieces form a tree of parent and leaf nodes. Rendering the tree produces HTML without a framework or a browser running on the server.
 
-```
+```text
 Markdown → text nodes → HTML nodes → template → static page
 ```
 
@@ -25,16 +25,22 @@ The generator also builds in a temporary directory. A malformed page should fail
 
 The shared template owns the navigation, metadata, and footer. Markdown owns the page. A small frontmatter block supplies a description and, for the homepage, its layout.
 
-```
+```text
 description: A short description of the page.
 layout: home
 ```
+
+## Artwork has a layout contract
+
+Project covers keep their own palettes and formats. The generator reads intrinsic dimensions from PNG, lossless WebP, and canonical SVG covers, then reserves that geometry before an image loads. Covers below the fold load lazily; the author portrait stays eager.
+
+That keeps a growing project page from shifting as images arrive, while preserving the original vector artwork. The source Markdown remains the place to update content; generated HTML is rebuilt rather than edited by hand.
 
 ## Try it
 
 From the project checkout, with Python 3.10 or newer, the launcher builds a local version and serves it on the loopback interface:
 
-```
+```bash
 ./launch
 ```
 

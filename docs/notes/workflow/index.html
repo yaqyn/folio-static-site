@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Following requests, state changes, and operational handoffs through HyperQuote, Stockroom, Waymark, and Leafmark.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Following a request through a system | yaqyn">
+    <meta property="og:description" content="Following requests, state changes, and operational handoffs through HyperQuote, Stockroom, Waymark, and Leafmark.">
+    <meta property="og:url" content="https://yaqyn.github.io/folio-static-site/notes/workflow/">
+    <meta property="og:site_name" content="yaqyn">
+    <meta property="og:image" content="https://yaqyn.github.io/folio-static-site/images/yaqyn-portrait.webp">
+    <meta property="og:image:alt" content="Black and white portrait of Abdulrahman M. Yaqyn">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Following a request through a system | yaqyn</title>
+    <link rel="canonical" href="https://yaqyn.github.io/folio-static-site/notes/workflow/">
+    <link rel="icon" href="/folio-static-site/favicon.svg" type="image/svg+xml">
+    <link href="/folio-static-site/index.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="/folio-static-site/" aria-label="yaqyn home">yaqyn<span>.</span></a>
+        <nav aria-label="Main navigation"><a href="/folio-static-site/">Home</a><a href="/folio-static-site/projects/">Projects</a><a href="/folio-static-site/games/">Games</a><a href="/folio-static-site/notes/" aria-current="location">Notes</a><a href="/folio-static-site/about/">About</a></nav>
+        <a class="header-link" href="https://github.com/yaqyn">GitHub <span aria-hidden="true">↗</span></a>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="breadcrumbs"><a href="/folio-static-site/">yaqyn.</a><span aria-hidden="true"> / </span>Following a request through a system</div>
+        <article class="page-content"><div><h1>Following a request through a system</h1><p>A screen shows an action. The useful engineering question is what that action commits the system to doing, which records it changes, and who depends on the result.</p><p>An accounting background makes those questions familiar. A record has a purpose, a responsible person, and consequences for the next step. Software needs the same clarity, including when an action fails or is retried.</p><h2>Begin with the handoff</h2><p>In HyperQuote, a material request connects customer planning to quotation, stock, payment, dispatch, and delivery. Those are different responsibilities around related records. The interface has to make the current task clear without losing the context needed by the next team.</p><p>Modern applies the same idea to a smaller journey. A visitor exploring a construction service should reach the inquiry with that context carried forward. The handoff begins before the form is submitted.</p><p><a href="https://github.com/yaqyn-dev">Explore the career-project gallery</a> for the public showcases and their scope.</p><h2>Separate a suggestion from a committed change</h2><p>Stockroom's local warehouse prototype can suggest a storage place. That suggestion leaves balances unchanged. Confirmation rechecks capacity and contents inside a write transaction, then records the balance change and movement history together.</p><p>Those are separate operations with separate meanings. The prototype also associates a request identifier with a confirmed movement so an unchanged retry does not become a second stock movement.</p><p>The prototype remains private and is not intended for live inventory use. The workflow is useful evidence; it does not establish production readiness or an implemented Odoo integration.</p><h2>Preserve work when a save fails</h2><p>Two browser views can act on the same record. Waymark checks revisions when a link is edited; Leafmark rejects a stale note save rather than silently replacing newer text.</p><p>A rejected save needs a useful outcome in the interface. Leafmark preserves the draft and lets it be downloaded as Markdown, so a server-side refusal does not mean losing the writing.</p><p><a href="https://github.com/yaqyn/leafmark-notebook">Explore Leafmark</a> or <a href="https://github.com/yaqyn/waymark-link-shortener/blob/main/docs/observability.md">read Waymark's request-diagnosis walkthrough</a>.</p><h2>Use the checks that answer the question</h2><p>A parser change needs examples of valid and invalid input. A stock movement needs capacity, balance, and retry checks. A layout change needs a narrow viewport and keyboard use. A deployment needs verification of the exact published commit and the behavior served to a visitor.</p><p>The working loop is:</p><ol><li>Define the task, operating constraints, and intended result.</li><li>Model the records, permissions, transitions, and failure cases.</li><li>Implement the interface and server behavior around the same rules.</li><li>Run relevant checks and inspect the complete journey.</li><li>Document the result and distinguish what was verified locally, in CI, and live.</li></ol><p>Claude Code and Codex support implementation, debugging, and review within that process. Requirements, decisions, and the resulting work remain my responsibility.</p><p><a href="/folio-static-site/projects/">Explore the projects</a> or <a href="/folio-static-site/notes/">return to the notes</a>.</p></div></article>
+      </main>
+      <footer class="site-footer">
+        <a class="wordmark" href="/folio-static-site/">yaqyn<span>.</span></a>
+        <p>Abdulrahman M. Yaqyn<br><span>Backend systems. AI applications. Linux.</span></p>
+        <div><a href="/folio-static-site/contact/">Get in touch</a><a href="https://github.com/yaqyn/folio-static-site">View source <span aria-hidden="true">↗</span></a></div>
+      </footer>
+    </div>
+  </body>
+</html>

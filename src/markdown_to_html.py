@@ -7,6 +7,7 @@ from parentnode import ParentNode
 from textnode import text_node_to_html_node
 import os
 import struct
+from xml.etree import ElementTree
 
 
 def _text_to_children(text: str) -> list[HTMLNode]:
@@ -141,7 +142,18 @@ def generate_page(
                     raise ValueError("Project cover path must stay inside its asset directory")
                 with image.open("rb") as cover:
                     header = cover.read(30)
-                if header[:8] == b"\x89PNG\r\n\x1a\n":
+                if image.suffix.lower() == ".svg":
+                    try:
+                        svg = ElementTree.parse(image).getroot()
+                        width = int(svg.attrib["width"])
+                        height = int(svg.attrib["height"])
+                        if width <= 0 or height <= 0:
+                            raise ValueError("Nonpositive SVG dimensions")
+                    except (ElementTree.ParseError, KeyError, ValueError) as error:
+                        raise ValueError(
+                            "SVG project covers need positive integer width and height"
+                        ) from error
+                elif header[:8] == b"\x89PNG\r\n\x1a\n":
                     width, height = struct.unpack(">II", header[16:24])
                 elif header[:4] == b"RIFF" and header[8:12] == b"WEBP":
                     if header[12:16] == b"VP8X":
@@ -154,7 +166,7 @@ def generate_page(
                     else:
                         raise ValueError("Project covers must use lossless WebP")
                 else:
-                    raise ValueError("Project covers must be PNG or lossless WebP images")
+                    raise ValueError("Project covers must be PNG, lossless WebP, or SVG images")
                 node.props.update(
                     width=str(width), height=str(height), loading="lazy", decoding="async"
                 )
