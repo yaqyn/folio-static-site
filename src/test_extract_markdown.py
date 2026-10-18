@@ -60,6 +60,16 @@ class TestExtractMarkdown(unittest.TestCase):
         self.assertEqual(extract_markdown_images("plain text"), [])
         self.assertEqual(extract_markdown_links("plain text"), [])
 
+    def test_urls_may_contain_balanced_parentheses(self):
+        self.assertEqual(
+            extract_markdown_links("[function](https://example.com/docs/call(value))"),
+            [("function", "https://example.com/docs/call(value)")],
+        )
+        self.assertEqual(
+            extract_markdown_images("![chart](images/plot(2026).png)"),
+            [("chart", "images/plot(2026).png")],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
