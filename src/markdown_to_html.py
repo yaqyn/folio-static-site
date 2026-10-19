@@ -95,7 +95,10 @@ def parse_frontmatter(markdown):
         key, separator, value = line.partition(":")
         if not separator or key.strip() not in {"description", "layout"}:
             raise ValueError(f"Unsupported frontmatter: {line}")
-        values[key.strip()] = value.strip()
+        key = key.strip()
+        if key in values:
+            raise ValueError(f"Duplicate frontmatter key: {key}")
+        values[key] = value.strip()
     if values.get("layout", "page") not in {"home", "page"}:
         raise ValueError("Layout must be home or page")
     return values, content

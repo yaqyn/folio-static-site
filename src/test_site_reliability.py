@@ -83,6 +83,7 @@ class TestSiteReliability(unittest.TestCase):
             "---\nlayout: home",
             "---\nunknown: value\n---\n# Test",
             "---\nlayout: invalid\n---\n# Test",
+            "---\nlayout: home\nlayout: page\n---\n# Test",
         ]:
             with self.subTest(markdown=markdown), self.assertRaises(ValueError):
                 parse_frontmatter(markdown)
