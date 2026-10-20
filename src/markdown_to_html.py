@@ -7,6 +7,7 @@ from parentnode import ParentNode
 from textnode import text_node_to_html_node
 import os
 import struct
+import unicodedata
 from xml.etree import ElementTree
 
 
@@ -98,7 +99,10 @@ def parse_frontmatter(markdown):
         key = key.strip()
         if key in values:
             raise ValueError(f"Duplicate frontmatter key: {key}")
-        values[key] = value.strip()
+        value = value.strip()
+        if any(unicodedata.category(char).startswith("C") for char in value):
+            raise ValueError(f"Frontmatter contains control characters: {key}")
+        values[key] = value
     if values.get("layout", "page") not in {"home", "page"}:
         raise ValueError("Layout must be home or page")
     return values, content
