@@ -110,9 +110,12 @@ def main(argv=None):
     parser.add_argument("--output", type=Path)
     parser.add_argument("--site-url", default="https://yaqyn.github.io/folio-static-site")
     args = parser.parse_args(argv)
+    site_url = urlsplit(args.site_url)
     if (
-        urlsplit(args.site_url).scheme not in {"https", "http"}
-        or not urlsplit(args.site_url).netloc
+        site_url.scheme not in {"https", "http"}
+        or not site_url.netloc
+        or site_url.username is not None
+        or site_url.password is not None
     ):
         parser.error("Site URL must be an absolute HTTP(S) URL")
     try:

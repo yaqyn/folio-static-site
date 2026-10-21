@@ -3,9 +3,16 @@ import unittest
 from pathlib import Path
 
 from markdown_to_html import extract_title, generate_page
+from main import main
+from contextlib import redirect_stderr
+import io
 
 
 class TestPageGeneration(unittest.TestCase):
+    def test_site_url_rejects_embedded_credentials(self):
+        with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as error:
+            main(["--site-url", "https://user:secret@example.com"])
+        self.assertEqual(error.exception.code, 2)
     def test_canonical_route_is_url_encoded_before_html_escaping(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
