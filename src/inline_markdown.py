@@ -62,11 +62,11 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
 
 def text_to_textnodes(text: str) -> list[TextNode]:
     nodes = [TextNode(text, TextType.TEXT)]
+    # Code spans are literal: protect their contents before interpreting
+    # links, images, or emphasis delimiters.
+    nodes = split_nodes_delimiter(nodes, "`", TextType.CODE)
     nodes = split_nodes_image(nodes)
     nodes = split_nodes_link(nodes)
-    # Code spans are literal: protect their contents before interpreting
-    # emphasis delimiters that may appear in commands or identifiers.
-    nodes = split_nodes_delimiter(nodes, "`", TextType.CODE)
     nodes = split_nodes_delimiter(nodes, "**", TextType.BOLD)
     nodes = split_nodes_delimiter(nodes, "_", TextType.ITALIC)
     return nodes

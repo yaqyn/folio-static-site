@@ -17,6 +17,20 @@ class TestTextToTextNodes(unittest.TestCase):
             ],
         )
 
+    def test_code_span_keeps_links_and_images_literal(self):
+        self.assertEqual(
+            text_to_textnodes(
+                "Use `[label](https://example.com)` and `![alt](image.png)`."
+            ),
+            [
+                TextNode("Use ", TextType.TEXT),
+                TextNode("[label](https://example.com)", TextType.CODE),
+                TextNode(" and ", TextType.TEXT),
+                TextNode("![alt](image.png)", TextType.CODE),
+                TextNode(".", TextType.TEXT),
+            ],
+        )
+
     def test_converts_mixed_markdown(self):
         text = (
             "This is **text** with an _italic_ word and a `code block` and an "
