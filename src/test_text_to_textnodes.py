@@ -5,6 +5,18 @@ from textnode import TextNode, TextType
 
 
 class TestTextToTextNodes(unittest.TestCase):
+    def test_code_span_keeps_markdown_delimiters_literal(self):
+        self.assertEqual(
+            text_to_textnodes("Use `snake_case` and `**literal**`."),
+            [
+                TextNode("Use ", TextType.TEXT),
+                TextNode("snake_case", TextType.CODE),
+                TextNode(" and ", TextType.TEXT),
+                TextNode("**literal**", TextType.CODE),
+                TextNode(".", TextType.TEXT),
+            ],
+        )
+
     def test_converts_mixed_markdown(self):
         text = (
             "This is **text** with an _italic_ word and a `code block` and an "
