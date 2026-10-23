@@ -43,6 +43,11 @@ class TestTextNodeToHTMLNode(unittest.TestCase):
             {"src": "image.png", "alt": "An image"},
         )
 
+    def test_link_urls_reject_hidden_control_characters(self):
+        for url in ["https://example.com/one\ntwo", "image\x00.png"]:
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                text_node_to_html_node(TextNode("unsafe", TextType.LINK, url))
+
     def test_unsupported_text_type_raises_error(self):
         node = TextNode("unknown", "unsupported")
         with self.assertRaises(ValueError):

@@ -1,4 +1,5 @@
 from urllib.parse import urlsplit
+import unicodedata
 
 from enum import Enum
 
@@ -43,6 +44,8 @@ def text_node_to_html_node(text_node: TextNode) -> LeafNode:
     if text_node.text_type == TextType.CODE:
         return LeafNode("code", text_node.text)
     if text_node.text_type in {TextType.LINK, TextType.IMAGE}:
+        if any(unicodedata.category(char).startswith("C") for char in text_node.url or ""):
+            raise ValueError("Link and image URLs cannot contain control characters")
         allowed = {"", "http", "https"}
         if text_node.text_type == TextType.LINK:
             allowed.add("mailto")
