@@ -67,6 +67,12 @@ the **same** even with inline stuff
             '<img src="image.png" alt="image"></p></div>',
         )
 
+    def test_thematic_break(self):
+        self.assertEqual(
+            markdown_to_html_node("Before\n\n---\n\nAfter").to_html(),
+            "<div><p>Before</p><hr><p>After</p></div>",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

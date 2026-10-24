@@ -9,6 +9,7 @@ class BlockType(Enum):
     QUOTE = "quote"
     UNORDERED_LIST = "unordered_list"
     ORDERED_LIST = "ordered_list"
+    THEMATIC_BREAK = "thematic_break"
 
 
 def block_to_block_type(block: str) -> BlockType:
@@ -17,6 +18,9 @@ def block_to_block_type(block: str) -> BlockType:
 
     if re.match(r"^```[\w+-]*\n", block) and block.endswith("\n```"):
         return BlockType.CODE
+
+    if re.fullmatch(r" {0,3}((\*\s*){3,}|(-\s*){3,}|(_\s*){3,})", block):
+        return BlockType.THEMATIC_BREAK
 
     lines = block.split("\n")
 

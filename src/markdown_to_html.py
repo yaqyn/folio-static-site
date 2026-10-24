@@ -66,6 +66,8 @@ def markdown_to_html_node(markdown: str) -> ParentNode:
             block_nodes.append(_list_to_html(block, "ul"))
         elif block_type == BlockType.ORDERED_LIST:
             block_nodes.append(_list_to_html(block, "ol", ordered=True))
+        elif block_type == BlockType.THEMATIC_BREAK:
+            block_nodes.append(LeafNode("hr", ""))
         else:
             paragraph_text = " ".join(block.split("\n"))
             block_nodes.append(_text_block_to_parent("p", paragraph_text))

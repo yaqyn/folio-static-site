@@ -39,7 +39,7 @@ Open **http://127.0.0.1:8888**. The launcher builds a local version and serves i
 | `src/` | Parser, HTML tree, staged build, and tests |
 | `docs/` | Generated output used by GitHub Pages |
 
-Markdown supports headings, paragraphs, quotes, lists, links, images, bold, italics, inline code, and fenced code with optional language labels. Blank lines inside code fences are preserved. Raw HTML is escaped rather than executed. Project-cover dimensions are read from PNG, lossless WebP, and canonical SVG files with positive integer width and height. Covers load lazily with their geometry reserved; the homepage portrait stays eager.
+Markdown supports headings, paragraphs, quotes, lists, thematic breaks, links, images, bold, italics, inline code, and fenced code with optional language labels. Blank lines inside code fences are preserved. Raw HTML is escaped rather than executed. Project-cover dimensions are read from PNG, lossless WebP, and canonical SVG files with positive integer width and height. Covers load lazily with their geometry reserved; the homepage portrait stays eager.
 
 Pages may start with a small frontmatter block:
 

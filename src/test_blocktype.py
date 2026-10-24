@@ -60,6 +60,12 @@ class TestBlockToBlockType(unittest.TestCase):
             BlockType.PARAGRAPH,
         )
 
+    def test_thematic_break_requires_three_matching_markers(self):
+        for value in ("---", "* * *", " ___ "):
+            self.assertEqual(block_to_block_type(value), BlockType.THEMATIC_BREAK)
+        for value in ("--", "__ words", "words ---"):
+            self.assertEqual(block_to_block_type(value), BlockType.PARAGRAPH)
+
 
 if __name__ == "__main__":
     unittest.main()
