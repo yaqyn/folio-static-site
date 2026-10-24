@@ -19,7 +19,7 @@ def block_to_block_type(block: str) -> BlockType:
     if re.match(r"^```[\w+-]*\n", block) and block.endswith("\n```"):
         return BlockType.CODE
 
-    if re.fullmatch(r" {0,3}((\*\s*){3,}|(-\s*){3,}|(_\s*){3,})", block):
+    if re.fullmatch(r" {0,3}((\*[ \t]*){3,}|(-[ \t]*){3,}|(_[ \t]*){3,})", block):
         return BlockType.THEMATIC_BREAK
 
     lines = block.split("\n")

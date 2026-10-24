@@ -61,9 +61,9 @@ class TestBlockToBlockType(unittest.TestCase):
         )
 
     def test_thematic_break_requires_three_matching_markers(self):
-        for value in ("---", "* * *", " ___ "):
+        for value in ("---", "* * *", "*\t*\t*", " ___ "):
             self.assertEqual(block_to_block_type(value), BlockType.THEMATIC_BREAK)
-        for value in ("--", "__ words", "words ---"):
+        for value in ("--", "__ words", "words ---", "***\n***"):
             self.assertEqual(block_to_block_type(value), BlockType.PARAGRAPH)
 
 
