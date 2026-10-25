@@ -36,11 +36,9 @@ def block_to_block_type(block: str) -> BlockType:
         if not match:
             break
         ordered_numbers.append(int(match.group(1)))
-    if (
-        ordered_numbers
-        and ordered_numbers == list(range(1, len(ordered_numbers) + 1))
-        and len(ordered_numbers) == len(lines)
-    ):
+    if ordered_numbers and ordered_numbers == list(
+        range(ordered_numbers[0], ordered_numbers[0] + len(ordered_numbers))
+    ) and len(ordered_numbers) == len(lines):
         return BlockType.ORDERED_LIST
 
     return BlockType.PARAGRAPH

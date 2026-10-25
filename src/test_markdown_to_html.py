@@ -59,6 +59,13 @@ the **same** even with inline stuff
             "<div><ol><li>first item</li><li>second item</li></ol></div>",
         )
 
+    def test_ordered_list_preserves_custom_start(self):
+        markdown = "3. third item\n4. fourth item"
+        self.assertEqual(
+            markdown_to_html_node(markdown).to_html(),
+            '<div><ol start="3"><li>third item</li><li>fourth item</li></ol></div>',
+        )
+
     def test_links_and_images(self):
         markdown = "A [link](https://example.com) and ![image](image.png)"
         self.assertEqual(

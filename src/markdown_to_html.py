@@ -33,7 +33,12 @@ def _list_to_html(block: str, tag: str, ordered: bool = False) -> ParentNode:
         else:
             item_text = line[2:]
         items.append(ParentNode("li", _text_to_children(item_text)))
-    return ParentNode(tag, items)
+    props = None
+    if ordered:
+        start = int(block.split(". ", 1)[0])
+        if start != 1:
+            props = {"start": start}
+    return ParentNode(tag, items, props)
 
 
 def _quote_to_html(block: str) -> ParentNode:

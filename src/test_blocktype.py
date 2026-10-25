@@ -40,14 +40,14 @@ class TestBlockToBlockType(unittest.TestCase):
             BlockType.UNORDERED_LIST,
         )
 
-    def test_ordered_list_must_start_at_one_and_increment(self):
+    def test_ordered_list_must_increment_from_its_start(self):
         self.assertEqual(
             block_to_block_type("1. first\n2. second\n3. third"),
             BlockType.ORDERED_LIST,
         )
         self.assertEqual(
             block_to_block_type("2. second\n3. third"),
-            BlockType.PARAGRAPH,
+            BlockType.ORDERED_LIST,
         )
         self.assertEqual(
             block_to_block_type("1. first\n3. third"),
