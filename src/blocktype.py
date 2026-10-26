@@ -27,7 +27,7 @@ def block_to_block_type(block: str) -> BlockType:
     if all(line.startswith(">") for line in lines):
         return BlockType.QUOTE
 
-    if all(line.startswith("- ") for line in lines):
+    if all(len(line) >= 2 and line[:2] in {"- ", "* ", "+ "} for line in lines):
         return BlockType.UNORDERED_LIST
 
     ordered_numbers = []

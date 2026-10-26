@@ -51,6 +51,10 @@ the **same** even with inline stuff
             markdown_to_html_node(markdown).to_html(),
             "<div><ul><li>first item</li><li><b>bold</b> item</li></ul></div>",
         )
+        self.assertEqual(
+            markdown_to_html_node("* first item\n* second item").to_html(),
+            "<div><ul><li>first item</li><li>second item</li></ul></div>",
+        )
 
     def test_ordered_list(self):
         markdown = "1. first item\n2. second item"

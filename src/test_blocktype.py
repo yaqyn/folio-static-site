@@ -39,6 +39,12 @@ class TestBlockToBlockType(unittest.TestCase):
             block_to_block_type("- first\n- second\n- third"),
             BlockType.UNORDERED_LIST,
         )
+        for marker in ("*", "+"):
+            self.assertEqual(
+                block_to_block_type(f"{marker} first\n{marker} second"),
+                BlockType.UNORDERED_LIST,
+            )
+        self.assertEqual(block_to_block_type("- first\n* second\n+ third"), BlockType.UNORDERED_LIST)
 
     def test_ordered_list_must_increment_from_its_start(self):
         self.assertEqual(
