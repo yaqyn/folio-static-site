@@ -78,6 +78,12 @@ the **same** even with inline stuff
             '<img src="image.png" alt="image"></p></div>',
         )
 
+    def test_strikethrough(self):
+        self.assertEqual(
+            markdown_to_html_node("Keep ~~old copy~~ new copy").to_html(),
+            "<div><p>Keep <del>old copy</del> new copy</p></div>",
+        )
+
     def test_thematic_break(self):
         self.assertEqual(
             markdown_to_html_node("Before\n\n---\n\nAfter").to_html(),
