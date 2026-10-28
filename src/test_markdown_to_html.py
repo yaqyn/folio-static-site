@@ -38,6 +38,16 @@ the **same** even with inline stuff
             "<div><h3>A heading</h3></div>",
         )
 
+    def test_heading_omits_optional_closing_hashes(self):
+        self.assertEqual(
+            markdown_to_html_node("## Release notes ##").to_html(),
+            "<div><h2>Release notes</h2></div>",
+        )
+        self.assertEqual(
+            markdown_to_html_node("## C#").to_html(),
+            "<div><h2>C#</h2></div>",
+        )
+
     def test_quote(self):
         markdown = "> first line\n> second line"
         self.assertEqual(

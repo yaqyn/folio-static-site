@@ -6,6 +6,7 @@ from leafnode import LeafNode
 from parentnode import ParentNode
 from textnode import text_node_to_html_node
 import os
+import re
 import struct
 import unicodedata
 from xml.etree import ElementTree
@@ -22,7 +23,11 @@ def _text_block_to_parent(tag: str, text: str) -> ParentNode:
 def _heading_to_html(block: str) -> ParentNode:
     heading_text = block.lstrip("#")
     level = len(block) - len(heading_text)
-    return _text_block_to_parent(f"h{level}", heading_text[1:])
+    # CommonMark permits an optional closing run of hashes when it is
+    # separated from the heading text by whitespace.
+    text = heading_text[1:]
+    text = re.sub(r"[ \t]+#+[ \t]*$", "", text)
+    return _text_block_to_parent(f"h{level}", text)
 
 
 def _list_to_html(block: str, tag: str, ordered: bool = False) -> ParentNode:
