@@ -40,7 +40,12 @@ def _split_nodes_by_markdown(
             before, remaining_text = sections
             if before:
                 new_nodes.append(TextNode(before, TextType.TEXT))
-            new_nodes.append(TextNode(label, text_type, url))
+            children = None
+            if text_type == TextType.LINK:
+                parsed_label = text_to_textnodes(label)
+                if any(node.text_type != TextType.TEXT for node in parsed_label):
+                    children = parsed_label
+            new_nodes.append(TextNode(label, text_type, url, children))
 
         if remaining_text:
             new_nodes.append(TextNode(remaining_text, TextType.TEXT))

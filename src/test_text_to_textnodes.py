@@ -53,6 +53,27 @@ class TestTextToTextNodes(unittest.TestCase):
             ],
         )
 
+    def test_formats_emphasis_inside_link_labels(self):
+        self.assertEqual(
+            text_to_textnodes(
+                "A [**bold** and _italic_](https://example.com) link"
+            ),
+            [
+                TextNode("A ", TextType.TEXT),
+                TextNode(
+                    "**bold** and _italic_",
+                    TextType.LINK,
+                    "https://example.com",
+                    [
+                        TextNode("bold", TextType.BOLD),
+                        TextNode(" and ", TextType.TEXT),
+                        TextNode("italic", TextType.ITALIC),
+                    ],
+                ),
+                TextNode(" link", TextType.TEXT),
+            ],
+        )
+
     def test_plain_text(self):
         self.assertEqual(
             text_to_textnodes("plain text"),

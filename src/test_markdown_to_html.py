@@ -100,6 +100,15 @@ the **same** even with inline stuff
             '<img src="image.png" alt="image"></p></div>',
         )
 
+    def test_link_labels_render_inline_emphasis(self):
+        self.assertEqual(
+            markdown_to_html_node(
+                "A [**bold** and _italic_](https://example.com) link"
+            ).to_html(),
+            '<div><p>A <a href="https://example.com"><b>bold</b> and '
+            "<i>italic</i></a> link</p></div>",
+        )
+
     def test_strikethrough(self):
         self.assertEqual(
             markdown_to_html_node("Keep ~~old copy~~ new copy").to_html(),
