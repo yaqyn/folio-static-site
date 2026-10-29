@@ -38,6 +38,13 @@ This is the same paragraph on a new line
     def test_single_block_is_preserved(self):
         self.assertEqual(markdown_to_blocks("single paragraph"), ["single paragraph"])
 
+    def test_tilde_fences_keep_blank_lines_inside_code(self):
+        markdown = "before\n\n~~~python\nprint('one')\n\nprint('two')\n~~~\n\nafter"
+        self.assertEqual(
+            markdown_to_blocks(markdown),
+            ["before", "~~~python\nprint('one')\n\nprint('two')\n~~~", "after"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

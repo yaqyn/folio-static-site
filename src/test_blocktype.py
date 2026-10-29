@@ -23,6 +23,10 @@ class TestBlockToBlockType(unittest.TestCase):
             block_to_block_type("```\nprint('hello')\n```"),
             BlockType.CODE,
         )
+        self.assertEqual(
+            block_to_block_type("~~~python\nprint('hello')\n~~~"),
+            BlockType.CODE,
+        )
 
     def test_invalid_code_block_is_paragraph(self):
         self.assertEqual(block_to_block_type("```not multiline```"), BlockType.PARAGRAPH)

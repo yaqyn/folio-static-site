@@ -32,6 +32,12 @@ the **same** even with inline stuff
             "the **same** even with inline stuff\n</code></pre></div>",
         )
 
+    def test_tilde_codeblock(self):
+        self.assertEqual(
+            markdown_to_html_node("~~~python\nprint('hello')\n~~~").to_html(),
+            '<div><pre><code class="language-python">print(\'hello\')\n</code></pre></div>',
+        )
+
     def test_heading(self):
         self.assertEqual(
             markdown_to_html_node("### A heading").to_html(),

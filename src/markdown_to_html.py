@@ -53,7 +53,8 @@ def _quote_to_html(block: str) -> ParentNode:
 
 def _code_to_html(block: str) -> ParentNode:
     opening, code_text = block.split("\n", 1)
-    code_text = code_text[:-3]
+    fence = opening[:3]
+    code_text = code_text[: -len(fence)]
     language = opening[3:]
     props = {"class": "language-" + language} if language else None
     code_node = LeafNode("code", code_text, props)
