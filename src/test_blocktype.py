@@ -56,6 +56,14 @@ class TestBlockToBlockType(unittest.TestCase):
             BlockType.ORDERED_LIST,
         )
         self.assertEqual(
+            block_to_block_type("2) second\n3) third"),
+            BlockType.ORDERED_LIST,
+        )
+        self.assertEqual(
+            block_to_block_type("1. first\n2) second"),
+            BlockType.PARAGRAPH,
+        )
+        self.assertEqual(
             block_to_block_type("1. first\n3. third"),
             BlockType.PARAGRAPH,
         )

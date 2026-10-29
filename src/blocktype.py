@@ -32,13 +32,16 @@ def block_to_block_type(block: str) -> BlockType:
 
     ordered_numbers = []
     for line in lines:
-        match = re.match(r"^(\d+)\. ", line)
+        match = re.match(r"^(\d+)([.)]) ", line)
         if not match:
             break
-        ordered_numbers.append(int(match.group(1)))
-    if ordered_numbers and ordered_numbers == list(
-        range(ordered_numbers[0], ordered_numbers[0] + len(ordered_numbers))
-    ) and len(ordered_numbers) == len(lines):
-        return BlockType.ORDERED_LIST
+        ordered_numbers.append((int(match.group(1)), match.group(2)))
+    if ordered_numbers and len(ordered_numbers) == len(lines):
+        numbers = [number for number, _ in ordered_numbers]
+        delimiters = {delimiter for _, delimiter in ordered_numbers}
+        if len(delimiters) == 1 and numbers == list(
+            range(numbers[0], numbers[0] + len(numbers))
+        ):
+            return BlockType.ORDERED_LIST
 
     return BlockType.PARAGRAPH

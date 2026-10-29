@@ -34,13 +34,13 @@ def _list_to_html(block: str, tag: str, ordered: bool = False) -> ParentNode:
     items = []
     for line in block.split("\n"):
         if ordered:
-            item_text = line.split(". ", 1)[1]
+            item_text = re.split(r"[.)] ", line, maxsplit=1)[1]
         else:
             item_text = line[2:]
         items.append(ParentNode("li", _text_to_children(item_text)))
     props = None
     if ordered:
-        start = int(block.split(". ", 1)[0])
+        start = int(re.match(r"\d+", block).group())
         if start != 1:
             props = {"start": start}
     return ParentNode(tag, items, props)

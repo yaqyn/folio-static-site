@@ -80,6 +80,12 @@ the **same** even with inline stuff
             '<div><ol start="3"><li>third item</li><li>fourth item</li></ol></div>',
         )
 
+    def test_ordered_list_accepts_parenthesis_delimiters(self):
+        self.assertEqual(
+            markdown_to_html_node("2) second\n3) third").to_html(),
+            '<div><ol start="2"><li>second</li><li>third</li></ol></div>',
+        )
+
     def test_links_and_images(self):
         markdown = "A [link](https://example.com) and ![image](image.png)"
         self.assertEqual(
