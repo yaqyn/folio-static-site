@@ -6,7 +6,7 @@ def markdown_to_blocks(markdown: str) -> list[str]:
     blocks, current = [], []
     fence = None
     for line in markdown.splitlines():
-        fence_match = re.fullmatch(r"(```|~~~)[\w+-]*", line.strip())
+        fence_match = re.fullmatch(r"(```|~~~)[ \t]*[\w+-]*[ \t]*", line.strip())
         if fence_match:
             marker = fence_match.group(1)
             if fence is None:

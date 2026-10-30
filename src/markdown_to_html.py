@@ -58,7 +58,7 @@ def _code_to_html(block: str) -> ParentNode:
     opening, code_text = block.split("\n", 1)
     fence = opening[:3]
     code_text = code_text[: -len(fence)]
-    language = opening[3:]
+    language = opening[3:].strip()
     props = {"class": "language-" + language} if language else None
     code_node = LeafNode("code", code_text, props)
     return ParentNode("pre", [code_node])

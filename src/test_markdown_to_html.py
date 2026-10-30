@@ -38,6 +38,12 @@ the **same** even with inline stuff
             '<div><pre><code class="language-python">print(\'hello\')\n</code></pre></div>',
         )
 
+    def test_codeblock_accepts_space_before_language(self):
+        self.assertEqual(
+            markdown_to_html_node("``` python  \nprint('hello')\n```").to_html(),
+            '<div><pre><code class="language-python">print(\'hello\')\n</code></pre></div>',
+        )
+
     def test_heading(self):
         self.assertEqual(
             markdown_to_html_node("### A heading").to_html(),

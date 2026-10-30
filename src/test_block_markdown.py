@@ -45,6 +45,12 @@ This is the same paragraph on a new line
             ["before", "~~~python\nprint('one')\n\nprint('two')\n~~~", "after"],
         )
 
+    def test_fence_language_may_be_separated_by_space(self):
+        self.assertEqual(
+            markdown_to_blocks("``` python\nprint('hello')\n```"),
+            ["``` python\nprint('hello')\n```"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
