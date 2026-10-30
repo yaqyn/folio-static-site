@@ -49,6 +49,12 @@ the **same** even with inline stuff
             markdown_to_html_node("## Release notes ##").to_html(),
             "<div><h2>Release notes</h2></div>",
         )
+
+    def test_setext_headings(self):
+        self.assertEqual(
+            markdown_to_html_node("Main title\n===\n\nSection\n---").to_html(),
+            "<div><h1>Main title</h1><h2>Section</h2></div>",
+        )
         self.assertEqual(
             markdown_to_html_node("## C#").to_html(),
             "<div><h2>C#</h2></div>",

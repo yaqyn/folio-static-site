@@ -14,6 +14,9 @@ class TestBlockToBlockType(unittest.TestCase):
                 BlockType.HEADING,
             )
 
+        self.assertEqual(block_to_block_type("Title\n==="), BlockType.HEADING)
+        self.assertEqual(block_to_block_type("Section\n---"), BlockType.HEADING)
+
     def test_invalid_heading_is_paragraph(self):
         self.assertEqual(block_to_block_type("####### Too many"), BlockType.PARAGRAPH)
         self.assertEqual(block_to_block_type("#No space"), BlockType.PARAGRAPH)

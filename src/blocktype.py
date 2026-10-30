@@ -17,6 +17,8 @@ def block_to_block_type(block: str) -> BlockType:
         return BlockType.HEADING
 
     lines = block.split("\n")
+    if len(lines) == 2 and lines[0].strip() and re.fullmatch(r" {0,3}(=+|-+)[ \t]*", lines[1]):
+        return BlockType.HEADING
     opening_fence = re.fullmatch(r"(```|~~~)[\w+-]*", lines[0])
     if opening_fence and lines[-1] == opening_fence.group(1):
         return BlockType.CODE
