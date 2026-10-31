@@ -65,6 +65,25 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
     )
 
 
+def split_nodes_autolink(old_nodes: list[TextNode]) -> list[TextNode]:
+    new_nodes = []
+    pattern = re.compile(r"<(https?://[^<>\s]+)>")
+    for node in old_nodes:
+        if node.text_type != TextType.TEXT:
+            new_nodes.append(node)
+            continue
+        position = 0
+        for match in pattern.finditer(node.text):
+            if match.start() > position:
+                new_nodes.append(TextNode(node.text[position:match.start()], TextType.TEXT))
+            url = match.group(1)
+            new_nodes.append(TextNode(url, TextType.LINK, url))
+            position = match.end()
+        if position < len(node.text):
+            new_nodes.append(TextNode(node.text[position:], TextType.TEXT))
+    return new_nodes
+
+
 def text_to_textnodes(text: str) -> list[TextNode]:
     nodes = [TextNode(text, TextType.TEXT)]
     # Code spans are literal: protect their contents before interpreting
@@ -72,8 +91,10 @@ def text_to_textnodes(text: str) -> list[TextNode]:
     nodes = split_nodes_delimiter(nodes, "`", TextType.CODE)
     nodes = split_nodes_image(nodes)
     nodes = split_nodes_link(nodes)
+    nodes = split_nodes_autolink(nodes)
     nodes = split_nodes_delimiter(nodes, "**", TextType.BOLD)
     nodes = split_nodes_delimiter(nodes, "~~", TextType.STRIKETHROUGH)
+    nodes = split_nodes_delimiter(nodes, "*", TextType.ITALIC)
     nodes = split_nodes_delimiter(nodes, "_", TextType.ITALIC)
     return nodes
 
