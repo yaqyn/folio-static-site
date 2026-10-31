@@ -11,6 +11,13 @@ class TestSplitNodesDelimiter(unittest.TestCase):
             [TextNode("Read ", TextType.TEXT), TextNode("carefully", TextType.ITALIC), TextNode(" today", TextType.TEXT)],
         )
 
+    def test_http_autolinks(self):
+        self.assertEqual(
+            text_to_textnodes("See <https://example.com/docs?q=1> now"),
+            [TextNode("See ", TextType.TEXT), TextNode("https://example.com/docs?q=1", TextType.LINK, "https://example.com/docs?q=1"), TextNode(" now", TextType.TEXT)],
+        )
+        self.assertEqual(text_to_textnodes("Keep <ftp://example.com> literal"), [TextNode("Keep <ftp://example.com> literal", TextType.TEXT)])
+
     def test_splits_code_delimiter(self):
         node = TextNode("This is text with a `code block` word", TextType.TEXT)
         self.assertEqual(
