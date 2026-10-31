@@ -1,10 +1,16 @@
 import unittest
 
-from inline_markdown import split_nodes_delimiter
+from inline_markdown import split_nodes_delimiter, text_to_textnodes
 from textnode import TextNode, TextType
 
 
 class TestSplitNodesDelimiter(unittest.TestCase):
+    def test_asterisk_italic_text(self):
+        self.assertEqual(
+            text_to_textnodes("Read *carefully* today"),
+            [TextNode("Read ", TextType.TEXT), TextNode("carefully", TextType.ITALIC), TextNode(" today", TextType.TEXT)],
+        )
+
     def test_splits_code_delimiter(self):
         node = TextNode("This is text with a `code block` word", TextType.TEXT)
         self.assertEqual(
