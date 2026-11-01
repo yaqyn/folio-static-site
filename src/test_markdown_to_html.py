@@ -19,6 +19,12 @@ This is another paragraph with _italic_ text and `code` here
             "<code>code</code> here</p></div>",
         )
 
+    def test_explicit_paragraph_line_breaks(self):
+        self.assertEqual(
+            markdown_to_html_node("first  \nsecond\\\nthird\nfourth").to_html(),
+            "<div><p>first<br>second<br>third fourth</p></div>",
+        )
+
     def test_codeblock(self):
         md = """
 ```

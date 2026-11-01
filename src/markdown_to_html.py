@@ -20,6 +20,21 @@ def _text_block_to_parent(tag: str, text: str) -> ParentNode:
     return ParentNode(tag, _text_to_children(text))
 
 
+def _paragraph_to_html(block: str) -> ParentNode:
+    children = []
+    lines = block.splitlines()
+    for index, line in enumerate(lines):
+        hard_break = line.endswith("  ") or line.endswith("\\")
+        if line.endswith("  "):
+            line = line[:-2]
+        elif line.endswith("\\"):
+            line = line[:-1]
+        children.extend(_text_to_children(line))
+        if index < len(lines) - 1:
+            children.append(LeafNode("br", "") if hard_break else LeafNode(None, " "))
+    return ParentNode("p", children)
+
+
 def _heading_to_html(block: str) -> ParentNode:
     lines = block.splitlines()
     if len(lines) == 2 and re.fullmatch(r" {0,3}(=+|-+)[ \t]*", lines[1]):
@@ -83,8 +98,7 @@ def markdown_to_html_node(markdown: str) -> ParentNode:
         elif block_type == BlockType.THEMATIC_BREAK:
             block_nodes.append(LeafNode("hr", ""))
         else:
-            paragraph_text = " ".join(block.split("\n"))
-            block_nodes.append(_text_block_to_parent("p", paragraph_text))
+            block_nodes.append(_paragraph_to_html(block))
 
     return ParentNode("div", block_nodes)
 
