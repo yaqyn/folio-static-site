@@ -18,6 +18,13 @@ class TestSplitNodesDelimiter(unittest.TestCase):
         )
         self.assertEqual(text_to_textnodes("Keep <ftp://example.com> literal"), [TextNode("Keep <ftp://example.com> literal", TextType.TEXT)])
 
+    def test_email_autolinks(self):
+        self.assertEqual(
+            text_to_textnodes("Write <hello@example.com> today"),
+            [TextNode("Write ", TextType.TEXT), TextNode("hello@example.com", TextType.LINK, "mailto:hello@example.com"), TextNode(" today", TextType.TEXT)],
+        )
+        self.assertEqual(text_to_textnodes("Keep <span> literal"), [TextNode("Keep <span> literal", TextType.TEXT)])
+
     def test_splits_code_delimiter(self):
         node = TextNode("This is text with a `code block` word", TextType.TEXT)
         self.assertEqual(

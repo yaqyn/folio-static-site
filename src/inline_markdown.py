@@ -67,7 +67,7 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
 
 def split_nodes_autolink(old_nodes: list[TextNode]) -> list[TextNode]:
     new_nodes = []
-    pattern = re.compile(r"<(https?://[^<>\s]+)>")
+    pattern = re.compile(r"<(https?://[^<>\s]+|[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+)>")
     for node in old_nodes:
         if node.text_type != TextType.TEXT:
             new_nodes.append(node)
@@ -77,7 +77,8 @@ def split_nodes_autolink(old_nodes: list[TextNode]) -> list[TextNode]:
             if match.start() > position:
                 new_nodes.append(TextNode(node.text[position:match.start()], TextType.TEXT))
             url = match.group(1)
-            new_nodes.append(TextNode(url, TextType.LINK, url))
+            destination = url if url.startswith(("http://", "https://")) else f"mailto:{url}"
+            new_nodes.append(TextNode(url, TextType.LINK, destination))
             position = match.end()
         if position < len(node.text):
             new_nodes.append(TextNode(node.text[position:], TextType.TEXT))
