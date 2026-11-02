@@ -86,6 +86,9 @@ def split_nodes_autolink(old_nodes: list[TextNode]) -> list[TextNode]:
 
 
 def text_to_textnodes(text: str) -> list[TextNode]:
+    escapes = {"\\*": "\ue000", "\\_": "\ue001", "\\~": "\ue002", "\\`": "\ue003"}
+    for escaped, placeholder in escapes.items():
+        text = text.replace(escaped, placeholder)
     nodes = [TextNode(text, TextType.TEXT)]
     # Code spans are literal: protect their contents before interpreting
     # links, images, or emphasis delimiters.
@@ -97,6 +100,10 @@ def text_to_textnodes(text: str) -> list[TextNode]:
     nodes = split_nodes_delimiter(nodes, "~~", TextType.STRIKETHROUGH)
     nodes = split_nodes_delimiter(nodes, "*", TextType.ITALIC)
     nodes = split_nodes_delimiter(nodes, "_", TextType.ITALIC)
+    restore = {placeholder: escaped[1:] for escaped, placeholder in escapes.items()}
+    for node in nodes:
+        for placeholder, literal in restore.items():
+            node.text = node.text.replace(placeholder, literal)
     return nodes
 
 

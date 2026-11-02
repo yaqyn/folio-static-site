@@ -5,6 +5,12 @@ from textnode import TextNode, TextType
 
 
 class TestTextToTextNodes(unittest.TestCase):
+    def test_backslashes_escape_inline_delimiters(self):
+        self.assertEqual(
+            text_to_textnodes(r"Use \*stars\*, \_underscores\_, \~tildes\~, and \`ticks\`."),
+            [TextNode("Use *stars*, _underscores_, ~tildes~, and `ticks`.", TextType.TEXT)],
+        )
+
     def test_code_span_keeps_markdown_delimiters_literal(self):
         self.assertEqual(
             text_to_textnodes("Use `snake_case` and `**literal**`."),
