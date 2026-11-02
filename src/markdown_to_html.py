@@ -55,7 +55,15 @@ def _list_to_html(block: str, tag: str, ordered: bool = False) -> ParentNode:
             item_text = re.split(r"[.)] ", line, maxsplit=1)[1]
         else:
             item_text = line[2:]
-        items.append(ParentNode("li", _text_to_children(item_text)))
+        task = re.match(r"\[([ xX])\] (.+)", item_text)
+        if task:
+            props = {"type": "checkbox", "disabled": "disabled"}
+            if task.group(1).lower() == "x":
+                props["checked"] = "checked"
+            children = [LeafNode("input", "", props), *_text_to_children(task.group(2))]
+            items.append(ParentNode("li", children, {"class": "task-list-item"}))
+        else:
+            items.append(ParentNode("li", _text_to_children(item_text)))
     props = None
     if ordered:
         start = int(re.match(r"\d+", block).group())

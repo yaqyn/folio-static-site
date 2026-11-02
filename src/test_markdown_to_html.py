@@ -90,6 +90,12 @@ the **same** even with inline stuff
             "<div><ul><li>first item</li><li>second item</li></ul></div>",
         )
 
+    def test_task_list_items_are_read_only_and_preserve_formatting(self):
+        self.assertEqual(
+            markdown_to_html_node("- [x] Ship **tests**\n- [ ] Write notes").to_html(),
+            '<div><ul><li class="task-list-item"><input type="checkbox" disabled="disabled" checked="checked">Ship <b>tests</b></li><li class="task-list-item"><input type="checkbox" disabled="disabled">Write notes</li></ul></div>',
+        )
+
     def test_ordered_list(self):
         markdown = "1. first item\n2. second item"
         self.assertEqual(
