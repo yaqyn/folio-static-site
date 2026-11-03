@@ -47,6 +47,12 @@ class TestSplitNodesDelimiter(unittest.TestCase):
             ],
         )
 
+    def test_double_underscore_bold_text(self):
+        self.assertEqual(
+            text_to_textnodes("This is __important__ text"),
+            [TextNode("This is ", TextType.TEXT), TextNode("important", TextType.BOLD), TextNode(" text", TextType.TEXT)],
+        )
+
     def test_splits_italic_delimiter(self):
         node = TextNode("This is _italic_ text", TextType.TEXT)
         self.assertEqual(
