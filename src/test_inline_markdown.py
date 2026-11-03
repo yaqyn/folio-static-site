@@ -64,6 +64,12 @@ class TestSplitNodesDelimiter(unittest.TestCase):
             ],
         )
 
+    def test_intraword_underscores_remain_literal(self):
+        self.assertEqual(
+            text_to_textnodes("Use snake_case_value and _emphasis_."),
+            [TextNode("Use snake_case_value and ", TextType.TEXT), TextNode("emphasis", TextType.ITALIC), TextNode(".", TextType.TEXT)],
+        )
+
     def test_preserves_non_text_nodes(self):
         bold_node = TextNode("already bold", TextType.BOLD)
         self.assertEqual(
