@@ -17,9 +17,19 @@ def page_metadata(title, description, route, site_url, seo_title=None):
     }.get(route, "WebPage")
     graph = [
         {"@type": "Person", "@id": person_id, "name": NAME,
-         "alternateName": "yaqyn", "url": origin + "/about/",
+         "alternateName": ["yaqyn", "yaqyndev"], "url": origin + "/about/",
          "image": origin + "/images/yaqyn-portrait.webp",
-         "sameAs": ["https://github.com/yaqyn", "https://www.boot.dev/u/yaqyn"]},
+         "sameAs": [
+             "https://github.com/yaqyn",
+             "https://linkedin.com/in/yaqyn",
+             "https://bsky.app/profile/yaqyn.dev",
+             "https://www.patreon.com/cw/yaqyn",
+             "https://www.youtube.com/@yaqyndev",
+             "https://gravatar.com/yaqyndev",
+             "https://x.com/yaqyndev",
+             "https://yaqyndev.contra.com/",
+             "https://www.boot.dev/u/yaqyn",
+         ]},
         {"@type": "WebSite", "@id": site_id, "name": "yaqyn",
          "alternateName": NAME, "url": origin + "/", "inLanguage": "en",
          "publisher": {"@id": person_id}},

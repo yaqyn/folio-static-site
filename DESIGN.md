@@ -189,3 +189,13 @@ first-party loader only enables measurement on HTTPS production hostnames; local
 previews make no analytics requests. Update its host allowlist when moving Folio. Search Console
 verification and sitemap submission need the owner's authenticated Google account;
 website traffic reports do not establish search impressions or indexing.
+
+## Public profile links
+
+The contact page prioritizes GitHub, LinkedIn, Bluesky and Contra. Patreon and
+Fourthwall are support/shop destinations. YouTube, X and Gravatar remain secondary
+profiles because the owner uses them less often. Discord is the plain handle
+`yaqyn`; do not fabricate a URL from a username. Meta profiles are not yet supplied.
+Person structured data connects the supplied personal profiles under the aliases
+`yaqyn` and `yaqyndev`; the Fourthwall shop and career organization are separate
+destinations, not alternate identities of the person.

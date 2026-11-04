@@ -10,9 +10,30 @@ For a role or project involving **business applications, backend systems, AI app
 
 [contact@yaqyn.dev](mailto:contact@yaqyn.dev)
 
-## Elsewhere
+## Profiles
 
-- [GitHub — personal projects and open source](https://github.com/yaqyn).
+- [GitHub — projects and open source](https://github.com/yaqyn).
+- [LinkedIn — professional background](https://linkedin.com/in/yaqyn).
+- [Bluesky — updates and conversation](https://bsky.app/profile/yaqyn.dev).
+- [Contra — freelance work](https://yaqyndev.contra.com/).
+
+Discord: `yaqyn`.
+
+## Support and shop
+
+- [Patreon](https://www.patreon.com/cw/yaqyn).
+- [Shop on Fourthwall](https://yaqyn-shop.fourthwall.com).
+
+## Other profiles
+
+These accounts are less active:
+
+- [YouTube](https://www.youtube.com/@yaqyndev).
+- [X](https://x.com/yaqyndev).
+- [Gravatar](https://gravatar.com/yaqyndev).
+
+## Work and learning
+
 - [Yaqyn Development — career work and development workflow](https://github.com/yaqyn-dev).
 - [Boot.dev — learning progress](https://www.boot.dev/u/yaqyn).
 
