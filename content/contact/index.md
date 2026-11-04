@@ -36,7 +36,7 @@ These accounts are less active:
 ## Work and learning
 
 - [Yaqyn Development — career work and development workflow](https://github.com/yaqyn-dev).
-- [Boot.dev — learning progress](https://www.boot.dev/yaqyn).
+- [Boot.dev — learning progress](https://www.boot.dev/u/yaqyn).
 
 If a question or bug belongs to a project, open an issue in its public repository when one is available so the context stays with the code.
 
