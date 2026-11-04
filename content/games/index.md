@@ -1,9 +1,21 @@
 ---
-description: Orbit, a Python Asteroids game, and Clibble, an original offline forest RPG in Go, by Abdulrahman M. Yaqyn.
+description: Verdant Trials, Clibble, and Orbit — forest adventures and arcade flight by Abdulrahman M. Yaqyn.
 ---
 # Games
 
-Step into a rainy forest and meet its wildlings, or pilot an upgradeable ship through incoming asteroids. These games began as Boot.dev projects and grew through independent work.
+Find a path through a lantern-lit labyrinth, meet wildlings in a rainy forest, or pilot an upgradeable ship through incoming asteroids. These games began as Boot.dev projects and grew through independent work.
+
+## Verdant Trials — Forest Maze Adventure
+
+![Verdant Trials — a lantern-bearing traveller in a forest labyrinth](/images/projects/verdant-trials-cover.webp)
+
+Explore five maze chapters with a lantern, warm lamps, and a teal beacon marking the exit. Light follows the traveller around stone walls, while fog remembers the paths already visited. Day and moonlit forest scenes frame the board.
+
+Play with the keyboard, ask for a hint, or watch depth-first and breadth-first search find their way through the maze. Pause, step through the search, and adjust its speed to see how the algorithms explore. Seeded mazes make a route repeatable; progress lasts for the current session.
+
+Run `./launch` from the repository. The first launch creates its Python environment and installs dependencies with internet access; later launches reuse that environment.
+
+[Explore Verdant Trials on GitHub](https://github.com/yaqyn/verdant-trials)
 
 ## Clibble — Terminal RPG
 

@@ -10,6 +10,7 @@ credits are preserved.
 
 | Local file under `projects/` | Published source | SHA-256 |
 | --- | --- | --- |
+| `verdant-trials-cover.webp` | [Canonical cover](https://github.com/yaqyn/verdant-trials/blob/main/docs/cover.webp) | `625f03bb1696c2c2b369efc9f4ade278f9b4c6ea7af018d8537217ca633d78ae` |
 | `modern-cover.webp` | [Canonical cover](https://github.com/yaqyn/Modern/blob/main/docs/readme/cover.webp) | `394fef31923693ac31b3b5dd1bd4dfcefae19c2a9c61298b1120c5ecf9338a72` |
 | `counter-cover.svg` | [Canonical cover](https://github.com/yaqyn/omarchy-counter/blob/main/readme-assets/cover.svg) | `d213fab5512f304b3bb405a25aac2e74456784bfc0aad6de9e415e7b99145e01` |
 | `leafmark-cover.svg` | [Canonical cover](https://github.com/yaqyn/leafmark-notebook/blob/main/readme-assets/cover.svg) | `730d9a7816f2f51abbd08c20dead29098e1477d150f14c978de58fad32b18c4a` |

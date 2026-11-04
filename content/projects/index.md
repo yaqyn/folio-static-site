@@ -77,7 +77,13 @@ Built for Omarchy's native plugin system. It follows the desktop theme and requi
 
 **Projects developed through the Boot.dev curriculum and extended through independent work.**
 
-Orbit and Clibble have complete entries on the [Games page](/games/).
+Verdant Trials, Clibble, and Orbit have complete entries on the [Games page](/games/).
+
+### Verdant Trials — Forest Maze Adventure
+
+A Python and PySide6 desktop game with five maze chapters, wall-aware lantern light, and fog that remembers explored paths. Play the route or watch depth-first and breadth-first search, with pause, step, and speed controls.
+
+[Explore Verdant Trials on the Games page](/games/) or [open its source](https://github.com/yaqyn/verdant-trials).
 
 ### Leafmark — Personal notebook
 

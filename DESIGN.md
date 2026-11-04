@@ -126,12 +126,12 @@ come from the user-maintained [GitHub profile README](https://github.com/yaqyn/y
 
 Project branding uses three explicit categories: Career projects (HyperQuote,
 Modern, Stockroom), Personal projects (qvOS, Counter), and Learning journey
-projects (Leafmark, Waymark, Readlane, Clibble, Threadline, Portlight, Workbench,
+projects (Verdant Trials, Leafmark, Waymark, Readlane, Clibble, Threadline, Portlight, Workbench,
 CineSearch, SiteLens, Orbit, TextScope, Folio). Keep this order on the homepage
-and Projects page. The Games page follows the relative learning order, Clibble
-then Orbit. Course origins remain explicit without repeating beginner labels.
+and Projects page. The Games page follows the relative learning order, Verdant Trials,
+Clibble, then Orbit. Course origins remain explicit without repeating beginner labels.
 
-All seventeen entries appear on the homepage and Projects page. Career source
+All eighteen entries appear on the homepage and Projects page. Career source
 stays private. Link to approved HyperQuote and Modern showcases and the public
 Yaqyn Development gallery; Stockroom remains a private evaluation prototype.
 The qvOS description leads with its standalone architecture; its signed Stable

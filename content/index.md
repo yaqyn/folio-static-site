@@ -27,6 +27,7 @@ Client applications and internal tools live in [Yaqyn Development](https://githu
 
 Projects developed through Boot.dev and extended through independent work. Each repository documents its origins, run instructions, and current boundaries.
 
+- [Verdant Trials — Forest Maze Adventure](/games/) A lantern-lit labyrinth with five chapters, fog memory, and visual depth-first and breadth-first search.
 - [Leafmark — Personal notebook](https://github.com/yaqyn/leafmark-notebook) Private plain-text notes, search, pinning, archives, and exportable drafts, with SQLite or optional Turso storage.
 - [Waymark — Private link workspace](https://github.com/yaqyn/waymark-link-shortener) Editable short links, persistent click totals, and request diagnosis through logs, metrics, and optional traces.
 - [Readlane — Feed reader](https://github.com/yaqyn/readlane-feed-reader) RSS and Atom collection, PostgreSQL, persistent retries, and keyboard-driven reading.
