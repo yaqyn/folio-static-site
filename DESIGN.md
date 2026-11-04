@@ -194,7 +194,7 @@ website traffic reports do not establish search impressions or indexing.
 
 The contact page prioritizes GitHub, LinkedIn, Bluesky and Contra. Patreon and
 Fourthwall are support/shop destinations. YouTube, X and Gravatar remain secondary
-profiles because the owner uses them less often. Discord is the plain handle
+profiles because the owner uses them less often. Telegram links to the supplied `t.me/yaqyndev` profile. Discord is the plain handle
 `yaqyn`; do not fabricate a URL from a username. Meta profiles are not yet supplied.
 Person structured data connects the supplied personal profiles under the aliases
 `yaqyn` and `yaqyndev`; the Fourthwall shop and career organization are separate

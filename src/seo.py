@@ -28,6 +28,7 @@ def page_metadata(title, description, route, site_url, seo_title=None):
              "https://gravatar.com/yaqyndev",
              "https://x.com/yaqyndev",
              "https://yaqyndev.contra.com/",
+             "https://t.me/yaqyndev",
              "https://www.boot.dev/u/yaqyn",
          ]},
         {"@type": "WebSite", "@id": site_id, "name": "yaqyn",

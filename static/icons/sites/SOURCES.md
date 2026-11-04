@@ -14,6 +14,7 @@ Original SVG geometry is preserved. No external assets, scripts, or fonts.
 | `youtube.svg` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/youtube.svg) | CC0 1.0; see `LICENSE-SIMPLE-ICONS.md` |
 | `x.svg` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/x.svg) | CC0 1.0; see `LICENSE-SIMPLE-ICONS.md` |
 | `gravatar.svg` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/gravatar.svg) | CC0 1.0; see `LICENSE-SIMPLE-ICONS.md` |
+| `telegram.svg` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/telegram.svg) | CC0 1.0; see `LICENSE-SIMPLE-ICONS.md` |
 | `discord.svg` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/discord.svg) | CC0 1.0; see `LICENSE-SIMPLE-ICONS.md` |
 | `linkedin.svg` | [Bootstrap Icons](https://github.com/twbs/icons/blob/main/icons/linkedin.svg) | MIT; see `LICENSE-BOOTSTRAP-ICONS.txt` |
 
@@ -47,3 +48,5 @@ copyright and license are retained in the accompanying MIT license file.
 | `patreon.svg` | `19b2589a0ab396e942aac60d7a8bd84b3d8c207bae1fa668c7b2f539e31decaa` |
 | `x.svg` | `693e68863eceb8dc9f72e2acd386ab9c20a10858dab2c076212f7084cb7a32fe` |
 | `youtube.svg` | `5038808acbbc4e6edda16cbeb1cc6dec80e4e4ee4e227e039c41229fa222aa8c` |
+
+Telegram SVG SHA-256: `147fd8f8923e7e5f463fe98c0eb9913bead6b2ae59935728cda141002ec8a7c9`.

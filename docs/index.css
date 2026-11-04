@@ -130,6 +130,7 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); display: bloc
 .contact .page-content a[href^="https://x.com/"]::before,
 .contact .page-content a[href^="https://gravatar.com/"]::before,
 .contact .page-content a[href^="https://www.boot.dev/"]::before,
+.contact .page-content a[href^="https://t.me/"]::before,
 .contact .discord-handle::before {
   content: "";
   display: inline-block;
@@ -163,5 +164,8 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); display: bloc
 .contact .page-content a[href^="https://x.com/"]::before,
 .contact .page-content a[href^="https://gravatar.com/"]::before,
 .contact .page-content a[href^="https://www.boot.dev/"]::before,
+.contact .page-content a[href^="https://t.me/"]::before,
 .contact .discord-handle::before { forced-color-adjust: none; background-color: LinkText; }
 }
+
+.contact .page-content a[href^="https://t.me/"] { --site-icon: url("icons/sites/telegram.svg"); }

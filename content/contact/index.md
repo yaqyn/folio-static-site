@@ -16,6 +16,7 @@ For a role or project involving **business applications, backend systems, AI app
 - [LinkedIn — professional background](https://linkedin.com/in/yaqyn).
 - [Bluesky — updates and conversation](https://bsky.app/profile/yaqyn.dev).
 - [Contra — freelance work](https://yaqyndev.contra.com/).
+- [Telegram — @yaqyndev](https://t.me/yaqyndev).
 
 Discord: `yaqyn`.
 
