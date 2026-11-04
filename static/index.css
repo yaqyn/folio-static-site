@@ -118,3 +118,50 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); display: bloc
 
 /* Project covers retain their own branding within the charcoal portfolio. */
 .page-content img[src*="-cover."] { width: 100%; max-width: 760px; margin-inline: auto; border: 1px solid var(--border); }
+
+/* Decorative local icons keep profile labels and keyboard targets intact. */
+.contact .page-content a[href^="https://github.com/"]::before,
+.contact .page-content a[href^="https://linkedin.com/"]::before,
+.contact .page-content a[href^="https://bsky.app/"]::before,
+.contact .page-content a[href^="https://yaqyndev.contra.com/"]::before,
+.contact .page-content a[href^="https://www.patreon.com/"]::before,
+.contact .page-content a[href^="https://yaqyn-shop.fourthwall.com"]::before,
+.contact .page-content a[href^="https://www.youtube.com/"]::before,
+.contact .page-content a[href^="https://x.com/"]::before,
+.contact .page-content a[href^="https://gravatar.com/"]::before,
+.contact .page-content a[href^="https://www.boot.dev/"]::before,
+.contact .discord-handle::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  vertical-align: -2px;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
+}
+.contact .page-content a[href^="https://github.com/"] { --site-icon: url("icons/sites/github.svg"); }
+.contact .page-content a[href^="https://linkedin.com/"] { --site-icon: url("icons/sites/linkedin.svg"); }
+.contact .page-content a[href^="https://bsky.app/"] { --site-icon: url("icons/sites/bluesky.svg"); }
+.contact .page-content a[href^="https://yaqyndev.contra.com/"] { --site-icon: url("icons/sites/contra.svg"); }
+.contact .page-content a[href^="https://www.patreon.com/"] { --site-icon: url("icons/sites/patreon.svg"); }
+.contact .page-content a[href^="https://yaqyn-shop.fourthwall.com"] { --site-icon: url("icons/sites/fourthwall.svg"); }
+.contact .page-content a[href^="https://www.youtube.com/"] { --site-icon: url("icons/sites/youtube.svg"); }
+.contact .page-content a[href^="https://x.com/"] { --site-icon: url("icons/sites/x.svg"); }
+.contact .page-content a[href^="https://gravatar.com/"] { --site-icon: url("icons/sites/gravatar.svg"); }
+.contact .page-content a[href^="https://www.boot.dev/"] { --site-icon: url("icons/sites/bootdev.svg"); }
+.contact .discord-handle { --site-icon: url("icons/sites/discord.svg"); }
+@media (forced-colors: active) {
+.contact .page-content a[href^="https://github.com/"]::before,
+.contact .page-content a[href^="https://linkedin.com/"]::before,
+.contact .page-content a[href^="https://bsky.app/"]::before,
+.contact .page-content a[href^="https://yaqyndev.contra.com/"]::before,
+.contact .page-content a[href^="https://www.patreon.com/"]::before,
+.contact .page-content a[href^="https://yaqyn-shop.fourthwall.com"]::before,
+.contact .page-content a[href^="https://www.youtube.com/"]::before,
+.contact .page-content a[href^="https://x.com/"]::before,
+.contact .page-content a[href^="https://gravatar.com/"]::before,
+.contact .page-content a[href^="https://www.boot.dev/"]::before,
+.contact .discord-handle::before { forced-color-adjust: none; background-color: LinkText; }
+}

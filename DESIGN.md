@@ -199,3 +199,10 @@ profiles because the owner uses them less often. Discord is the plain handle
 Person structured data connects the supplied personal profiles under the aliases
 `yaqyn` and `yaqyndev`; the Fourthwall shop and career organization are separate
 destinations, not alternate identities of the person.
+
+Profile links on the contact page use 16 px monochrome, locally hosted icons.
+Icons are decorative CSS masks that inherit link color; labels, wrapping, focus
+and keyboard targets remain readable independently. Recognizable upstream brand
+assets retain their source/license notes under `static/icons/sites/`. Where no
+brand vector is available, use an honest category symbol. The X label is
+“X | formerly Twitter.” Browser titles remain separate from the visual wordmark.

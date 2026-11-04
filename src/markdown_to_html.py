@@ -181,6 +181,11 @@ def generate_page(
     metadata, markdown = parse_frontmatter(Path(from_path).read_text(encoding="utf-8"))
     template = Path(template_path).read_text(encoding="utf-8")
     content_node = markdown_to_html_node(markdown)
+    if route == "/contact/":
+        for block in content_node.children:
+            if (block.tag == "p" and block.children
+                    and block.children[0].value == "Discord: "):
+                block.props = {"class": "discord-handle"}
     # Reserve cover geometry and defer artwork below the fold; the hero stays eager.
     for block in content_node.children:
         for node in block.children or []:
@@ -260,7 +265,7 @@ def generate_page(
         "Title": escape(title),
         "Content": html,
         "Description": escape(description, quote=True),
-        "PageClass": layout,
+        "PageClass": layout + (" contact" if route == "/contact/" else ""),
         "Navigation": "".join(navigation),
         "Canonical": escape(site_url.rstrip("/") + quote(route, safe="/"), quote=True),
         "ImageURL": escape(

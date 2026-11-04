@@ -29,7 +29,7 @@ Discord: `yaqyn`.
 These accounts are less active:
 
 - [YouTube](https://www.youtube.com/@yaqyndev).
-- [X](https://x.com/yaqyndev).
+- [X | formerly Twitter](https://x.com/yaqyndev).
 - [Gravatar](https://gravatar.com/yaqyndev).
 
 ## Work and learning
