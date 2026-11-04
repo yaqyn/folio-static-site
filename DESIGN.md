@@ -156,3 +156,10 @@ regenerate `docs/`; never maintain a second copy of page content by hand.
 ## Voice
 
 Use first person selectively for introductions, ownership, and opinions. Let projects, decisions, behavior, and outcomes lead most sentences. Keep ownership clear without awkward passive wording or an invented ‘we’. Explain the purpose before the implementation. Keep paragraphs focused and headings descriptive. State course origins once where relevant, and distinguish ongoing study from completed work. Confidence comes from evidence and a point of view; humility comes from honest scope and limitations. Avoid inflated expertise, repeated beginner labels, generic enthusiasm, and claims about adoption or results without evidence.
+
+## Publication domain
+
+GitHub Pages serves this site at `https://yaqyn.dev/`. Production builds use the
+root base path and canonical URLs on that domain. `static/CNAME` is copied into
+`docs/CNAME` on every build so publishing preserves the domain. Custom base paths
+remain supported for previews and other deployments.

@@ -6,7 +6,7 @@
 
 Folio brings together three career projects, two personal projects, twelve Boot.dev learning projects, and development notes. The site uses a charcoal palette and an original black-and-white author portrait. Its Python generator turns Markdown into the pages you see, including the full project inventory, games page, biography, contact page, workflow and technical notes, and custom 404 page.
 
-[Visit the published site](https://yaqyn.github.io/folio-static-site/) · [Run locally](#-quick-start) · [Design context](DESIGN.md)
+[Visit the published site](https://yaqyn.dev/) · [Run locally](#-quick-start) · [Design context](DESIGN.md)
 
 ## <img src="readme-assets/icons/features.svg" width="24" height="24" alt=""> Features
 
@@ -53,7 +53,7 @@ layout: page
 
 Supported keys are `description` and `layout`; layouts are `page` and `home`. This is a deliberately small key-value format, not a full YAML parser. The homepage's first three paragraphs are its introduction, actions, and image. Keep that order when editing its content.
 
-Build for the existing GitHub Pages project path:
+Build for the custom domain at `https://yaqyn.dev/`:
 
 ```bash
 sh build.sh

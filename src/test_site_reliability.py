@@ -160,6 +160,25 @@ class TestSiteReliability(unittest.TestCase):
                 (output / "projects/index.html").read_text(),
             )
 
+    def test_custom_domain_root_routes_assets_and_canonical_urls(self):
+        with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()):
+            output = build_site(output=Path(directory) / "site")
+            self.assertEqual((output / "CNAME").read_text(), "yaqyn.dev\n")
+            for page in output.rglob("*.html"):
+                markup = page.read_text()
+                route = "/" + page.relative_to(output).as_posix()
+                if route.endswith("index.html"):
+                    route = route[:-len("index.html")]
+                self.assertIn(f' rel="canonical" href="https://yaqyn.dev{route}"', markup)
+                links = Links()
+                links.feed(markup)
+                for url in links.urls:
+                    if url.startswith("/") and not url.startswith("//"):
+                        local = output / unquote(urlsplit(url).path).lstrip("/")
+                        if local.is_dir():
+                            local /= "index.html"
+                        self.assertTrue(local.exists(), f"{page}: missing {url}")
+
     def test_failed_build_preserves_previous_output(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "site"
