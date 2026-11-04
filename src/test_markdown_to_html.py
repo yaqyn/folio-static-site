@@ -96,6 +96,12 @@ the **same** even with inline stuff
             "<div><ul><li>first item</li><li>second item</li></ul></div>",
         )
 
+    def test_unordered_list_accepts_commonmark_indentation(self):
+        self.assertEqual(
+            markdown_to_html_node("   - first item\n   - second item").to_html(),
+            "<div><ul><li>first item</li><li>second item</li></ul></div>",
+        )
+
     def test_task_list_items_are_read_only_and_preserve_formatting(self):
         self.assertEqual(
             markdown_to_html_node("- [x] Ship **tests**\n- [ ] Write notes").to_html(),

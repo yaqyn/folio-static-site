@@ -55,7 +55,7 @@ def _list_to_html(block: str, tag: str, ordered: bool = False) -> ParentNode:
         if ordered:
             item_text = re.split(r"[.)] ", line, maxsplit=1)[1]
         else:
-            item_text = line[2:]
+            item_text = re.sub(r"^ {0,3}[-*+] ", "", line)
         task = re.match(r"\[([ xX])\] (.+)", item_text)
         if task:
             props = {"type": "checkbox", "disabled": "disabled"}
