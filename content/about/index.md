@@ -61,7 +61,7 @@ Local checks, CI, and live verification answer different questions. A successful
 
 Current study covers backend development through **Boot.dev and IBM**, **Go, JavaScript, and TypeScript**, and **AWS and cloud engineering**. Further coursework includes frontend development with **Scrimba**, full-stack development with **Meta and Scrimba**, and AI engineering with **IBM and Scrimba**.
 
-[View my Boot.dev learning progress](https://www.boot.dev/u/yaqyn).
+[View my Boot.dev learning progress](https://www.boot.dev/yaqyn).
 
 ## Professional certificates and AI training
 
