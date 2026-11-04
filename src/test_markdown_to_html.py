@@ -62,6 +62,12 @@ the **same** even with inline stuff
             "<div><h2>Release notes</h2></div>",
         )
 
+    def test_heading_accepts_commonmark_indentation(self):
+        self.assertEqual(
+            markdown_to_html_node("   ### Indented heading").to_html(),
+            "<div><h3>Indented heading</h3></div>",
+        )
+
     def test_setext_headings(self):
         self.assertEqual(
             markdown_to_html_node("Main title\n===\n\nSection\n---").to_html(),

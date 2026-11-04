@@ -39,6 +39,7 @@ def _heading_to_html(block: str) -> ParentNode:
     lines = block.splitlines()
     if len(lines) == 2 and re.fullmatch(r" {0,3}(=+|-+)[ \t]*", lines[1]):
         return _text_block_to_parent("h1" if "=" in lines[1] else "h2", lines[0].strip())
+    block = block.lstrip(" ")
     heading_text = block.lstrip("#")
     level = len(block) - len(heading_text)
     # CommonMark permits an optional closing run of hashes when it is

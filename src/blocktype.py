@@ -13,7 +13,7 @@ class BlockType(Enum):
 
 
 def block_to_block_type(block: str) -> BlockType:
-    if re.match(r"^#{1,6} ", block):
+    if re.match(r"^ {0,3}#{1,6} ", block):
         return BlockType.HEADING
 
     lines = block.split("\n")
