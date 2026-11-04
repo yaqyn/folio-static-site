@@ -136,7 +136,7 @@ def parse_frontmatter(markdown):
         if not line.strip():
             continue
         key, separator, value = line.partition(":")
-        if not separator or key.strip() not in {"description", "layout"}:
+        if not separator or key.strip() not in {"description", "layout", "title"}:
             raise ValueError(f"Unsupported frontmatter: {line}")
         key = key.strip()
         if key in values:
@@ -184,6 +184,17 @@ def generate_page(
     # Reserve cover geometry and defer artwork below the fold; the hero stays eager.
     for block in content_node.children:
         for node in block.children or []:
+            if node.tag == "img" and node.props["src"] == "/images/yaqyn-portrait.webp":
+                node.props.update(
+                    src="/images/yaqyn-portrait-768.webp",
+                    srcset=(f"{basepath}images/yaqyn-portrait-384.webp 384w, "
+                            f"{basepath}images/yaqyn-portrait-768.webp 768w, "
+                            f"{basepath}images/yaqyn-portrait.webp 1122w"),
+                    sizes=("(min-width: 1160px) 435px, "
+                           "(max-width: 600px) calc(100vw - 40px), "
+                           "(max-width: 800px) calc(42.5vw - 33px), calc(42.5vw - 58px)"),
+                    width="1122", height="1402", fetchpriority="high", decoding="async",
+                )
             if node.tag == "img" and node.props["src"].startswith("/images/projects/"):
                 static = Path(__file__).resolve().parent.parent / "static"
                 image = (static / node.props["src"].lstrip("/")).resolve()
@@ -240,7 +251,12 @@ def generate_page(
             else ""
         )
         navigation.append(f'<a href="{target}"{current}>{label}</a>')
+    from seo import page_metadata
+    seo = page_metadata(title, description, route, site_url, metadata.get("title"))
     replacements = {
+        "DocumentTitle": escape(seo["DocumentTitle"], quote=True),
+        "Robots": seo["Robots"],
+        "StructuredData": seo["StructuredData"],
         "Title": escape(title),
         "Content": html,
         "Description": escape(description, quote=True),
@@ -248,9 +264,11 @@ def generate_page(
         "Navigation": "".join(navigation),
         "Canonical": escape(site_url.rstrip("/") + quote(route, safe="/"), quote=True),
         "ImageURL": escape(
-            site_url.rstrip("/") + "/images/yaqyn-portrait.webp", quote=True
+            site_url.rstrip("/") + "/images/social-card.webp", quote=True
         ),
         "Breadcrumbs": '<a href="/">yaqyn.</a><span aria-hidden="true"> / </span>'
+        + ('<a href="/notes/">Notes</a><span aria-hidden="true"> / </span>'
+           if route.startswith("/notes/") and route != "/notes/" else "")
         + escape(title)
         if layout != "home"
         else "",

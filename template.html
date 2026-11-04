@@ -4,18 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
+    <meta name="author" content="Abdulrahman M. Yaqyn">
+    <meta name="robots" content="{{ Robots }}">
+    <meta name="theme-color" content="#1c1d20">
     <meta name="description" content="{{ Description }}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ Title }} | yaqyn">
+    <meta property="og:title" content="{{ DocumentTitle }}">
     <meta property="og:description" content="{{ Description }}">
     <meta property="og:url" content="{{ Canonical }}">
     <meta property="og:site_name" content="yaqyn">
     <meta property="og:image" content="{{ ImageURL }}">
-    <meta property="og:image:alt" content="Black and white portrait of Abdulrahman M. Yaqyn">
+    <meta property="og:image:alt" content="Abdulrahman M. Yaqyn — backend systems, AI applications, Linux, projects and development notes">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:title" content="{{ DocumentTitle }}">
+    <meta name="twitter:description" content="{{ Description }}">
+    <meta name="twitter:image" content="{{ ImageURL }}">
+    <meta name="twitter:image:alt" content="Abdulrahman M. Yaqyn — backend systems, AI applications, Linux, projects and development notes">
     <meta name="twitter:card" content="summary_large_image">
-    <title>{{ Title }} | yaqyn</title>
+    <title>{{ DocumentTitle }}</title>
     <link rel="canonical" href="{{ Canonical }}">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="application/ld+json">{{ StructuredData }}</script>
     <link href="/index.css" rel="stylesheet">
   </head>
   <body class="{{ PageClass }}">
@@ -27,7 +43,7 @@
         <a class="header-link" href="https://github.com/yaqyn">GitHub <span aria-hidden="true">↗</span></a>
       </header>
       <main id="main" tabindex="-1">
-        <div class="breadcrumbs">{{ Breadcrumbs }}</div>
+        <div class="breadcrumbs" role="navigation" aria-label="Breadcrumb">{{ Breadcrumbs }}</div>
         <article class="page-content">{{ Content }}</article>
       </main>
       <footer class="site-footer">
@@ -36,5 +52,6 @@
         <div><a href="/contact/">Get in touch</a><a href="https://github.com/yaqyn/folio-static-site">View source <span aria-hidden="true">↗</span></a></div>
       </footer>
     </div>
+    <script type="module" src="/analytics.js"></script>
   </body>
 </html>

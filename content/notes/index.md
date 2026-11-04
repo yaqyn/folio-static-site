@@ -1,4 +1,5 @@
 ---
+title: Software Engineering Notes | Abdulrahman M. Yaqyn
 description: Development notes from yaqyn's workbench — Python, static sites, agents, and systems.
 ---
 # Notes

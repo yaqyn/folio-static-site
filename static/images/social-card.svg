@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Abdulrahman M. Yaqyn — software, systems and development notes</title>
+  <desc id="desc">Charcoal portfolio card with the yaqyn wordmark and original black-and-white author portrait.</desc>
+  <rect width="1200" height="630" fill="#1c1d20"/>
+  <text x="66" y="190" font-family="Liberation Sans, Arial, sans-serif" font-size="128" font-weight="700" letter-spacing="-7" fill="#f2f1ed">yaqyn<tspan fill="#b0b2b6">.</tspan></text>
+  <text x="72" y="285" font-family="Liberation Sans, Arial, sans-serif" font-size="38" font-weight="700" fill="#f2f1ed">Abdulrahman M. Yaqyn</text>
+  <text x="72" y="347" font-family="Liberation Sans, Arial, sans-serif" font-size="28" fill="#b0b2b6">Backend systems. AI applications.</text>
+  <text x="72" y="387" font-family="Liberation Sans, Arial, sans-serif" font-size="28" fill="#b0b2b6">Linux. Projects and development notes.</text>
+  <path d="M72 467h568" stroke="#45474b"/>
+  <text x="72" y="530" font-family="Liberation Sans, Arial, sans-serif" font-size="26" fill="#deddd9">yaqyn.dev</text>
+  <image x="744" y="70" width="384" height="480" preserveAspectRatio="xMidYMid meet" xlink:href="yaqyn-portrait.webp"/>
+</svg>

@@ -1,4 +1,5 @@
 ---
+title: About Abdulrahman M. Yaqyn | Software & Systems
 description: Abdulrahman M. Yaqyn — backend developer in 6th of October City, Egypt, working across AI applications, Linux, and business automation.
 ---
 # About

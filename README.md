@@ -51,7 +51,7 @@ layout: page
 # Page title
 ```
 
-Supported keys are `description` and `layout`; layouts are `page` and `home`. This is a deliberately small key-value format, not a full YAML parser. The homepage's first three paragraphs are its introduction, actions, and image. Keep that order when editing its content.
+Supported keys are `title`, `description` and `layout`; layouts are `page` and `home`. This is a deliberately small key-value format, not a full YAML parser. The homepage's first three paragraphs are its introduction, actions, and image. Keep that order when editing its content.
 
 Build for the custom domain at `https://yaqyn.dev/`:
 
@@ -67,7 +67,7 @@ python3 src/main.py /portfolio/ --output /tmp/portfolio --site-url https://examp
 
 Builds stage assets and pages in a temporary directory before replacing generated output. A broken Markdown page leaves the previous build intact. Existing custom output directories need a `.nojekyll` marker; the generator protects the project, source, and Git directories. Edit sources rather than generated HTML. Regenerate `docs/` with `sh build.sh` before committing for publication.
 
-Local links receive the selected base path; external and protocol-relative links retain their destinations. Text and attributes are HTML-escaped, and unsupported link/image schemes are rejected. Every page has a description, canonical URL, social metadata, and selected navigation.
+Local links receive the selected base path; external and protocol-relative links retain their destinations. Text and attributes are HTML-escaped, and unsupported link/image schemes are rejected. Every page has a description, canonical URL, social metadata, and selected navigation. Page titles, structured data, the generated sitemap and robots file use the configured public URL. The error page is marked noindex.
 
 ## <img src="readme-assets/icons/projects.svg" width="24" height="24" alt=""> Projects
 
@@ -135,3 +135,20 @@ Built by **[Abdulrahman M. Yaqyn](https://github.com/yaqyn)**.
 
 > **Learning Journey Project · Boot.dev**
 > Built through the Boot.dev curriculum and extended into my personal portfolio.
+
+### Search and analytics
+
+`/sitemap.xml` lists the nine indexable pages; `/robots.txt` points crawlers to it.
+The shared template provides descriptive titles, canonical URLs, a `y.` favicon,
+landscape social previews, and Person/WebSite/page/breadcrumb JSON-LD. Changing
+`--site-url` regenerates these URLs for another host.
+
+Cloudflare Web Analytics uses the existing `yaqyn.dev` site's deferred beacon.
+Local previews skip analytics requests. Its dashboard reports visits, referrers, and browser performance when the beacon
+runs; script blocking and sampled data can affect totals. The public beacon token
+is not an API credential. No advertising tracker is installed.
+
+Google Search Console remains a separate setup: add the `yaqyn.dev` Domain
+property, publish the real TXT verification value in Cloudflare, verify ownership,
+and submit `https://yaqyn.dev/sitemap.xml`. Indexing and search-result appearance
+are controlled by search engines and are not guaranteed by a successful build.

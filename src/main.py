@@ -8,6 +8,7 @@ import tempfile
 from urllib.parse import urlsplit
 
 from markdown_to_html import generate_page, normalize_basepath
+from seo import write_crawl_files
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -91,6 +92,7 @@ def build_site(basepath="/", output=None, site_url="https://yaqyn.dev"):
         generate_pages_recursive(
             ROOT / "content", ROOT / "template.html", stage, basepath, site_url=site_url
         )
+        write_crawl_files(stage, site_url)
         (stage / ".nojekyll").touch()
         backup = Path(temporary) / "previous"
         if output.exists():

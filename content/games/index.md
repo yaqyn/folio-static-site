@@ -1,4 +1,5 @@
 ---
+title: Indie Games & Forest Adventures | Abdulrahman M. Yaqyn
 description: Verdant Trials, Clibble, and Orbit — forest adventures and arcade flight by Abdulrahman M. Yaqyn.
 ---
 # Games

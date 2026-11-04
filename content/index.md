@@ -1,4 +1,5 @@
 ---
+title: Abdulrahman M. Yaqyn | Backend Systems, AI & Linux
 layout: home
 description: Abdulrahman M. Yaqyn — business software, backend systems, AI applications, and Linux. Projects, engineering decisions, and development notes.
 ---

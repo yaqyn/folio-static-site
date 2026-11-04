@@ -84,8 +84,10 @@ The header and footer are shared in `template.html`. Navigation wraps naturally,
 without a JavaScript menu. The first keyboard target is Skip to content. Article
 breadcrumbs and selected navigation retain orientation. Hero image aspect ratio
 reserves space before loading at a 4:5 ratio on desktop and mobile. The
-portrait preserves its original pixels and is converted to lossless WebP
-from the user’s supplied author photograph. No forms, async controls, or loading states exist.
+original portrait preserves its pixels and is converted to lossless WebP
+from the user’s supplied author photograph. Proportional 384/768 px lossless
+derivatives let browsers choose a smaller transfer through srcset; retain the
+original as the largest candidate. No forms, async controls, or loading states exist.
 
 ## Elevation & Depth
 
@@ -119,7 +121,8 @@ keyboard-visible navigation; test those contracts whenever the template changes.
 - Update source Markdown, template, and CSS; regenerate `docs/` for publication.
 - Keep links useful, focus visible, and narrow layouts free of horizontal overflow.
 - Do not restore fantasy artwork or generic placeholder phone numbers.
-- Do not add external fonts, trackers, or unnecessary JavaScript to this site.
+- Do not add external fonts, advertising trackers, or unnecessary JavaScript.
+  Cloudflare Web Analytics is the approved deferred measurement beacon.
 
 The biography, skills, credentials, contact details, and major-project descriptions
 come from the user-maintained [GitHub profile README](https://github.com/yaqyn/yaqyn/blob/main/README.md), reviewed for this redesign. Do not invent additional personal claims.
@@ -142,8 +145,8 @@ The homepage remains text-led, with its original black-and-white portrait.
 Detailed project entries reuse the original HyperQuote and qvOS animated covers
 and the other projects' canonical artwork. Modern uses its static architectural
 brand illustration. Counter and Leafmark retain their original SVG covers;
-Waymark retains its lossless WebP. No organization bumper, new fonts, JavaScript,
-or decorative effects are added to Folio. Stockroom has no public cover or
+Waymark retains its lossless WebP. No organization bumper, new fonts, or
+decorative effects are added to Folio. Stockroom has no public cover or
 interface capture. Games keep full entries and covers on the Games page, with
 short linked descriptions in the Projects inventory.
 
@@ -163,3 +166,26 @@ GitHub Pages serves this site at `https://yaqyn.dev/`. Production builds use the
 root base path and canonical URLs on that domain. `static/CNAME` is copied into
 `docs/CNAME` on every build so publishing preserves the domain. Custom base paths
 remain supported for previews and other deployments.
+
+## Search and sharing
+
+Keep the visible lowercase wordmark and original portrait. Browser/search icons
+use a self-contained off-white `y.` on charcoal, with SVG and square PNG/ICO
+fallbacks. Social previews use the 1200 × 630 charcoal composition in
+`static/images/social-card.webp`; preserve the portrait's proportions.
+
+Page titles identify the owner and subject independently of the visible H1.
+Canonical URLs, Open Graph/Twitter cards, and JSON-LD share the configured public
+site URL. Schema describes the real person, website, page, and breadcrumbs;
+never add invented ratings, credentials, publication dates, or search actions.
+Generate sitemap and robots files with the site, excluding the noindex 404 page.
+No fabricated last-modified dates or keyword meta tags.
+
+The user's 2026-11-04 analytics request authorizes the existing Cloudflare Web
+Analytics site's deferred beacon. Its public site token is configuration, not an
+API credential. No advertising scripts or cookies are introduced by the site.
+The site works without JavaScript and when analytics is blocked. The small
+first-party loader only enables measurement on HTTPS production hostnames; local
+previews make no analytics requests. Update its host allowlist when moving Folio. Search Console
+verification and sitemap submission need the owner's authenticated Google account;
+website traffic reports do not establish search impressions or indexing.

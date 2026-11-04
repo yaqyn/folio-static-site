@@ -1,4 +1,5 @@
 ---
+title: Contact Abdulrahman M. Yaqyn | Software Projects
 description: Contact Abdulrahman M. Yaqyn about backend development, AI applications, and business workflow automation.
 ---
 # Get in touch

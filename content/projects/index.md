@@ -1,9 +1,10 @@
 ---
-description: Career applications, independent Linux tools, and twelve Boot.dev projects by Abdulrahman M. Yaqyn. Explore the behavior, engineering choices, and source.
+title: Software Projects | Abdulrahman M. Yaqyn
+description: Career applications, independent Linux tools, and thirteen Boot.dev projects by Abdulrahman M. Yaqyn. Explore the behavior, engineering choices, and source.
 ---
 # Projects
 
-Client applications, independent tools, and twelve learning projects. Career work has approved public showcases; personal and learning projects link to their source and run instructions. Private prototypes are identified as such.
+Client applications, independent tools, and thirteen learning projects. Career work has approved public showcases; personal and learning projects link to their source and run instructions. Private prototypes are identified as such.
 
 ## Career projects
 
