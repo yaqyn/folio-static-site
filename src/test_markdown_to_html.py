@@ -151,6 +151,12 @@ the **same** even with inline stuff
             "<i>italic</i></a> link</p></div>",
         )
 
+    def test_combined_bold_italic_emphasis(self):
+        self.assertEqual(
+            markdown_to_html_node("A ***careful*** note").to_html(),
+            "<div><p>A <b><i>careful</i></b> note</p></div>",
+        )
+
     def test_strikethrough(self):
         self.assertEqual(
             markdown_to_html_node("Keep ~~old copy~~ new copy").to_html(),

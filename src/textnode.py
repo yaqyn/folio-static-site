@@ -10,6 +10,7 @@ class TextType(Enum):
     TEXT = "text"
     BOLD = "bold"
     ITALIC = "italic"
+    BOLD_ITALIC = "bold_italic"
     STRIKETHROUGH = "strikethrough"
     CODE = "code"
     LINK = "link"
@@ -46,6 +47,10 @@ def text_node_to_html_node(text_node: TextNode) -> LeafNode:
         return LeafNode("b", text_node.text)
     if text_node.text_type == TextType.ITALIC:
         return LeafNode("i", text_node.text)
+    if text_node.text_type == TextType.BOLD_ITALIC:
+        from parentnode import ParentNode
+
+        return ParentNode("b", [LeafNode("i", text_node.text)])
     if text_node.text_type == TextType.STRIKETHROUGH:
         return LeafNode("del", text_node.text)
     if text_node.text_type == TextType.CODE:
