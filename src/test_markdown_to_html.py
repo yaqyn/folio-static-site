@@ -4,6 +4,12 @@ from markdown_to_html import markdown_to_html_node
 
 
 class TestMarkdownToHTML(unittest.TestCase):
+    def test_link_titles_render_as_attributes(self):
+        self.assertEqual(
+            markdown_to_html_node('[Guide](https://example.com "Read the guide")').to_html(),
+            '<div><p><a href="https://example.com" title="Read the guide">Guide</a></p></div>',
+        )
+
     def test_paragraphs(self):
         md = """
 This is **bolded** paragraph
