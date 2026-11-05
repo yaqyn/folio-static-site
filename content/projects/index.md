@@ -1,10 +1,10 @@
 ---
 title: Software Projects | Abdulrahman M. Yaqyn
-description: Career applications, independent Linux tools, and thirteen Boot.dev projects by Abdulrahman M. Yaqyn. Explore the behavior, engineering choices, and source.
+description: Career applications, independent Linux tools, and fourteen learning projects from Boot.dev and Meta coursework by Abdulrahman M. Yaqyn. Explore the behavior, engineering choices, and source.
 ---
 # Projects
 
-Client applications, independent tools, and thirteen learning projects. Career work has approved public showcases; personal and learning projects link to their source and run instructions. Private prototypes are identified as such.
+Client applications, independent tools, and fourteen learning projects. Career work has approved public showcases; personal and learning projects link to their source and run instructions. Private prototypes are identified as such.
 
 ## Career projects
 
@@ -76,9 +76,21 @@ Built for Omarchy's native plugin system. It follows the desktop theme and requi
 
 ## Learning journey projects
 
-**Projects developed through the Boot.dev curriculum and extended through independent work.**
+**Projects developed through Boot.dev and Meta coursework, then extended through independent work.**
 
 Verdant Trials, Clibble, and Orbit have complete entries on the [Games page](/games/).
+
+### Little Lemon — Database
+
+![Little Lemon — database model and booking procedures with the Meta curriculum mark](/images/projects/little-lemon-database-cover.webp)
+
+Import 21,000 supplied workbook records into a dedicated MySQL database. Seven linked tables preserve the source data, while five stored procedures check table availability, add, update, and cancel bookings, and retrieve the maximum order quantity. Demonstration bookings are labeled separately from workbook records.
+
+**Stack:** Python, MySQL, MySQL Connector/Python, and Jupyter Notebook.
+
+The Python client uses a connection pool and explicit transactions. The executed notebook, schema-derived ER diagram, and 48 passing tests make the data import and procedure behavior inspectable. Tableau-ready CSVs are included; native Tableau and MySQL Workbench execution remain unverified. Developed from the Meta database coursework brief.
+
+[Explore Little Lemon Database on GitHub](https://github.com/yaqyn/little-lemon-database) or [read the executed notebook](https://github.com/yaqyn/little-lemon-database/blob/main/notebooks/Little%5FLemon%5FDatabase.ipynb).
 
 ### Verdant Trials — Forest Maze Adventure
 

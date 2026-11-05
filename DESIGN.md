@@ -129,12 +129,12 @@ come from the user-maintained [GitHub profile README](https://github.com/yaqyn/y
 
 Project branding uses three explicit categories: Career projects (HyperQuote,
 Modern, Stockroom), Personal projects (qvOS, Counter), and Learning journey
-projects (Verdant Trials, Leafmark, Waymark, Readlane, Clibble, Threadline, Portlight, Workbench,
+projects (Little Lemon Database, Verdant Trials, Leafmark, Waymark, Readlane, Clibble, Threadline, Portlight, Workbench,
 CineSearch, SiteLens, Orbit, TextScope, Folio). Keep this order on the homepage
 and Projects page. The Games page follows the relative learning order, Verdant Trials,
 Clibble, then Orbit. Course origins remain explicit without repeating beginner labels.
 
-All eighteen entries appear on the homepage and Projects page. Career source
+All nineteen entries appear on the homepage and Projects page. Career source
 stays private. Link to approved HyperQuote and Modern showcases and the public
 Yaqyn Development gallery; Stockroom remains a private evaluation prototype.
 The qvOS description leads with its standalone architecture; its signed Stable
@@ -145,7 +145,8 @@ The homepage remains text-led, with its original black-and-white portrait.
 Detailed project entries reuse the original HyperQuote and qvOS animated covers
 and the other projects' canonical artwork. Modern uses its static architectural
 brand illustration. Counter and Leafmark retain their original SVG covers;
-Waymark retains its lossless WebP. No organization bumper, new fonts, or
+Waymark retains its lossless WebP. Little Lemon Database uses a lossless WebP
+render of its approved Meta-badge cover, as requested for the project library. No organization bumper, new fonts, or
 decorative effects are added to Folio. Stockroom has no public cover or
 interface capture. Games keep full entries and covers on the Games page, with
 short linked descriptions in the Projects inventory.

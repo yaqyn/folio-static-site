@@ -5,7 +5,7 @@ description: Abdulrahman M. Yaqyn — business software, backend systems, AI app
 ---
 # yaqyn.
 
-**Business software, backend systems, and Linux tools built around real workflows.** Based in **6th of October City, Egypt**, I build across client applications, independent tools, and Go and Python projects developed through Boot.dev.
+**Business software, backend systems, and Linux tools built around real workflows.** Based in **6th of October City, Egypt**, I build across client applications, independent tools, and Go and Python projects developed through Boot.dev and Meta coursework.
 
 [Explore my work](/projects/) [Get in touch](/contact/)
 
@@ -26,8 +26,9 @@ Client applications and internal tools live in [Yaqyn Development](https://githu
 
 ## Learning journey projects
 
-Projects developed through Boot.dev and extended through independent work. Each repository documents its origins, run instructions, and current boundaries.
+Projects developed through Boot.dev and Meta coursework, then extended through independent work. Each repository documents its origins, run instructions, and current boundaries.
 
+- [Little Lemon — Database](https://github.com/yaqyn/little-lemon-database) A workbook-backed MySQL model with linked restaurant records, tested booking procedures, and an executed Python notebook.
 - [Verdant Trials — Forest Maze Adventure](/games/) A lantern-lit labyrinth with five chapters, fog memory, and visual depth-first and breadth-first search.
 - [Leafmark — Personal notebook](https://github.com/yaqyn/leafmark-notebook) Private plain-text notes, search, pinning, archives, and exportable drafts, with SQLite or optional Turso storage.
 - [Waymark — Private link workspace](https://github.com/yaqyn/waymark-link-shortener) Editable short links, persistent click totals, and request diagnosis through logs, metrics, and optional traces.

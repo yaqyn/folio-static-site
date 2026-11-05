@@ -70,3 +70,16 @@ large displays and provenance.
 | --- | --- | --- |
 | `yaqyn-portrait-384.webp` | 121,252 | `de90bdb111ec12d85765c2c370725298be09f42e9f5ab87a3474186aabf9d618` |
 | `yaqyn-portrait-768.webp` | 502,512 | `5363678b2bd1889615bd8f8ee664539bb919e75671be55af3777652e3105603c` |
+
+## Little Lemon Database cover
+
+`projects/little-lemon-database-cover.webp` is a 1600 × 640 lossless raster render
+of the project's [approved restored cover](https://github.com/yaqyn/little-lemon-database/blob/main/readme-assets/cover.svg).
+The user requested raster artwork in the project library. The original cover,
+including its Meta curriculum-context mark, remains unchanged in the source
+repository. The mark does not imply endorsement. ImageMagick converted the
+rendered PNG to lossless WebP with zero differing pixels; ExifTool retained only
+the owner's XMP Creator and Rights fields. This illustration is cover artwork,
+not a screenshot of the application.
+
+SHA-256: `700388d2e2eca651f39849156a58e6656c72d656587d60cd77c3a8c3ce8f4da8`.
