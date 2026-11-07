@@ -13,6 +13,14 @@ class TestPageGeneration(unittest.TestCase):
         with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as error:
             main(["--site-url", "https://user:secret@example.com"])
         self.assertEqual(error.exception.code, 2)
+
+    def test_site_url_rejects_query_and_fragment_state(self):
+        for value in ["https://example.com?preview=1", "https://example.com/#draft"]:
+            with self.subTest(value=value), redirect_stderr(io.StringIO()), self.assertRaises(
+                SystemExit
+            ) as error:
+                main(["--site-url", value])
+            self.assertEqual(error.exception.code, 2)
     def test_canonical_route_is_url_encoded_before_html_escaping(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
