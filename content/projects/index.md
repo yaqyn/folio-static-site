@@ -92,6 +92,30 @@ The Python client uses a connection pool and explicit transactions. The executed
 
 [Explore Little Lemon Database on GitHub](https://github.com/yaqyn/little-lemon-database) or [read the executed notebook](https://github.com/yaqyn/little-lemon-database/blob/main/notebooks/Little%5FLemon%5FDatabase.ipynb).
 
+### Global Super Store — Data modeling
+
+A retail data-modeling project that cleans the supplied workbook, documents its relationships, and produces analysis-ready exports. Reconciliation checks keep order, customer, product, and regional totals traceable back to the source data.
+
+[Explore Global Super Store on GitHub](https://github.com/yaqyn/global-super-store-data-modeling).
+
+### Little Lemon — Django capstone
+
+A Django restaurant application with menu and booking interfaces backed by MySQL. API behavior, authentication boundaries, and database setup are kept in the repository alongside repeatable checks.
+
+[Explore the Little Lemon Django capstone on GitHub](https://github.com/yaqyn/little-lemon-django-capstone).
+
+### Little Lemon — Sales report
+
+A MySQL reporting project that turns seeded restaurant records into reconciled sales summaries, Markdown and JSON artifacts, an SVG chart, and an executed notebook. Database integration tests run against a real MySQL service in CI.
+
+[Explore the Little Lemon sales report on GitHub](https://github.com/yaqyn/little-lemon-sales-report).
+
+### Emotion detector
+
+A small Flask application around IBM Watson's emotion-analysis service. Input validation keeps requests bounded, while a deterministic health endpoint reports the configured model contract without making an upstream request.
+
+[Explore the emotion detector on GitHub](https://github.com/yaqyn/oaqjp-final-project-emb-ai).
+
 ### Verdant Trials — Forest Maze Adventure
 
 A Python and PySide6 desktop game with five maze chapters, wall-aware lantern light, and fog that remembers explored paths. Play the route or watch depth-first and breadth-first search, with pause, step, and speed controls.

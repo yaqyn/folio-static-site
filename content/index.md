@@ -29,6 +29,10 @@ Client applications and internal tools live in [Yaqyn Development](https://githu
 Projects developed through Boot.dev and Meta coursework, then extended through independent work. Each repository documents its origins, run instructions, and current boundaries.
 
 - [Little Lemon — Database](https://github.com/yaqyn/little-lemon-database) A workbook-backed MySQL model with linked restaurant records, tested booking procedures, and an executed Python notebook.
+- [Global Super Store — Data modeling](https://github.com/yaqyn/global-super-store-data-modeling) A cleaned retail workbook, relational model, reconciliation checks, and analysis-ready exports.
+- [Little Lemon — Django](https://github.com/yaqyn/little-lemon-django-capstone) A restaurant API and booking application built with Django and MySQL.
+- [Little Lemon — Sales report](https://github.com/yaqyn/little-lemon-sales-report) A MySQL sales pipeline with reproducible reports, charts, and an executed notebook.
+- [Emotion detector](https://github.com/yaqyn/oaqjp-final-project-emb-ai) A Flask interface around IBM Watson emotion analysis with deterministic validation and health reporting.
 - [Verdant Trials — Forest Maze Adventure](/games/) A lantern-lit labyrinth with five chapters, fog memory, and visual depth-first and breadth-first search.
 - [Leafmark — Personal notebook](https://github.com/yaqyn/leafmark-notebook) Private plain-text notes, search, pinning, archives, and exportable drafts, with SQLite or optional Turso storage.
 - [Waymark — Private link workspace](https://github.com/yaqyn/waymark-link-shortener) Editable short links, persistent click totals, and request diagnosis through logs, metrics, and optional traces.
