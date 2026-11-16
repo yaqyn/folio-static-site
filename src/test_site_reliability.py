@@ -179,6 +179,25 @@ class TestSiteReliability(unittest.TestCase):
                             local /= "index.html"
                         self.assertTrue(local.exists(), f"{page}: missing {url}")
 
+    def test_project_cover_png_dimensions_must_be_positive(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            project_images = root / "static/images/projects"
+            project_images.mkdir(parents=True)
+            (project_images / "bad.png").write_bytes(
+                b"\x89PNG\r\n\x1a\n" + b"\0" * 8 + (0).to_bytes(4, "big")
+                + (120).to_bytes(4, "big") + b"\0" * 6
+            )
+            source = root / "page.md"
+            template = root / "template.html"
+            source.write_text("# Test\n\n![cover](/images/projects/bad.png)")
+            template.write_text("{{ Content }}")
+            with (
+                patch("markdown_to_html.__file__", str(root / "src/markdown_to_html.py")),
+                self.assertRaisesRegex(ValueError, "positive width and height"),
+            ):
+                generate_page(source, template, root / "output.html")
+
     def test_failed_build_preserves_previous_output(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "site"

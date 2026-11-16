@@ -234,6 +234,8 @@ def generate_page(
                         raise ValueError("Project covers must use lossless WebP")
                 else:
                     raise ValueError("Project covers must be PNG, lossless WebP, or SVG images")
+                if width <= 0 or height <= 0:
+                    raise ValueError("Project covers need positive width and height")
                 node.props.update(
                     width=str(width), height=str(height), loading="lazy", decoding="async"
                 )
