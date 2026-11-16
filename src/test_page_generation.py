@@ -39,8 +39,11 @@ class TestPageGeneration(unittest.TestCase):
             extract_title("## Only a subheading")
 
     def test_extract_title_rejects_an_empty_h1(self):
-        with self.assertRaisesRegex(ValueError, "nonempty h1"):
-            extract_title("#   ")
+        for markdown in ["#   ", "# ###"]:
+            with self.subTest(markdown=markdown), self.assertRaisesRegex(
+                ValueError, "nonempty h1"
+            ):
+                extract_title(markdown)
 
     def test_extract_title_ignores_code_examples(self):
         self.assertEqual(extract_title("```markdown\n# Example\n```\n\n# Actual title"), "Actual title")

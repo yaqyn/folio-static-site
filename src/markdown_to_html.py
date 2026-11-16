@@ -119,7 +119,7 @@ def extract_title(markdown: str) -> str:
         for line in block.splitlines():
             if line.startswith("# "):
                 title = line[2:].strip()
-                if title:
+                if title and not re.fullmatch(r"#+", title):
                     return title
         lines = block.splitlines()
         if len(lines) == 2 and re.fullmatch(r" {0,3}=+[ \t]*", lines[1]):
