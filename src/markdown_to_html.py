@@ -118,11 +118,13 @@ def extract_title(markdown: str) -> str:
             continue
         for line in block.splitlines():
             if line.startswith("# "):
-                return line[2:].strip()
+                title = line[2:].strip()
+                if title:
+                    return title
         lines = block.splitlines()
         if len(lines) == 2 and re.fullmatch(r" {0,3}=+[ \t]*", lines[1]):
             return lines[0].strip()
-    raise ValueError("Markdown document has no h1 heading")
+    raise ValueError("Markdown document has no nonempty h1 heading")
 
 
 def parse_frontmatter(markdown):
